@@ -1,7 +1,6 @@
 {
   "name": "Greg-DiCristofaro's-website",
   "version": "0.0.1",
-  "description": "Sample project that uses material-ui",
   "scripts": {
     "start": "gulp",
     "lint": "eslint src && echo \"eslint: no lint errors\""
