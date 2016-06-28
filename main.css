@@ -3,9 +3,13 @@ html {
 }
 body {
   font-size: 13px;
+  background-color: #eee;
+}
+html,
+body {
+  height: 100%;
   padding: 0px;
   margin: 0px;
-  background-color: #eee;
 }
 .baseHeaderFooter {
   background-color: #0A1719;
@@ -26,6 +30,21 @@ body {
 .smallImg:hover path {
   fill: #B2F4FF;
 }
+.GithubIcon path,
+.MailIcon path,
+.MenuIcon path {
+  fill: #f9f9f9;
+}
+.GithubIcon:hover path,
+.MailIcon:hover path,
+.MenuIcon:hover path {
+  fill: #B2F4FF;
+}
+.letterhead {
+  font-weight: 300;
+  color: #5ACFE3;
+  font-size: 160%;
+}
 .header {
   background-color: #0A1719;
   color: #f9f9f9;
@@ -39,77 +58,36 @@ body {
 .header a:hover {
   color: #B2F4FF;
 }
-.header .GithubIcon path {
-  fill: #f9f9f9;
-}
-.header .GithubIcon:hover path {
-  fill: #B2F4FF;
-}
-.header .MailIcon path {
-  fill: #f9f9f9;
-}
-.header .MailIcon:hover path {
-  fill: #B2F4FF;
-}
-.header .MenuIcon path {
-  fill: #f9f9f9;
-}
-.header .MenuIcon:hover path {
-  fill: #B2F4FF;
-}
 .header h1 {
   font-weight: 300;
   color: #5ACFE3;
   font-size: 160%;
 }
-.header .navbar {
+.navbar {
   background-color: #0A1719;
   color: #f9f9f9;
   margin: 0px;
   font-weight: 300;
 }
-.header .navbar a {
+.navbar a {
   text-decoration: none;
   color: #f9f9f9;
 }
-.header .navbar a:hover {
+.navbar a:hover {
   color: #B2F4FF;
 }
-.header .navbar .navigation {
-  text-align: center;
+.navbar h1 {
   margin: 0px;
 }
-.header .navbar .navigation a {
+.navbar .navigation {
+  margin: 0px;
+}
+.navbar .navigation a {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 120%;
 }
-.header .navbar .navigation .selected {
-  color: #5ACFE3;
-}
-.header .mobileNavbar {
-  background-color: #0A1719;
-  color: #f9f9f9;
-  margin: 0px;
-  font-weight: 300;
-}
-.header .mobileNavbar a {
-  text-decoration: none;
-  color: #f9f9f9;
-}
-.header .mobileNavbar a:hover {
-  color: #B2F4FF;
-}
-.header .mobileNavbar .navigation {
-  text-align: center;
-  margin: 0px;
-}
-.header .mobileNavbar .navigation a {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 120%;
-}
-.header .mobileNavbar .navigation .selected {
+.navbar .navigation .selected {
   color: #5ACFE3;
 }
 .footer {
@@ -117,7 +95,6 @@ body {
   color: #f9f9f9;
   margin: 0px;
   font-weight: 300;
-  padding: 10px;
 }
 .footer a {
   text-decoration: none;

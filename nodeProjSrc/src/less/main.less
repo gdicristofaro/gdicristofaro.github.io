@@ -21,9 +21,13 @@ html {
 
 body {
   font-size: 13px;
+  background-color: @bodyBackground;
+}
+
+html, body {
+  height: 100%;
   padding: 0px;
   margin: 0px;
-  background-color: @bodyBackground;
 }
 
 
@@ -54,56 +58,51 @@ body {
   }
 }
 
+.GithubIcon, .MailIcon, .MenuIcon {
+  .smallImg;
+}
+
+
+
+
+.letterhead {
+  font-weight: @headerWeight;
+  color: @accentColor;
+  font-size: 160%;
+}
 
 .header {
   .baseHeaderFooter;
 
-  .GithubIcon {
-    .smallImg;
-  }
-
-  .MailIcon {
-    .smallImg;
-  }
-
-  .MenuIcon {
-    .smallImg
-  }
-
   h1 {
-    font-weight: @headerWeight;
-    color: @accentColor;
-    font-size: 160%;
-  }
-
-  .navbar {
-    .baseHeaderFooter;
-
-    .navigation {
-      text-align: center;
-      margin: 0px;
-
-      a {
-        font-weight: @headerWeight + 300;
-        text-transform: uppercase;
-        font-size: 120%;
-      }
-
-      .selected {
-        color: @accentColor;
-      }
-    }
-  }
-
-  .mobileNavbar {
-    .navbar;
+    .letterhead;
   }
 }
 
 
+.navbar {
+  .baseHeaderFooter;
+  h1 {
+    margin: 0px;
+  }
+
+  .navigation {
+    margin: 0px;
+
+    a {
+      font-weight: @headerWeight + 300;
+      text-transform: uppercase;
+      font-size: 120%;
+    }
+
+    .selected {
+      color: @accentColor;
+    }
+  }
+}
+
 .footer {
   .baseHeaderFooter;
-  padding: 10px;
 
   p {
     padding: 0px;
