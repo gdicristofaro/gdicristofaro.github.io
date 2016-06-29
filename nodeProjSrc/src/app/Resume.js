@@ -71,7 +71,7 @@ export default class Resume extends React.Component {
         <p>&nbsp;</p>
         <p><strong>Technology Applied to Music Education:</strong></p>
         <ul>
-          <li>Audio: GarageBand, Audacity, Sibelius</li>
+          <li>Audio: GarageBand, Audacity, Sibelius, Finale</li>
           <li>Video: iMovie, HandBrake, VLC, FFmpeg, avconv</li>
           <li>Image: Gimp, Inkscape</li>
           <li>Presentation: Apple Keynote, PowerPoint, Google Slides, Smart Notebook</li>
