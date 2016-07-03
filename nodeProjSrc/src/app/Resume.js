@@ -65,7 +65,7 @@ export default class Resume extends React.Component {
         <p><strong>Languages and Technologies:</strong></p>
         <ul>
           <li>Experienced in Java, Scala, C, C#, F#, Javascript/HTML/CSS</li>
-          <li>Working knowledge of Amazon AWS, Google App Engine, shell scripting, PHP, Dart, Rust, OCaml</li>
+          <li>Working knowledge of Amazon AWS, Google App Engine, Heroku, shell scripting, PHP, Dart, Rust, OCaml, React, Play Framework, jQuery</li>
           <li>Familiar with Linux distributions: Busybox, Ubuntu, Fedora</li>
         </ul>
         <p>&nbsp;</p>
@@ -82,12 +82,12 @@ export default class Resume extends React.Component {
         <table style={{width: '100%'}}>
         <tbody>
           <tr>
-            <td style={{width: '70.5722%'}}><em>Music Teacher at Green Holly Elementary</em></td>
-            <td style={{width: '27.5204%', textAlign: 'left'}}><em>August 2009 – present</em></td>
+            <td style={{width: '50%'}}><em>Music Teacher at Green Holly Elementary</em></td>
+            <td style={{width: '50%', textAlign: 'left'}}><em>August 2006 – June 2008; August 2009 – present</em></td>
           </tr>
           <tr>
-            <td style={{width: '70.5722%'}}><em>Music Teacher at Spring Ridge Middle School</em></td>
-            <td style={{width: '27.5204%', textAlign: 'left'}}><em>August 2008 – June 2009</em></td>
+            <td style={{width: '50%'}}><em>Music Teacher at Spring Ridge Middle School</em></td>
+            <td style={{width: '50%', textAlign: 'left'}}><em>August 2008 – June 2009</em></td>
           </tr>
         </tbody>
       </table>
