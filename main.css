@@ -45,11 +45,22 @@ body {
   color: #5ACFE3;
   font-size: 160%;
 }
+.opacityTransitionable {
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.heightTransitionable {
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  transition: height 0.5s;
+}
 .header {
   background-color: #0A1719;
   color: #f9f9f9;
   margin: 0px;
   font-weight: 300;
+  overflow: hidden;
 }
 .header a {
   text-decoration: none;
