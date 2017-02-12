@@ -49,14 +49,14 @@ body {
   font-size: 160%;
 }
 .opacityTransitionable {
-  -webkit-transition: visibility 0s, opacity 0.5s;
-  -moz-transition: visibility 0s, opacity 0.5s;
-  transition: visibility 0s, opacity 0.5s;
+  -webkit-transition: visibility 0s, opacity 0.3s;
+  -moz-transition: visibility 0s, opacity 0.3s;
+  transition: visibility 0s, opacity 0.3s;
 }
 .heightTransitionable {
-  -webkit-transition: height 0.5s;
-  -moz-transition: height 0.5s;
-  transition: height 0.5s;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  transition: height 0.3s;
 }
 .header {
   background-color: #0A1719;
