@@ -13,10 +13,11 @@ const $ = require('jQuery');
 export class NavBarDesktop extends React.Component {
   // desktop icons to go to the right
   getIcons(opacity) {
+    var visibility = (opacity <= 0) ? "hidden" : "visible";
     return (
       <div
         className="opacityTransitionable"
-        style={{opacity: opacity, marginRight:  NavTextMargin + 'px'}}
+        style={{opacity: opacity, visibility: visibility, marginRight:  NavTextMargin + 'px'}}
       >
         <a style={{paddingLeft: '10px', paddingRight: '10px'}} href="mailto: gregdicristofaro@gmail.com">
           <MailIcon style={{height: IconHeight + 'px'}}/>

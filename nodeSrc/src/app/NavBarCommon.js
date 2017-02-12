@@ -24,17 +24,12 @@ export const NavTextMargin = 20;
 var NavBarCommon = {};
 export default NavBarCommon;
 
-
-// only display if opacity is greater than 0
-NavBarCommon.getDisplay = function(opacity) {
-  return (opacity > 0) ? "block" : "none";
-};
-
   // link to main website with name
 NavBarCommon.getNameLink = function(opacity, style) {
+  var visibility = (opacity <= 0) ? "hidden" : "visible";
   return (
     <div
-      style={$.extend({}, style, {opacity: opacity})}
+      style={$.extend({}, style, {opacity: opacity, visibility: visibility})}
       className="opacityTransitionable"
     >
       <a href="http://www.gdicristofaro.com/">

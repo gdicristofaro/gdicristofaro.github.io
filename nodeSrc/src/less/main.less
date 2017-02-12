@@ -77,9 +77,10 @@ html, body {
 }
 
 .opacityTransitionable {
-  -webkit-transition: opacity @opacityTransitionTime;
-  -moz-transition: opacity @opacityTransitionTime;
-  transition: opacity @opacityTransitionTime;
+  -webkit-transition: visibility 0s, opacity @opacityTransitionTime;
+  -moz-transition: visibility 0s, opacity @opacityTransitionTime;
+  transition: visibility 0s, opacity @opacityTransitionTime;
+
 }
 
 .heightTransitionable {
