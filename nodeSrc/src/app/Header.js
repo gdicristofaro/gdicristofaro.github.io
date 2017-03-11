@@ -22,7 +22,8 @@ class Header extends React.Component {
     super(props, context);
     var that = this;
     this.scrollEvent = function(e) {
-      that.setState({"scrollPos" : window.scrollY});
+      var y = $(window).scrollTop();
+      that.setState({"scrollPos" : y});
     };
 
     this.styles = {
@@ -51,13 +52,13 @@ class Header extends React.Component {
   }
 
   componentWillMount() {
-    window.addEventListener('scroll', this.scrollEvent);
+    $(window).scroll(this.scrollEvent);
     this.scrollEvent();
   }
 
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.scrollEvent);
+    $(window).off(this.scrollEvent);
   }
 
   // gets very upper header that disappears on scroll
