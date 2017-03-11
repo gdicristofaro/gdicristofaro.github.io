@@ -52,7 +52,7 @@ NavBarCommon.getNavBar = function(left, center, right) {
         <div style={$.extend({}, child, {textAlign: 'left'})}>
           {left}
         </div>
-        <div style={$.extend({}, child, {textAlign: 'center'})}>
+        <div style={$.extend({}, child, {textAlign: 'center', whiteSpace: 'nowrap'})}>
           {center}
         </div>
         <div style={$.extend({}, child, {textAlign: 'right'})}>
