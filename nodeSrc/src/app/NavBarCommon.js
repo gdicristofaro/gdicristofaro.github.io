@@ -34,7 +34,7 @@ NavBarCommon.getNameLink = function(opacity, style) {
     >
       <a href="http://www.gdicristofaro.com/">
         <div>
-          <h1 style={{textAlign: 'center'}} className="letterhead">Greg DiCristofaro</h1>
+          <h1 style={{textAlign: 'left'}} className="letterhead">Greg DiCristofaro</h1>
         </div>
       </a>
     </div>
@@ -43,18 +43,19 @@ NavBarCommon.getNameLink = function(opacity, style) {
 
   // retrieves nav bar component given left, center, right component
 NavBarCommon.getNavBar = function(left, center, right) {
-  const child = {position: 'absolute', top: '50%', transform: 'translateY(-50%)'};
-  const parent = {minHeight: NavBarHeight + "px", width: '100%'};
+  const child = {flex: 1};
+  const parent = {minHeight: NavBarHeight + "px", width: '100%', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'flexStart', alignItems: 'center'};
+
   return (
     <div className="navbar" style={parent}>
       <div style={$.extend({padding: '0px', margin: '0px', position: 'relative'}, parent)}>
-        <div style={$.extend({}, child, {textAlign: "center", width: '100%'})}>
-          {center}
-        </div>
-        <div style={$.extend({}, child, {left: 0})}>
+        <div style={$.extend({}, child, {textAlign: 'left'})}>
           {left}
         </div>
-        <div style={$.extend({}, child, {right: 0})}>
+        <div style={$.extend({}, child, {textAlign: 'center'})}>
+          {center}
+        </div>
+        <div style={$.extend({}, child, {textAlign: 'right'})}>
           {right}
         </div>
       </div>
