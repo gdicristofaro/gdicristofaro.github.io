@@ -43,8 +43,8 @@ NavBarCommon.getNameLink = function(opacity, style) {
 
   // retrieves nav bar component given left, center, right component
 NavBarCommon.getNavBar = function(left, center, right) {
-  const child = {flex: 1};
-  const parent = {minHeight: NavBarHeight + "px", width: '100%', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'flexStart', alignItems: 'center'};
+  const child = {flex: 1, whiteSpace: 'nowrap'};
+  const parent = {minHeight: NavBarHeight + "px", width: '100%', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center'};
 
   return (
     <div className="navbar" style={parent}>
@@ -52,7 +52,7 @@ NavBarCommon.getNavBar = function(left, center, right) {
         <div style={$.extend({}, child, {textAlign: 'left'})}>
           {left}
         </div>
-        <div style={$.extend({}, child, {textAlign: 'center', whiteSpace: 'nowrap'})}>
+        <div style={$.extend({}, child, {textAlign: 'center'})}>
           {center}
         </div>
         <div style={$.extend({}, child, {textAlign: 'right'})}>

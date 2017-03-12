@@ -10,21 +10,12 @@ import baseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {Link, Route, Router} from 'react-router';
 
-
-const $ = require('jQuery');
-
-
 export const HeaderHeight = 300;
 
 // pages are a series of links
 class Header extends React.Component {
   constructor(props, context) {
     super(props, context);
-    var that = this;
-    this.scrollEvent = function(e) {
-      var y = $(window).scrollTop();
-      that.setState({"scrollPos" : y});
-    };
 
     this.styles = {
       header: {
@@ -51,22 +42,10 @@ class Header extends React.Component {
       return { muiTheme: getMuiTheme(baseTheme) };
   }
 
-  componentWillMount() {
-    $(window).scroll(this.scrollEvent);
-    this.scrollEvent();
-  }
-
-
-  componentWillUnmount() {
-    $(window).off(this.scrollEvent);
-  }
 
   // gets very upper header that disappears on scroll
   render() {
-
     const that = this;
-    var opacity = 1 - Math.min(1, this.state.scrollPos / HeaderHeight);
-
     var height = (this.props.isHidden) ? "0px" : HeaderHeight + "px";
     var opacity = (this.props.isHidden) ? 0 : 1;
 

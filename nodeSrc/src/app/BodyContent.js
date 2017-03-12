@@ -16,6 +16,8 @@ import MenuItem from 'material-ui/MenuItem';
 import baseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
+const $ = require('jQuery');
+
 
 export var myPages = [];
 myPages['Home'] =
@@ -46,7 +48,8 @@ export default class BodyContent extends React.Component {
     }
 
     this.scrollEvent = function(e) {
-      if (window.scrollY >= 1)
+      var y = $(window).scrollTop();
+      if (y >= 1)
         that.setState({isScrolled:true})
       else
         that.setState({isScrolled:false})
