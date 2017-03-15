@@ -72,8 +72,10 @@ export default class BodyContent extends React.Component {
     const bodyHeight = (this.state.windowHeight - NavBarHeight - footerHeight);
     var isMobileWidth = this.state.windowWidth < MinDesktopWidth;
 
-    var navBarOpacity = Math.min(1, this.state.scrollY / HeaderHeight);
-    var headerOpacity = 1 - navBarOpacity;
+    var headerShownPercent = Math.min(1, Math.max(0, this.state.scrollY / HeaderHeight));
+    var navBarOpacity = ((headerShownPercent - .75) * 4);
+    var headerOpacity = 1 - headerShownPercent;
+ 
     // spacer for content so that it doesn't hide behind header
     var headerShift =  Math.max(-this.state.scrollY, -HeaderHeight);
 
