@@ -16,6 +16,9 @@ const $ = require('jQuery');
 // the minimum width before switching to mobile
 export const MinDesktopWidth = 700;
 export const IconHeight = 30;
+export const MailWidth = 40;
+export const GithubWidth = 30;
+export const MobileWidth = 45;
 export const NavBarHeight = 50;
 export const NavTextMargin = 20;
 
@@ -29,8 +32,7 @@ NavBarCommon.getNameLink = function(opacity, style) {
   var visibility = (opacity <= 0) ? "hidden" : "visible";
   return (
     <div
-      style={$.extend({}, style, {opacity: opacity, visibility: visibility})}
-      className="opacityTransitionable"
+      style={$.extend({}, style, {opacity: opacity, visibility: visibility, lineHeight: NavBarHeight+"px"})}
     >
       <a href="http://www.gdicristofaro.com/">
         <div>
@@ -47,8 +49,7 @@ NavBarCommon.getNavBar = function(left, center, right) {
   const parent = {minHeight: NavBarHeight + "px", width: '100%', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center'};
 
   return (
-    <div className="navbar" style={parent}>
-      <div style={$.extend({padding: '0px', margin: '0px', position: 'relative'}, parent)}>
+      <div className="navbar" style={$.extend({padding: '0px', margin: '0px', position: 'relative'}, parent)}>
         <div style={$.extend({}, child, {textAlign: 'left'})}>
           {left}
         </div>
@@ -59,6 +60,5 @@ NavBarCommon.getNavBar = function(left, center, right) {
           {right}
         </div>
       </div>
-    </div>
   );
 };

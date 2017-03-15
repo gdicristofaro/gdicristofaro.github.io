@@ -46,18 +46,18 @@ class Header extends React.Component {
   // gets very upper header that disappears on scroll
   render() {
     const that = this;
-    var height = (this.props.isHidden) ? "0px" : HeaderHeight + "px";
-    var opacity = (this.props.isHidden) ? 0 : 1;
+    var opacity = this.props.opacity;
 
     return (
-      <div className="header heightTransitionable" style={{margin: "0px", padding: "0px", height: height}}>
-        <div className="opacityTransitionable" style={{opacity: opacity}}>
+      <div className="header" style={{margin: "0px", padding: "0px"}}>
+        <div style={{opacity: opacity, height: HeaderHeight}}>
           <img style={this.styles.circleIcon} title="A picture of me!" src='circleIcon.png'/>
           <h1 style={this.styles.letterhead}>Greg DiCristofaro</h1>
           <p style={this.styles.letterhead}>
             <a href="http://www.gdicristofaro.com">www.gdicristofaro.com</a> <span style={this.styles.dot}>•</span> <a href="http://www.github.com/gdicristofaro">www.github.com/gdicristofaro</a></p>
           <p style={this.styles.letterhead}><a href="mailto: gregdicristofaro@gmail.com">gregdicristofaro@gmail.com</a></p>
         </div>
+        {this.props.children}
       </div>
     );
   }

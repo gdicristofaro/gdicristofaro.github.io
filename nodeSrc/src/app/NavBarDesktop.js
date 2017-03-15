@@ -3,7 +3,7 @@ import MailIcon from './MailIcon';
 import GithubIcon from './GithubIcon';
 import MenuIcon from './MenuIcon';
 import {Header, imgHeaderHeight} from './Header';
-import NavBarCommon, {IconHeight, NavTextMargin} from './NavBarCommon';
+import NavBarCommon, {IconHeight, MailWidth, GithubWidth, NavTextMargin, NavBarHeight} from './NavBarCommon';
 
 import {Link, Route, Router} from 'react-router';
 
@@ -16,14 +16,13 @@ export class NavBarDesktop extends React.Component {
     var visibility = (opacity <= 0) ? "hidden" : "visible";
     return (
       <div
-        className="opacityTransitionable"
-        style={{opacity: opacity, visibility: visibility, marginRight:  NavTextMargin + 'px'}}
+        style={{opacity: opacity, visibility: visibility, height: IconHeight + 'px', padding: "0px", marginTop: "auto", marginBottom: "auto", marginRight:  NavTextMargin + 'px'}}
       >
-        <a style={{paddingLeft: '10px', paddingRight: '10px'}} href="mailto: gregdicristofaro@gmail.com">
-          <MailIcon style={{height: IconHeight + 'px'}}/>
+        <a style={{marginLeft: '10px', marginRight: '10px'}} href="mailto: gregdicristofaro@gmail.com">
+          <MailIcon style={{height: IconHeight + 'px', width: MailWidth + 'px'}}/>
         </a>
         <a href="http://www.github.com/gdicristofaro">
-          <GithubIcon style={{height: IconHeight + 'px'}}/>
+          <GithubIcon style={{height: IconHeight + 'px', width: GithubWidth + 'px'}}/>
         </a>
       </div>
     );
@@ -37,7 +36,7 @@ export class NavBarDesktop extends React.Component {
       var linkClass = (linkInf.href == that.props.location.pathname) ? "selected" : "";
       var innerText = {__html: linkInf.name};
       return (<Link
-                style={{margin: "0px 15px"}}
+                style={{margin: "auto 15px"}}
                 key={i}
                 className={linkClass}
                 to={linkInf.href}
@@ -47,14 +46,14 @@ export class NavBarDesktop extends React.Component {
 
     return (
       <div style={{margin: "0px 15px"}}>
-        <p className='navigation' style={{textAlign: 'center'}}>{pages}</p>
+        <p className='navigation' style={{lineHeight: NavBarHeight + "px", textAlign: 'center'}}>{pages}</p>
       </div>
     );
   }
 
   render() {
     const that = this;
-    var opacity = (this.props.isScrolled) ? 1 : 0;
+    var opacity = this.props.opacity;
 
     return NavBarCommon.getNavBar(
       NavBarCommon.getNameLink(opacity, {marginLeft: NavTextMargin + 'px'}),

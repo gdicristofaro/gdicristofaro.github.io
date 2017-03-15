@@ -49,10 +49,7 @@ export default class BodyContent extends React.Component {
 
     this.scrollEvent = function(e) {
       var y = $(window).scrollTop();
-      if (y >= 1)
-        that.setState({isScrolled:true})
-      else
-        that.setState({isScrolled:false})
+      that.setState({scrollY: y});
     };
   }
 
@@ -70,11 +67,17 @@ export default class BodyContent extends React.Component {
   }
 
   render () {
-    var that = this;
+    const that = this;
     const mobileView = this.state.windowWidth < MinDesktopWidth;
     const bodyHeight = (this.state.windowHeight - NavBarHeight - footerHeight);
-    var spacerHeight = (this.state.isScrolled) ? NavBarHeight : HeaderHeight + NavBarHeight;
     var isMobileWidth = this.state.windowWidth < MinDesktopWidth;
+
+    var navBarOpacity = Math.min(1, this.state.scrollY / HeaderHeight);
+    var headerOpacity = 1 - navBarOpacity;
+    // spacer for content so that it doesn't hide behind header
+    var headerShift =  Math.max(-this.state.scrollY, -HeaderHeight);
+
+
 
     const main = (
       <div
@@ -114,7 +117,7 @@ export default class BodyContent extends React.Component {
         <NavBarMobile
           handleToggle={mobileDrawerToggler}
           pages={indexedPages}
-          isScrolled={this.state.isScrolled}
+          opacity={navBarOpacity}
           location={this.props.location}
         />);
     }
@@ -122,7 +125,7 @@ export default class BodyContent extends React.Component {
       navbar = (
         <NavBarDesktop
           pages={indexedPages}
-          isScrolled={this.state.isScrolled}
+          opacity={navBarOpacity}
           location={this.props.location}
         />
       )
@@ -134,11 +137,16 @@ export default class BodyContent extends React.Component {
         style={{padding: '0px', margin: '0px', height: '100%', position: 'relative'}}
       >
         {drawer}
-        <div style={{position: 'fixed', width: '100%', zIndex: '999'}}>
-          <Header pages={indexedPages} location={this.props.location} isHidden={this.state.isScrolled} />
-          {navbar}
+        <div style={{position: 'fixed', width: '100%', top: headerShift+'px', zIndex: '999'}}>
+          <Header
+            pages={indexedPages}
+            location={this.props.location}
+            opacity={headerOpacity}
+          >
+            {navbar}
+          </Header>
         </div>
-        <div className="heightTransitionable" style={{height: spacerHeight + 'px'}}></div>
+        <div style={{height: (HeaderHeight + NavBarHeight) + 'px'}}></div>
         {main}
         <Footer/>
       </div>

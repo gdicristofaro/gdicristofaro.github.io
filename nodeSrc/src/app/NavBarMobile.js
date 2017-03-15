@@ -3,7 +3,7 @@ import MailIcon from './MailIcon';
 import GithubIcon from './GithubIcon';
 import MenuIcon from './MenuIcon';
 import {Header, imgHeaderHeight} from './Header';
-import NavBarCommon, {IconHeight} from './NavBarCommon';
+import NavBarCommon, {IconHeight, NavTextMargin, MobileWidth} from './NavBarCommon';
 
 import baseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -20,7 +20,7 @@ export class NavBarMobile extends React.Component {
 
   getMobileMenuButton() {
     return (
-      <div onClick={this.props.handleToggle} style={{marginLeft : '20px'}}>
+      <div onClick={this.props.handleToggle} style={{padding: '0px', width: MobileWidth + "px", marginLeft: NavTextMargin + 'px', marginTop: 'auto', marginBottom: 'auto', height: IconHeight + 'px'}}>
         <MenuIcon style={{height: IconHeight + 'px', cursor: "pointer"}} />
       </div>
     );
@@ -28,11 +28,12 @@ export class NavBarMobile extends React.Component {
 
   render() {
     const that = this;
-    var opacity = this.props.isScrolled ? 1 : 0;
+    const emptyDiv = null;
+    var opacity = this.props.opacity;
     return NavBarCommon.getNavBar(
       this.getMobileMenuButton(),
       NavBarCommon.getNameLink(opacity),
-      null);
+      emptyDiv);
   }
 }
 
