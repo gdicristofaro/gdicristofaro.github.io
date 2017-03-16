@@ -87,7 +87,7 @@ export default class Resume extends React.Component {
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p><strong>TEACHING EXPERIENCE: </strong></p>
-        <p><strong>St. Mary&rsquo;s County Public Schools, </strong>Leonardtown, MD <em>August 2006 - present</em></p>
+        <p><strong>St. Mary&rsquo;s County Public Schools, </strong>Leonardtown, MD  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>August 2006 - present</em></p>
         <p><em></em></p>
         <ul>
           <li><strong>Instruction: </strong>
