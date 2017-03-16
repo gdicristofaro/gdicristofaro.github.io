@@ -55,7 +55,7 @@ class Header extends React.Component {
           <h1 style={this.styles.letterhead}>Greg DiCristofaro</h1>
           <p style={this.styles.letterhead}>
             <a href="http://www.gdicristofaro.com">www.gdicristofaro.com</a> <span style={this.styles.dot}>•</span> <a href="http://www.github.com/gdicristofaro">www.github.com/gdicristofaro</a></p>
-          <p style={this.styles.letterhead}><a href="mailto: gregdicristofaro@gmail.com">gregdicristofaro@gmail.com</a></p>
+          <p style={this.styles.letterhead}><a href="mailto:gregdicristofaro@gmail.com">gregdicristofaro@gmail.com</a></p>
         </div>
         {this.props.children}
       </div>

@@ -48,7 +48,7 @@ export default class MobileDrawer extends React.Component {
       );
     }
 
-    getLinkButton("Email", "mailto: gregdicristofaro@gmail.com");
+    getLinkButton("Email", "mailto:gregdicristofaro@gmail.com");
     getLinkButton("GitHub", "https://github.com/gdicristofaro");
 
     return (

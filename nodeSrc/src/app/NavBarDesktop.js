@@ -18,7 +18,7 @@ export class NavBarDesktop extends React.Component {
       <div
         style={{opacity: opacity, visibility: visibility, height: IconHeight + 'px', padding: "0px", marginTop: "auto", marginBottom: "auto", marginRight:  NavTextMargin + 'px'}}
       >
-        <a style={{marginLeft: '10px', marginRight: '10px'}} href="mailto: gregdicristofaro@gmail.com">
+        <a style={{marginLeft: '10px', marginRight: '10px'}} href="mailto:gregdicristofaro@gmail.com">
           <MailIcon style={{height: IconHeight + 'px', width: MailWidth + 'px'}}/>
         </a>
         <a href="http://www.github.com/gdicristofaro">
