@@ -1,3 +1,3 @@
 # My GitHub Webpage
 
-Source for this project can be found in the "nodeSrc" folder.
+This is the react setup for the website located at [https://gdicristofaro.github.io](https://gdicristofaro.github.io)
