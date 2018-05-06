@@ -19,7 +19,7 @@ var projData = [
   {
     img: 'mapmaker.png',
     header: 'MapMaker',
-    description: "Generates a map of the word with a map for a particular country superimposed using angular 2 and js canvas for image rendering.  The generated image is divided into quarters for easy printing.",
+    description: "Generates a map of the world with a map for a particular country superimposed using angular 2 and js canvas for image rendering.  The generated image is divided into quarters for easy printing.",
     href: 'http://www.github.com/gdicristofaro/MapMaker',
     alternateHref: 'https://gdicristofaro.github.io/MapMaker/',
     alternateHrefTitle: 'Live Demo'
