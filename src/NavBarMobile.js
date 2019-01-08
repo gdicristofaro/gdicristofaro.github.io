@@ -11,7 +11,10 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import List, { ListItem, ListItemIcon, ListItemText } from '@material-ui/core/List';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
 
 // pages are a series of links
