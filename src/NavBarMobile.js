@@ -7,11 +7,11 @@ import NavBarCommon, {IconHeight, NavTextMargin, MobileWidth} from './NavBarComm
 import DarkTheme from './DarkTheme';
 import {NavLink } from 'react-router-dom';
 
-import SvgIcon from 'material-ui/SvgIcon';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
-import { MuiThemeProvider } from 'material-ui/styles';
-import Drawer from 'material-ui/Drawer';
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import List, { ListItem, ListItemIcon, ListItemText } from '@material-ui/core/List';
 
 
 // pages are a series of links

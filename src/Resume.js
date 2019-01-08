@@ -39,13 +39,16 @@ export default class Resume extends React.Component {
                     <div class="ResumeDate">July 2017 - present</div>
                 </div>
                 <ul>
-                    <li>Develop RESTful applications utilizing Web API and Json.NET</li>
+                    <li>Develop RESTful applications utilizing .NET Web API and Json.NET</li>
                     <li>Create RESTful client applications in Java utilizing GSON and in C# utilizing Json.NET</li>
-                    <li>Web-based UI development with ASP.NET Web Forms, ASP.NET MVC, Kendo UI, Bootstrap, JQuery, CSS and HTML</li>
+                    <li>Web-based UI development with ASP.NET Web Forms, ASP.NET MVC, Kendo UI, Bootstrap, JQuery, CSS
+                        and HTML</li>
                     <li>Data visualizations with JavaScript, TypeScript, D3.js and SVG</li>
-                    <li>Database interaction with Microsoft SQL Server, T-SQL, Entity Framework, Linq to SQL and ADO.NET</li>
-                    <li>Office document exporting with EPPlus, Office Open XML and Spire Powerpoint utilzing ImageMagick / Magick.NET for image embeds</li>
-                    <li>NUnit/Moq unit testing and Ninject dependency injection</li>
+                    <li>Database interaction with Microsoft SQL Server, T-SQL, Entity Framework, Linq to SQL and
+                        ADO.NET</li>
+                    <li>Office document exporting with EPPlus, Office Open XML and Spire Powerpoint utilizing
+                        ImageMagick / Magick.NET for image embeds</li>
+                    <li>Develop web application utilizing React, Redux and Bootstrap frontend with ASP.NET Core backend</li>
                 </ul>
             </div>
             <div class="ResumeSectionItem ResumeBU">
@@ -56,58 +59,86 @@ export default class Resume extends React.Component {
                     <div class="ResumeDate">Fall 2017 - Spring 2019 (expected)</div>
                 </div>
                 <div class="ResumeItemDescription">
-                    <p>Classes in Python Development, Agile SDLC, Data Structures and Algorithms. Current GPA 4.00/4.00</p>
+                    <p>Classes in Python Development, Agile SDLC, Data Structures and Algorithms, Database Design and
+                        Implementation and Angular development. Current GPA 3.96/4.00</p>
                 </div>
             </div>
             <div class="ResumeSectionItem ResumeHarvard">
                 <div class="ResumeLeftRight">
                     <div>
-                        <span class="ResumeItemHeader">Software Engineering Certificate:</span> Harvard University, Cambridge, MA
+                        <span class="ResumeItemHeader">Software Engineering Certificate:</span> Harvard University,
+                        Cambridge, MA
                     </div>
                     <div class="ResumeDate">Fall 2012 - Fall 2014</div>
                 </div>
                 <div class="ResumeItemDescription">
-                    <p>Classes included Programming Microsoft .NET, Systems Programming and Machine Organization, and Software
+                    <p>Classes included Programming Microsoft .NET, Systems Programming and Machine Organization and
+                        Software
                         Design. GPA 4.00 / 4.00</p>
                 </div>
             </div>
         </div>
 
-        <div class="ResumeSectionItem ResumeNotableProgramsBuilt">
+        <div class="ResumeSectionItemCanBreak ResumeNotableProgramsBuilt">
             <div>
                 <span class="ResumeItemHeader">Notable Programs Built:</span>
             </div>
             <div class="ResumeItemDescription">
-                <p class="ResumeItemHeader ResumeAlgorithmic">Algorithmic:</p>
-                <ul class="ResumeAlgorithmic">
-                    <li>Scala implementation of the Seam-Carving Algorithm for content-aware image resizing</li>
-                    <li>Class scheduling program based on the AC-3 algorithm utilizing Apache POI API to import from excel documents
-                        written in Scala</li>
-                    <li>Spell-checking algorithm built in C, which loads and unloads a dictionary file and checks words in a
-                        dictionary utilizing a self-developed hash map with buckets</li>
-                </ul>
-                <p class="ResumeItemHeader ResumeMobile">Mobile:</p>
-                <ul class="ResumeMobile">
-                    <li>JQuery-based mobile application for determining local weather and news using Yahoo and Google API's</li>
-                    <li>Android NPuzzle game with an A* search algorithm for solving</li>
-                </ul>
-                <p class="ResumeItemHeader ResumeWeb">Web:</p>
-                <ul class="ResumeWebPrograms">
-                    <li>Map making web application developed with Node.js, TypeScript and Angular 2 manipulating uploaded images
-                        using JavaScript canvas operations utilized in showing geography to young students</li>
-                    <li>Calendar making application developed with Node.js, Webpack, TypeScript, React, Moment.js, Material-UI
-                        and PptxGenJS that generates a PowerPoint of a calendar with calendar events for the year</li>
-                    <li>Python web application for converting Photoshop files into SVG's for data visualization</li>
-                </ul>
-                <p class="ResumeItemHeader ResumeDesktopApplications">Desktop Applications:</p>
-                <ul class="ResumeDesktopPrograms">
-                    <li>Memory-style game built in Java AWT and Swing, which can be configured to either use images or text for
-                        pairs used as an educational tool</li>
-                    <li>Police scanner UI utilizing bing maps API, WPF, WCF, and the Prism framework built in C#</li>
-                    <li>Music composition software for young students built in Java utilizing the LibGDX library for cross-platform
-                        deployment: processes PCM audio data, utilizes the JavaScript Web Audio API, visualizes music in
-                        a sequencer, and renders standard music notation</li>
-                </ul>
+                <div class="NoBreak">
+                    <p class="ResumeItemHeader ResumeAlgorithmic">Algorithmic:</p>
+                    <ul class="ResumeAlgorithmic">
+                        <li>Scala implementation of the Seam-Carving Algorithm for content-aware image resizing</li>
+                        <li>Class scheduling program based on the AC-3 algorithm utilizing Apache POI API to import
+                            from excel documents
+                            written in Scala</li>
+                        <li>Spell-checking algorithm built in C, which loads and unloads a dictionary file and checks
+                            words in a
+                            dictionary utilizing a self-developed hash map with buckets</li>
+                        <li>Implementation of the Constant-Q transform in TypeScript for performing spectral analysis
+                            on music utilizing
+                            Angular development, Chart.js, Web Audio API and Web Workers</li>
+                        <li>PostgreSQL database project for running queries to determine area covered by a
+                            region as well as the overlap of regions utilizing PostGIS</li>
+                    </ul>
+                </div>
+                <div class="NoBreak">
+                    <p class="ResumeItemHeader ResumeMobile">Mobile:</p>
+                    <ul class="ResumeMobile">
+                        <li>Android NPuzzle game with an A* search algorithm for solving</li>
+                    </ul>
+                </div>
+                <div class="NoBreak">
+                    <p class="ResumeItemHeader ResumeWeb">Web:</p>
+                    <ul class="ResumeWebPrograms">
+                        <li>Map making web application developed with Node.js, TypeScript and Angular manipulating
+                            uploaded
+                            images
+                            using JavaScript canvas operations utilized in showing geography to young students</li>
+                        <li>Calendar making application developed with Node.js, Webpack, TypeScript, React, Moment.js,
+                            Material-UI
+                            and PptxGenJS that generates a PowerPoint of a calendar with calendar events for the year</li>
+                        <li>Python web application for converting Photoshop files into SVG's for data visualization</li>
+                    </ul>
+                </div>
+                <div class="NoBreak">
+                    <p class="ResumeItemHeader ResumeDesktopApplications">Desktop Applications:</p>
+                    <ul class="ResumeDesktopPrograms">
+                        <li>Electron-based desktop application for parsing Esri shapefiles and combining them into a
+                            single
+                            GeoJSON file</li>
+                        <li>Memory-style game built in Java AWT and Swing, which can be configured to either use images
+                            or
+                            text for
+                            pairs used as an educational tool</li>
+                        <li>Music composition software for young students built in Java utilizing the LibGDX library
+                            for
+                            cross-platform
+                            deployment: processes PCM audio data, utilizes the JavaScript Web Audio API, visualizes
+                            music
+                            in
+                            a sequencer, and renders standard music notation</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="ResumeSectionItem ResumeLangaugesAndTechnologies">
@@ -115,9 +146,9 @@ export default class Resume extends React.Component {
                 <span class="ResumeItemHeader">Languages and Technologies:</span>
             </div>
             <ul>
-                <li>Experienced in Java, C, C#, SQL, TypeScript, Javascript/HTML/CSS, JQuery</li>
-                <li>Working knowledge of Ubuntu, Linux, Amazon AWS, Google App Engine, Heroku, shell scripting, PHP, Dart, Rust, OCaml, React,
-                    Python, Scala, F#</li>
+                <li>Experienced in Java, C, C#, SQL, TypeScript, Javascript/HTML/CSS, JQuery and React</li>
+                <li>Working knowledge of Linux, Google App Engine, Heroku, shell scripting, PHP,
+                    Python, Scala and F#</li>
             </ul>
         </div>
         <div class="ResumeSectionItem ResumeMusicEdTech">
@@ -125,9 +156,9 @@ export default class Resume extends React.Component {
                 <span class="ResumeItemHeader">Technology Applied to Music Education:</span>
             </div>
             <ul>
-                <li>Audio: GarageBand, Audacity, Sibelius, Finale</li>
-                <li>Video: iMovie, HandBrake, VLC, FFmpeg, avconv</li>
-                <li>Image: Gimp, Inkscape</li>
+                <li>Audio: GarageBand, Audacity, Noteflight, Sibelius and Finale</li>
+                <li>Video: iMovie, HandBrake, VLC, FFmpeg and avconv</li>
+                <li>Image: Gimp and Inkscape</li>
             </ul>
         </div>
 
@@ -150,14 +181,16 @@ export default class Resume extends React.Component {
             <div class="ResumeSectionItem ResumeUArts">
                 <div class="ResumeLeftRight">
                     <div>
-                        <span class="ResumeItemHeader">M.M. Music Education: </span> University of the Arts, Philadelphia, PA
+                        <span class="ResumeItemHeader">M.M. Music Education: </span> University of the Arts,
+                        Philadelphia, PA
                     </div>
                     <div class="ResumeDate">Summer 2012 - Fall 2015</div>
                 </div>
                 <div class="ResumeItemDescription">
                     <ul>
-                        <li>Thesis: Designed cross-platform music composition software to foster creativity for young students 
-                            that processes audio, visualizes music in a sequencer, and renders standard music notation</li>
+                        <li>Thesis: Designed cross-platform music composition software to foster creativity for young
+                            students
+                            that processes audio, visualizes music in a sequencer and renders standard music notation</li>
                         <li>GPA 4.00/4.00</li>
                     </ul>
                 </div>
@@ -178,7 +211,7 @@ export default class Resume extends React.Component {
                                 <div>Kodaly Level I Certification</div>
                                 <div class="ResumeDate">July 2010</div>
                             </div>
-                        </li>    
+                        </li>
                         <li>
                             <div class="ResumeLeftRight">
                                 <div>Maryland State Certification in Music (K-12)</div>
@@ -189,10 +222,10 @@ export default class Resume extends React.Component {
                 </div>
             </div>
 
-            <div class="ResumeSectionItem ResumeMusicTeacher">
+            <div class="ResumeSectionItemCanBreak ResumeMusicTeacher">
                 <div class="ResumeLeftRight">
                     <div>
-                        <span class="ResumeItemHeader">Music Teacher: </span> 
+                        <span class="ResumeItemHeader">Music Teacher: </span>
                         St. Mary's County Public Schools, Leonardtown, MD
                     </div>
                     <div class="ResumeDate">August 2006 - June 2017</div>
@@ -200,56 +233,33 @@ export default class Resume extends React.Component {
                 <div class="ResumeItemDescription">
                     <ul>
                         <li>
-                            <span class="ResumeItemHeader ResumeInstruction">Instruction: </span> 
+                            <span class="ResumeItemHeader ResumeInstruction NoBreak">Instruction: </span>
                             <ul>
                                 <li>Taught middle school general music and band director</li>
-                                <li>Taught elementary band and general music at a Title 1, 
+                                <li>Taught elementary band and general music at a Title 1 and
                                     special education magnet school</li>
-                                <li>Taught after school guitar club and after school 
-                                    percussion ensemble</li>
-                                <li>Taught private lessons on brass and woodwind instruments as
-                                    well as gave lessons on music history and music theory</li>
                             </ul>
                         </li>
-
                         <li>
-                            <span class="ResumeItemHeader ResumeSchedulingLogistics">Scheduling &amp; Logistics:</span> 
+                            <span class="ResumeItemHeader ResumeSchedulingLogistics NoBreak">Scheduling &amp; Logistics:</span>
                             <ul>
-                                <li>Organized grade level and school wide events including sing-alongs, 
-                                    dances, and multicultural educational events.</li>
-                                <li>Determined school schedule for the areas of music, physical education, 
-                                    art, and media.  Scheduling requirements included optimization of 
-                                    instruction by allowing for band, strings, and chorus pullout lessons 
-                                    to not interfere with certain periods of instruction, schedule classes 
-                                    to allow for easy transitions from class to class, and allow for similar 
-                                    schedules from week to week when possible.</li>
+                                <li>Organized grade level and school wide events</li>
+                                <li>Determined school-wide schedule to optimize instruction and transitions</li>
                             </ul>
                         </li>
                         <li>
-                            <span class="ResumeItemHeader ResumeSpecialNeeds">Special Education:</span> 
-                            Taught general music to community-based special education classes.
-                        </li>
-
-                        <li>
-                            <span class="ResumeItemHeader ResumeCollegialCollaboration">Collegial Collaboration:</span> 
-                            Coordinated with teachers to determine scheduling for pull-out lessons in band to 
-                            minimize impact on classroom teachers and coordinated with teachers to organize 
-                            performances and events.
-                        </li>
-                        
-                        <li>
-                            <span class="ResumeItemHeader ResumePresenter">Presenter:</span> 
-                            Presenter for staff development sessions for the Fine Arts Department of St. Mary's 
-                            County Public Schools. Presented on use of technology for administrative tasks, 
-                            Japanese music and activities, and a comparison of band method books.
-                        </li>
-
-                        <li>
-                            <span class="ResumeItemHeader ResumeLeadership">Leadership:</span> 
-                            On-site coordinator for Elementary All County Honor Band.  In charge of preparing 
-                            public information about rehearsal locations, reserving rooms for sectional 
-                            rehearsals, determining appropriate personnel for sectional rehearsals, and 
-                            coordinating with director.
+                            <span class="ResumeItemHeader ResumeLeadership NoBreak">Leadership and Collaboration:</span>
+                            <ul>
+                                <li>On-site coordinator for Elementary All County Honor Band in charge of preparing
+                                    public information about rehearsal locations, reserving rooms for sectional
+                                    rehearsals, determining appropriate personnel for sectional rehearsals, and
+                                    coordinating with director</li>
+                                <li>Coordinated with teachers to determine scheduling for pull-out lessons in band to
+                                    minimize impact on classroom teachers and coordinated with teachers to organize
+                                    performances and events</li>
+                                <li>Presenter for staff development sessions for the Fine Arts Department of St. Mary's
+                                    County Public Schools</li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
