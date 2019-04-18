@@ -60,7 +60,7 @@ export default class Resume extends React.Component {
                 </div>
                 <div class="ResumeItemDescription">
                     <p>Classes in Python Development, Agile SDLC, Data Structures and Algorithms, Database Design and
-                        Implementation, Server-Side Development and Angular Development. Current GPA 3.96/4.00</p>
+                        Implementation, Server-Side Development and Angular Development.  GPA 3.96/4.00</p>
                 </div>
             </div>
             <div class="ResumeSectionItem ResumeHarvard">
