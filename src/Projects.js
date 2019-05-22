@@ -3,10 +3,18 @@ import ProjectCell from './ProjectCell'
 
 var projData = [
   {
+    img: 'constantqtransform.png',
+    header: 'Constant Q Transform',
+    description: "In this project, someone can view all the pitches in a piece of music. ConstantQJs utilizes Benjamin Blankertz's algorithm implementing the Constant Q Transform.",
+    href: 'https://github.com/gdicristofaro/constantqjs',
+    alternateHref: 'https://gdicristofaro.github.io/constantqjs/',
+    alternateHrefTitle: 'Live Demo'
+  },
+  {
     img: 'calendarmaker.png',
     header: 'CalendarMaker',
     description: "Generates powerpoint of year long calendar with custom events, pictures and banners written with react, material ui and PptxGenJS",
-    href: 'http://www.github.com/gdicristofaro/CalendarMaker',
+    href: 'https://www.github.com/gdicristofaro/CalendarMaker',
     alternateHref: 'https://gdicristofaro.github.io/CalendarMaker/',
     alternateHrefTitle: 'Live Demo'
   },
@@ -14,7 +22,7 @@ var projData = [
     img: 'psdtosvg.png',
     header: 'PSDtoSVG',
     description: "Using python, this app creates an svg by generating svg paths for all layers of an svg except for the bottom most layer.  The bottom most layer is converted to a dataurl to be embedded in the svg.  The generated svg can be utilized for various data visualizations.",
-    href: 'http://www.github.com/gdicristofaro/PSDtoSVG',
+    href: 'https://www.github.com/gdicristofaro/PSDtoSVG',
     alternateHref: 'https://psdtosvg.herokuapp.com/',
     alternateHrefTitle: 'Live Demo'
   },
@@ -22,16 +30,8 @@ var projData = [
     img: 'mapmaker.png',
     header: 'MapMaker',
     description: "Generates a map of the world with a map for a particular country superimposed using angular 2 and js canvas for image rendering.  The generated image is divided into quarters for easy printing.",
-    href: 'http://www.github.com/gdicristofaro/MapMaker',
+    href: 'https://www.github.com/gdicristofaro/MapMaker',
     alternateHref: 'https://gdicristofaro.github.io/MapMaker/',
-    alternateHrefTitle: 'Live Demo'
-  },
-  {
-    img: 'mobileNewsWeather.png',
-    header: 'Mobile News & Weather',
-    description: "jQuery-based mobile application for determining local weather and news using Yahoo and Google API’s. This project was first created on October 7th, 2012 and was updated recently for changes in API's and to make use of React.",
-    href: 'http://www.github.com/gdicristofaro/MobileNewsWeather',
-    alternateHref: 'http://gdicristofaro.github.io/MobileNewsWeather',
     alternateHrefTitle: 'Live Demo'
   },
   {
@@ -39,7 +39,7 @@ var projData = [
     header: 'Seam Carve',
     description: "Scala implementation of the Seam-Carving Algorithm. This project was first created in 2013.  The project utilizes play framework, xuggle, nodejs/npm/gulp, material ui, fancybox, jquery, react, react dropzone, react swipeable views, and whammy.",
     href: 'https://github.com/gdicristofaro/SeamCarve',
-    alternateHref: 'http://seamcarve.herokuapp.com/',
+    alternateHref: 'https://seamcarve.herokuapp.com/',
     alternateHrefTitle: 'Live Demo'
   },
   {
