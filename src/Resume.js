@@ -146,7 +146,7 @@ export default class Resume extends React.Component {
             </div>
             <ul>
                 <li>Experienced in Java, C, C#, SQL, TypeScript, Javascript, HTML, CSS, JQuery, and React</li>
-                <li>Working knowledge of Linux, C++, PHP, Python, Scala, and F#</li>
+                <li>Working knowledge of Linux, Go, C++, PHP, Python, Scala, and F#</li>
             </ul>
         </div>
         <!-- <div class="ResumeSectionItem ResumeMusicEdTech">
