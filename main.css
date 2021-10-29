@@ -1,0 +1,231 @@
+*:focus {
+  outline: none;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  font-size: 13px;
+  background-color: #eee;
+}
+html,
+body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.baseHeaderFooter {
+  background-color: #0A1719;
+  color: #f9f9f9;
+  margin: 0px;
+  font-weight: 300;
+}
+.baseHeaderFooter a {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+.baseHeaderFooter a:hover {
+  color: #B2F4FF;
+}
+.smallImg path {
+  fill: #f9f9f9;
+}
+.smallImg:hover path {
+  fill: #B2F4FF;
+}
+.GithubIcon path,
+.MailIcon path,
+.MenuIcon path {
+  fill: #f9f9f9;
+}
+.GithubIcon:hover path,
+.MailIcon:hover path,
+.MenuIcon:hover path {
+  fill: #B2F4FF;
+}
+.letterhead {
+  font-weight: 300;
+  color: #5ACFE3;
+  font-size: 160%;
+}
+.header {
+  background-color: #0A1719;
+  color: #f9f9f9;
+  margin: 0px;
+  font-weight: 300;
+  overflow: hidden;
+}
+.header a {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+.header a:hover {
+  color: #B2F4FF;
+}
+.header h1 {
+  font-weight: 300;
+  color: #5ACFE3;
+  font-size: 160%;
+}
+.navbar {
+  background-color: #0A1719;
+  color: #f9f9f9;
+  margin: 0px;
+  font-weight: 300;
+}
+.navbar a {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+.navbar a:hover {
+  color: #B2F4FF;
+}
+.navbar h1 {
+  margin: 0px;
+}
+.navbar .navigation {
+  margin: 0px;
+}
+.navbar .navigation a {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 120%;
+}
+.navbar .navigation .selected {
+  color: #5ACFE3;
+}
+.footer {
+  background-color: #0A1719;
+  color: #f9f9f9;
+  margin: 0px;
+  font-weight: 300;
+}
+.footer a {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+.footer a:hover {
+  color: #B2F4FF;
+}
+.footer p {
+  padding: 0px;
+  margin: 5px;
+  text-align: center;
+  font-size: 90%;
+}
+.main {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 10px;
+  background-color: #eee;
+  color: #0A1719;
+}
+.main p {
+  font-size: 18px;
+}
+.main h1 {
+  font-size: 40px;
+}
+.main .highlightedText {
+  font-weight: 700;
+}
+.main a {
+  text-decoration: none;
+  color: #38808C;
+}
+.main a:hover {
+  color: #5ACFE3;
+}
+.MobileDrawer .selected {
+  background-color: #5ACFE3;
+}
+.MobileDrawer .selected h3 {
+  color: #303030;
+}
+.MobileDrawer .selected:hover {
+  background-color: #75E6F9;
+}
+.pagetransition-exit {
+  display: none;
+}
+.pagetransition-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.pagetransition-enter.pagetransition-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+.Resume {
+  font-family: Garamond, Georgia, serif;
+  font-size: 15px;
+  /*font-family: 'Roboto', sans-serif;*/
+  max-width: 800px;
+  margin: 0px auto;
+}
+.Resume * {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  /* added to ensure that size is overrided */
+  font-size: 16px !important;
+}
+.ResumeHeader p {
+  text-align: center;
+  font-size: 100%;
+}
+.ResumeTitle {
+  font-weight: 800;
+  font-size: 130%;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+.ResumeHorizontalDivider {
+  width: 100%;
+  border-top: 2px solid black;
+  height: 0px;
+  margin: 10px 0px 20px 0px;
+}
+.ResumeSectionItem {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  page-break-inside: avoid;
+}
+.ResumeItemDescription {
+  margin-left: 20px;
+}
+.ResumeSection {
+  margin-bottom: 30px;
+}
+.ResumeSection h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 100%;
+}
+.ResumeItemHeader {
+  font-weight: 800;
+}
+.ResumeLeftRight {
+  display: table;
+  width: 100%;
+}
+.ResumeLeftRight > div {
+  display: table-cell;
+}
+.ResumeLeftRight > .ResumeDate {
+  text-align: right;
+}
+.ResumeDate {
+  font-style: italic;
+}
+.Resume ul {
+  list-style-type: disc;
+  font-size: 100%;
+}
+.Resume ul ul {
+  list-style-type: circle;
+}
+@media print {
+  .ResumeHeader a {
+    text-decoration: none;
+    color: black;
+  }
+}
