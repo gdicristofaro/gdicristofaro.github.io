@@ -1,0 +1,271 @@
+@headerBackground: #0A1719;
+@headerForeground: #f9f9f9;
+@bodyContentShadow: #142F33;
+@accentColor: #5ACFE3;
+@highlightAccentColor: #B2F4FF;
+@darkAccentColor: #47A3B2;
+@darkerAccentColor: #38808C;
+@bodyBackground: #eee;
+@mainBackground: #eee;
+@mainTextColor: #0A1719;
+
+
+@headerWeight: 300;
+@highlightedText : 700;
+@heightTransitionTime : .3s;
+@opacityTransitionTime : .3s;
+
+*:focus {
+    outline: none;
+}
+
+html {
+  //font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 13px;
+  background-color: @bodyBackground;
+}
+
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.baseHeaderFooter {
+  background-color: @headerBackground;
+  color: @headerForeground;
+  margin: 0px;
+  font-weight: @headerWeight;
+
+  a {
+    text-decoration: none;
+    color: @headerForeground;
+
+    &:hover {
+      color: @highlightAccentColor;
+    }
+  }
+}
+
+
+.smallImg {
+  path {
+    fill: @headerForeground;
+  }
+
+  &:hover path {
+    fill: @highlightAccentColor;
+  }
+}
+
+.GithubIcon, .MailIcon, .MenuIcon {
+  .smallImg;
+}
+
+
+
+
+.letterhead {
+  font-weight: @headerWeight;
+  color: @accentColor;
+  font-size: 160%;
+}
+
+
+.header {
+  .baseHeaderFooter;
+  overflow: hidden;
+  h1 {
+    .letterhead;
+  }
+}
+
+
+.navbar {
+  .baseHeaderFooter;
+  h1 {
+    margin: 0px;
+  }
+
+  .navigation {
+    margin: 0px;
+
+    a {
+      font-weight: @headerWeight + 300;
+      text-transform: uppercase;
+      font-size: 120%;
+    }
+
+    .selected {
+      color: @accentColor;
+    }
+  }
+}
+
+.footer {
+  .baseHeaderFooter;
+
+  p {
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+    font-size: 90%;
+  }
+}
+
+
+.main {
+  max-width: 800px;
+  margin: 0px auto;
+
+  p {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+
+  padding: 10px;
+  background-color: @mainBackground;
+  color: @mainTextColor;
+
+  .highlightedText {
+    font-weight: @highlightedText;
+  }
+
+  a {
+    text-decoration: none;
+    color: @darkerAccentColor;
+
+    &:hover {
+      color: @accentColor;
+    }
+  }
+}
+
+.MobileDrawer .selected {
+  background-color: #5ACFE3;
+
+  h3 {
+    color: #303030;
+  }
+
+  &:hover {
+    background-color: #75E6F9;
+  }
+}
+
+
+
+.pagetransition-exit {
+  display: none;
+}
+
+.pagetransition-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.pagetransition-enter.pagetransition-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+
+
+.Resume {
+  font-family:Garamond, Georgia, serif;
+  font-size: 15px;
+  /*font-family: 'Roboto', sans-serif;*/
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+.Resume * {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  /* added to ensure that size is overrided */
+  font-size: 16px !important;
+}
+
+.ResumeHeader p {
+  text-align: center;
+  font-size: 100%;
+}
+
+.ResumeTitle {
+  font-weight: 800;
+  font-size: 130%;
+  text-shadow: 1px 1px rgba(0,0,0,.3)
+}
+
+.ResumeHorizontalDivider {
+  width: 100%;
+  border-top: 2px solid black;
+  height: 0px;
+  margin: 10px 0px 20px 0px;
+}
+
+.ResumeSectionItem {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  page-break-inside: avoid;
+}
+
+.ResumeItemDescription {
+  margin-left: 20px;
+}
+
+.ResumeSection {
+  margin-bottom: 30px;
+}
+
+.ResumeSection h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 100%;
+}
+
+.ResumeItemHeader {
+  font-weight: 800;
+}
+
+.ResumeLeftRight {
+  display: table;
+  width: 100%;
+}
+
+.ResumeLeftRight>div {
+  display: table-cell;
+}
+
+.ResumeLeftRight>.ResumeDate {
+  text-align: right;
+}
+
+.ResumeDate {
+  font-style: italic;
+}
+
+.Resume ul {
+  list-style-type: disc;
+  font-size: 100%;
+}
+
+.Resume ul ul {
+  list-style-type: circle;
+}
+
+@media print {
+  .ResumeHeader a {
+      text-decoration: none;
+      color: black;
+  }
+}
