@@ -30,12 +30,27 @@ export default class Resume extends React.Component {
         <!--Technology Experience-->
         <div class="ResumeSection">
             <h1>Technology Experience:</h1>
+            <div class="ResumeSectionItem ResumeBasis">
+                <div class="ResumeLeftRight">
+                    <div>
+                        <span class="ResumeItemHeader">Software Engineer:</span> Basis Technology, Vienna, VA
+                    </div>
+                    <div class="ResumeDate">February 2020 - Present</div>
+                </div>
+                <ul>
+                    <li>Develop and maintain a java desktop application with Swing, Apache Ivy, SQLite, PostgreSQL, and Netbeans RCP</li>
+                    <li>Manage automated testing using Jenkins, Bash scripting, Apache Ant, JUnit, Mockito, and snakeyaml</li>
+                    <li>Use Python to update and maintain application modules, manage application localization, automate the creation of application-specific databases, and verify E2E regression tests</li>
+                    <li>Manage parsing and exporting of documents using Jackson, Gson, and Apache POI</li>
+                    <li>Create RESTful and Reactive web applications using Spring Boot, Jackson, Spring JDBC, Maven, React, Material UI, Typescript, Server Sent Events, Project Reactor, Styled Components, and Swagger</li>
+                </ul>
+            </div>
             <div class="ResumeSectionItem ResumeKbr">
                 <div class="ResumeLeftRight">
                     <div>
                         <span class="ResumeItemHeader">Software Engineer:</span> KBR, Lexington Park, MD
                     </div>
-                    <div class="ResumeDate">July 2017 - present</div>
+                    <div class="ResumeDate">July 2017 - February 2020</div>
                 </div>
                 <ul>
                     <li>Develop RESTful applications utilizing .NET Web API and Json.NET</li>
@@ -145,8 +160,8 @@ export default class Resume extends React.Component {
                 <span class="ResumeItemHeader">Languages and Technologies:</span>
             </div>
             <ul>
-                <li>Experienced in Java, C, C#, SQL, TypeScript, Javascript, HTML, CSS, JQuery, and React</li>
-                <li>Working knowledge of Linux, Go, C++, PHP, Python, Scala, and F#</li>
+                <li>Experienced in Java, C, C#, SQL, Python, TypeScript, Javascript, HTML, CSS, and React</li>
+                <li>Working knowledge of Linux, Go, C++, Rust, PHP, Scala, and F#</li>
             </ul>
         </div>
         <!-- <div class="ResumeSectionItem ResumeMusicEdTech">
@@ -159,19 +174,6 @@ export default class Resume extends React.Component {
                 <li>Image: Gimp and Inkscape</li>
             </ul>
         </div> -->
-
-        <!--Government Credentials-->
-        <div class="ResumeSection ResumeGovernmenttCredentials">
-            <h1>Government Credentials:</h1>
-            <div class="ResumeSectionItem">
-                <div class="ResumeLeftRight">
-                    <div>
-                        <span class="ResumeItemHeader">Secret Clearance</span>
-                    </div>
-                    <div class="ResumeDate">October 2017 - present</div>
-                </div>
-            </div>
-        </div>
 
         <!--Teaching Experience-->
         <div class="ResumeSection ResumeTeachingExperience">
