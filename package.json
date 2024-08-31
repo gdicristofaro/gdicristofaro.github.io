@@ -1,38 +1,32 @@
 {
-  "name": "gdicristofaro-website",
-  "version": "1.0.0",
+  "name": "gdicristofaro.github.io",
+  "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.2",
-    "history": "^4.9.0",
-    "jquery": "^3.4.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-addons-css-transition-group": "^15.6.2",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "^3.0.1"
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.0.0",
+    "@mui/material": "^6.0.0",
+    "@types/react-transition-group": "^4.4.11",
+    "next": "14.2.7",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "less": "^3.9.0",
-    "gh-pages": "^2.0.1"
-  },
-  "scripts": {
-    "less": "lessc ./less/main.less ./public/main.css",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "deploy": "react-scripts build && gh-pages -d build -b main",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
 }
