@@ -1,15 +1,15 @@
 import React from 'react';
 import ProjectCell from './ProjectCell';
+import ResumeImg from './img/resumeThumb.png';
+
 
 
 // item to html: copy paste to https://www.tinymce.com/
 // html to jsx: http://magic.reactjs.net/htmltojsx.htm
-export default class Resume extends React.Component {
 
 
-  render() {
-    // html for easy copying and pasting from html document
-    var html = { __html: `
+// html for easy copying and pasting from html document
+const RESUME_HTML = `
     <div class="Resume">
         <!-- header -->
         <div class="ResumeHeader">
@@ -266,16 +266,13 @@ export default class Resume extends React.Component {
             </div>
         </div>
     </div>
-    `};
+    `
 
-    return (
-      <div>
-        <h1 style={{marginBottom: '30px', textAlign: 'center'}}>Resum&eacute;</h1>
-        <div dangerouslySetInnerHTML={html} />
-        <div>
-            <ProjectCell img="resumeThumb.png" header="PDF Version" style={{maxWidth: "350px", margin: "20px", display: "inline-block"}} description="Download the PDF version of my resume here" href="resume.pdf"/>
-        </div>
-      </div>
-    );
-  }
-}
+export default () => (<div>
+    <h1 style={{ marginBottom: '30px', textAlign: 'center' }}>Resum&eacute;</h1>
+    <div dangerouslySetInnerHTML={{ __html: RESUME_HTML }} />
+    <div>
+        <ProjectCell img={ResumeImg} header="PDF Version" style={{ maxWidth: "350px", margin: "20px", display: "inline-block" }} description="Download the PDF version of my resume here" href="resume.pdf" />
+    </div>
+</div>
+);
