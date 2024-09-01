@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from '@mui/material';
 
 import { NavBarDesktop } from './NavBarDesktop';
-import { NavBarMobile } from './NavBarMobile';
+import NavBarMobile from './NavBarMobile';
 import { NavBarHeight, MinDesktopWidth } from './NavBarCommon';
 import Header, { HeaderHeight } from './Header';
-import { Footer, footerHeight } from './Footer';
-import Home from './Home';
+import Footer, { footerHeight } from './Footer';
+import Home from './HomePage';
 import Projects from './Projects';
 import Resume from './Resume';
 
@@ -84,14 +84,14 @@ export default (props: {children: any}) => {
       className="main"
       style={{ minHeight: bodyHeight + "px" }}
     >
-      <CSSTransition
+      {/* <CSSTransition
         component="div"
         transitionName="pagetransition"
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}
-      >
+      > */}
         {children}
-      </CSSTransition>
+      {/* </CSSTransition> */}
     </div>);
 
   let navbar;
@@ -126,5 +126,4 @@ export default (props: {children: any}) => {
       <Footer />
     </div>
   );
-}
 }

@@ -1,34 +1,22 @@
-import React from 'react';
-import { GithubPath } from './GithubIcon';
+import { ListItem, ListItemText, ListItemIcon, SvgIcon, List } from '@mui/material';
+import React, { useState } from 'react';
 import { MailPath } from './MailIcon';
-
 import MenuIcon from './MenuIcon';
-import NavBarCommon, { IconHeight, NavTextMargin, MobileWidth } from './NavBarCommon';
-import DarkTheme from './DarkTheme';
-import { NavLink } from 'react-router-dom';
-
-import SvgIcon from '@material-ui/core/SvgIcon';
-
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-
-
+import { DarkTheme } from './Theme';
+import Link from 'next/link';
+import { GithubPath } from './GithubIcon';
 
 
 const Drawer = (prop: { pages: any[] }) => {
   let { pages } = prop;
   // map other local pages to menu items
   let normalPageComp = pages.map((linkInf, i) => (
-    <ListItem key={i} exact={true} component={NavLink} to={linkInf.href} activeClassName="selected" button>
+    <ListItem key={i} exact={true} component={Link} to={linkInf.href} activeClassName="selected" button>
       <ListItemText primary={<div dangerouslySetInnerHTML={{ __html: linkInf.name }}></div>} />
     </ListItem>));
 
   let emailComp = (
-    <ListItem button key={"email"} component="a" href="mailto:gregdicristofaro@gmail.com">
+    <ListItem type='button' key={"email"} component="a" href="mailto:gregdicristofaro@gmail.com">
       <ListItemIcon>
         <SvgIcon viewBox="0 0 20 20" style={{ marginRight: 0 }}>
           <MailPath />
@@ -38,7 +26,7 @@ const Drawer = (prop: { pages: any[] }) => {
     </ListItem>);
 
   let githubComp = (
-    <ListItem button key={"github"}
+    <ListItem type='button' key={"github"}
       component="a" href="https://github.com/gdicristofaro">
       <ListItemIcon>
         <SvgIcon viewBox="0 0 18 18" style={{ marginRight: 0 }}>
@@ -49,7 +37,7 @@ const Drawer = (prop: { pages: any[] }) => {
     </ListItem>);
 
   return (
-    <MuiThemeProvider theme={DarkTheme}>
+    // <MuiThemeProvider theme={DarkTheme}>
       <Drawer
         open={this.state.drawerOpen}
         onClose={() => setState({ drawerOpen: false })}
@@ -66,7 +54,7 @@ const Drawer = (prop: { pages: any[] }) => {
           </List>
         </div>
       </Drawer>
-    </MuiThemeProvider>
+    // </MuiThemeProvider>
   );
 }
 
