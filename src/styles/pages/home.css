@@ -1,0 +1,18 @@
+.homepage-main {
+    display: block;
+}
+
+.homepage-header {
+    text-align: center;
+}
+
+.homepage-profile-picture {
+    float: left;
+    margin-right: 10px;
+    height: 200px;
+    width: auto;
+}
+
+.homepage-paragraph {
+    margin-top: 0;
+}

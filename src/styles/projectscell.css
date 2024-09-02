@@ -1,0 +1,28 @@
+.ProjectCell {
+    max-width: 350px;
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.ProjectCellImage {
+    height: 200px;
+    transition: .5s
+}
+
+.ProjectCellImage:hover {
+    filter: brightness(50%)
+}
+
+.ProjectCellTitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.35417em;
+}
+
+.ProjectCellParagraph {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.46429em;
+}

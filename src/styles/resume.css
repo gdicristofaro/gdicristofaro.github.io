@@ -1,0 +1,89 @@
+.Resume {
+    font-family: Garamond, Georgia, serif;
+    font-size: 15px;
+    /*font-family: 'Roboto', sans-serif;*/
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+.Resume * {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    /* added to ensure that size is overrided */
+    font-size: 16px !important;
+}
+
+.ResumeHeader p {
+    text-align: center;
+    font-size: 100%;
+}
+
+.ResumeTitle {
+    font-weight: 800;
+    font-size: 150%;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ResumeHorizontalDivider {
+    width: 100%;
+    border-top: 2px solid black;
+    height: 0px;
+    margin: 10px 0px 20px 0px;
+}
+
+.ResumeSectionItem {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+}
+
+.ResumeItemDescription {
+    margin-left: 20px;
+}
+
+.ResumeSection {
+    margin-bottom: 30px;
+}
+
+.ResumeSection h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 100%;
+}
+
+.ResumeItemHeader {
+    font-weight: 800;
+}
+
+.ResumeLeftRight {
+    display: table;
+    width: 100%;
+}
+
+.ResumeLeftRight>div {
+    display: table-cell;
+}
+
+.ResumeLeftRight>.ResumeDate {
+    text-align: right;
+}
+
+.ResumeDate {
+    font-style: italic;
+}
+
+.Resume ul {
+    list-style-type: disc;
+    font-size: 100%;
+}
+
+.Resume ul ul {
+    list-style-type: circle;
+}
+
+@media print {
+    .ResumeHeader a {
+        text-decoration: none;
+        color: black;
+    }
+}

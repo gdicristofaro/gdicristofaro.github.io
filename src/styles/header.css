@@ -1,0 +1,44 @@
+.header {
+    width: 100%;
+    background-color: #0A1719;
+    color: #f9f9f9;
+    margin: 0px;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.header-inner {
+    height: 300px;
+}
+
+.header-circle-photo {
+    height: 200px;
+    width: auto;
+    margin: 0px auto;
+    display: block;
+}
+
+.header-letterhead {
+    margin: 0px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.header-dot {
+    font-size: 75%;
+}
+
+.header a {
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+.header a:hover {
+    color: #B2F4FF;
+}
+
+.header h1 {
+    font-weight: 300;
+    color: #5ACFE3;
+    font-size: 160%;
+}
