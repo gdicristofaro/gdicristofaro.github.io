@@ -43,7 +43,7 @@ const DesktopNavLinks = (props: {pages: any[]}) => {
 
   return (
     <div className="DesktopNavLinks">
-      <p className='navigation'>{pagesEls}</p>
+      <div className='navigation'>{pagesEls}</div>
     </div>
   );
 }

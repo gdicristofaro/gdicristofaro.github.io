@@ -9,33 +9,8 @@ import Header, { HeaderHeight } from './Header';
 import Footer, { footerHeight } from './Footer';
 import { MinDesktopWidth, NavBarHeight } from './NavBarConstants';
 import NavBarDesktop from './NavBarDesktop';
+import PageInfo from '../model/PageInfo';
 
-declare global {
-  interface Window {
-  }
-}
-
-export const myPages = {
-  Home: {
-    pagetitle: "Greg DiCristofaro",
-    name: "Home",
-    href: "/"
-    //content: (<Home />)
-  },
-  Projects: {
-    pagetitle: "Greg DiCristofaro - Projects",
-    name: "Projects",
-    href: "/projects"
-    //content: (<Projects />)
-  },
-  Resume:
-  {
-    pagetitle: "Greg DiCristofaro - Resum&eacute;",
-    name: "Resum&eacute;",
-    href: "/resume"
-    //content: (<Resume />)
-  }
-};
 
 interface BodyContentSettings {
   windowHeight: number,
@@ -44,13 +19,13 @@ interface BodyContentSettings {
   scrollY: number
 }
 
-export const indexedPages = [myPages['Home'], myPages['Projects'], myPages['Resume']];
+export const indexedPages = [PageInfo['Home'], PageInfo['Projects'], PageInfo['Resume']];
 
 export default (props: {children: any}) => {
   let { children } = props;
 
   let [{windowHeight, mobileDrawerOpen, isScrolled, scrollY}, setSettings] = useState<BodyContentSettings>({
-    windowHeight: 780, //window.innerHeight
+    windowHeight: 0, //window.innerHeight
     mobileDrawerOpen: false,
     isScrolled: false,
     scrollY: 0 //window.scrollY
@@ -65,6 +40,9 @@ export default (props: {children: any}) => {
 
     window.addEventListener('resize', onResizeEvent);
     window.addEventListener('scroll', onScrollEvent);
+
+    onResizeEvent(undefined);
+    onScrollEvent(undefined);
 
     return () => {
       window.removeEventListener('resize', onResizeEvent);

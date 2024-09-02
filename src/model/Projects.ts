@@ -57,12 +57,6 @@ export default [
     description: "Spell-checking algorithm built in C, which loads and unloads a dictionary file and checks words in a dictionary utilizing a self-developed hash map with buckets.",
     href: 'https://github.com/gdicristofaro/SpellChecker'
   },
-  // {
-  //   img: '/img/XMIParser.png',
-  //   header: 'XMI Parser',
-  //   description: "Parses XMI (version 1.1) and formats class information found in a class diagram into html format.",
-  //   href: 'https://github.com/gdicristofaro/XMI-parser'
-  // },
   {
     img: '/img/concentration.png',
     header: 'Concentration Game',
