@@ -66,6 +66,7 @@ body {
 
 .header-circle-photo {
   height: 200px;
+  width: auto;
   margin: 0px auto;
   display: block;
 }
@@ -94,6 +95,7 @@ body {
   float: left;
   margin-right: 10px;
   height: 200px;
+  width: auto;
 }
 
 .homepage-paragraph {
@@ -150,14 +152,17 @@ body {
 
 .desktop-icons-parent .NavIcon {
   height: 30px;
+  width: auto;
 }
 
 .desktop-icons-parent .MailIcon {
   width: 40px;
+  height: auto;
 }
 
 .desktop-icons-parent .GithubIcon {
   width: 30px;
+  height: auto;
 }
 
 .desktop-icons-parent .email-link {
@@ -180,4 +185,65 @@ body {
 .DesktopNavLinks .navigation {
   line-height: 50px;
   text-align: center;
+}
+
+.MobileMenuButtonParent {
+  padding: 0;
+  width: 45px;
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 30px;
+}
+
+.MobileMenuButtonParent .MenuIcon {
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
+
+.ProjectCellImage {
+  height: 200px;
+  transition: .5s
+}
+
+.ProjectCellImage:hover {
+  filter: brightness(50%)
+}
+
+.ProjectCellTitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.35417em;
+}
+
+.ProjectCellParagraph {
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 146429em;
+}
+
+
+.ProjectsParent {
+  text-align: center;
+}
+
+
+.ProjectCell {
+  max-width: 350px;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.ResumePage {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.ResumePage .ProjectCell {
+  max-width: 350px;
+  margin: 20px;
+  display: inline-block;
 }
