@@ -1,12 +1,11 @@
-import Link from "next/link";
-import BodyContent from "./BodyContent";
+import Link from 'next/link';
+import React from 'react'
 import Image from 'next/image'
-
 
 export default () => (
   <div className="homepage-main">
     <h1 className="homepage-header">Hello!</h1>
-    <Image className="homepage-profile-picture" src={require("./img/profile.jpg")} alt="my profile picture" />
+    <img className="homepage-profile-picture" src="/img/profile.jpg" alt="my profile picture" />
     <p className="homepage-paragraph">
       Hello, and welcome to my website.
       I write software and play music.
