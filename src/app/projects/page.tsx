@@ -1,6 +1,6 @@
 import React from 'react';
-import ProjectCell from './ProjectCell'
-import Projects from './Projects'
+import ProjectCell from '../../components/ProjectCell'
+import Projects from '../../components/Projects'
 
 
 export default () => (

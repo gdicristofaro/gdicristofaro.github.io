@@ -27,7 +27,8 @@ export default (props: {
         className="projectLink"
       >
         <CardMedia
-          image={img}
+          component="img"
+          src={img}
           title={header}
           className='ProjectCellImage'
         />

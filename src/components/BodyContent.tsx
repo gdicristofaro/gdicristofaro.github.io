@@ -50,10 +50,10 @@ export default (props: {children: any}) => {
   let { children } = props;
 
   let [{windowHeight, mobileDrawerOpen, isScrolled, scrollY}, setSettings] = useState<BodyContentSettings>({
-    windowHeight: window.innerHeight,
+    windowHeight: 780, //window.innerHeight
     mobileDrawerOpen: false,
     isScrolled: false,
-    scrollY: window.scrollY
+    scrollY: 0 //window.scrollY
   });
 
   useEffect(() => {
