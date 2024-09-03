@@ -4,6 +4,7 @@ import GithubIcon from './GithubIcon';
 import Link from 'next/link';
 import NavBarParent from './NavBarParent';
 import NavBarNameLink from './NavBarNameLink';
+import { PageInfo } from '@/model/PageInfo';
 
 
 
@@ -24,21 +25,17 @@ const DesktopIconsParent = (props: {opacity: number}) => {
 }
 
 // desktop version containing links for navigation; opacity is always 1
-const DesktopNavLinks = (props: {pages: any[]}) => {
-  let {pages} = props;
+const DesktopNavLinks = (props: {pages: PageInfo[], pathName: string}) => {
+  let {pages, pathName} = props;
 
   // render pages
   const pagesEls = pages.map(function(linkInf, i) {
-    //var linkClass = (linkInf.href == that.props.location.pathname) ? "selected" : "";
-    var innerText = {__html: linkInf.name};
-    return (<Link
-              className="DesktopNavLink"
-              key={i}
-              href={linkInf.href}
-              // dangerouslySetInnerHTML={innerText}
-              >
-                {linkInf.name}
-            </Link>);
+    if (linkInf.href.toLocaleLowerCase() === pathName.toLocaleLowerCase()) {
+      return (<span className="DesktopNavLink selected" key={i}>{linkInf.name}</span>);
+    } else {
+      return (<Link className="DesktopNavLink" key={i} href={linkInf.href}>{linkInf.name}</Link>);
+    }
+
   });
 
   return (
@@ -50,13 +47,13 @@ const DesktopNavLinks = (props: {pages: any[]}) => {
 
 
 // pages are a series of links
-export default (props: {opacity: number, pages: any[]}) => {
-  let {opacity, pages} = props;
+export default (props: {opacity: number, pathName:string, pages: PageInfo[]}) => {
+  let {opacity, pathName, pages} = props;
   return (
     <NavBarParent
       className="DesktopNavParent"
       left={<NavBarNameLink opacity={opacity} />}
-      center={<DesktopNavLinks pages={pages} /> }
+      center={<DesktopNavLinks pages={pages} pathName={pathName} /> }
       right={<DesktopIconsParent opacity={opacity} />}
     />
   );

@@ -3,8 +3,8 @@ import React from 'react'
 import Image from 'next/image'
 
 export default () => (
-  <div className="homepage-main">
-    <h1 className="homepage-header">Hello!</h1>
+  <div className="homepage-main page-transition">
+    <h1 className="homepage-header page-header">Hello!</h1>
     <img className="homepage-profile-picture" src="/img/profile.jpg" alt="my profile picture" />
     <p className="homepage-paragraph">
       Hello, and welcome to my website.

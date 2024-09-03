@@ -5,7 +5,7 @@ export default (props: { opacity: number }) => {
   let { opacity } = props;
 
   return (
-    <div className="navbar-name-link"
+    <div className="navbar-name-div"
       style={{ opacity, visibility: opacity <= 0 ? 'hidden' : 'visible' }}
     >
       <a href="http://www.gdicristofaro.com/">

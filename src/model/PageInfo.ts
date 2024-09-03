@@ -1,4 +1,10 @@
-export default {
+export interface PageInfo {
+  pagetitle: string,
+  name: string,
+  href: string
+}
+
+const pages: {[key: string]: PageInfo} = {
   Home: {
     pagetitle: "Greg DiCristofaro",
     name: "Home",
@@ -18,3 +24,7 @@ export default {
     //content: (<Resume />)
   }
 };
+
+export default pages;
+
+
