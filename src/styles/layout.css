@@ -1,36 +1,62 @@
 .bodyContent {
-    padding: 0px;
-    margin: 0px;
-    min-height: 100%;
-    position: relative;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100%;
+  position: relative;
 }
 
 .innerBodyContent {
-    position: fixed;
-    width: 100%;
-    z-index: 999;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
 .main {
-    max-width: 800px;
-    margin: 0px auto;
-    padding: 10px;
-    background-color: #eee;
-    color: #0A1719;
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 10px;
+  background-color: #eee;
+  color: #0A1719;
+}
+
+.main p {
+  font-size: 18px;
+}
+
+.main h1 {
+  font-size: 40px;
+}
+
+.main .highlightedText {
+  font-weight: 700;
+}
+
+.page-header {
+  font-weight: 900;
+}
+
+.main a {
+  text-decoration: none;
+  color: #38808C;
+}
+
+.main a:hover {
+  color: #5ACFE3;
+}
+
+
+.page-transition {
+  opacity: 0;
+  animation: fadeIn .35s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0.3;
   }
-  .main p {
-    font-size: 18px;
+
+  to {
+      opacity: 1;
   }
-  .main h1 {
-    font-size: 40px;
-  }
-  .main .highlightedText {
-    font-weight: 700;
-  }
-  .main a {
-    text-decoration: none;
-    color: #38808C;
-  }
-  .main a:hover {
-    color: #5ACFE3;
-  }
+}
+

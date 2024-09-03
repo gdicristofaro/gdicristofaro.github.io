@@ -1,11 +1,3 @@
-.navbar-name-link {
-    line-height: 50px;
-}
-
-.navbar-name-text {
-    text-align: left;
-}
-
 .navbar {
     min-height: 50px;
     width: 100%;
@@ -17,6 +9,31 @@
     padding: 0 20px;
     margin: 0;
     position: relative;
+    background-color: #0A1719;
+    color: #f9f9f9;
+    font-weight: 300;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+.navbar a:hover {
+    color: #B2F4FF;
+}
+
+.navbar h1 {
+    margin: 0px;
+}
+
+
+.navbar-name-div {
+    line-height: 50px;
+}
+
+.navbar-name-text {
+    text-align: left;
 }
 
 .navbar-child {
@@ -44,18 +61,14 @@
     margin-right: 20px;
 }
 
-.desktop-icons-parent .NavIcon {
+.desktop-icons-parent .NavIcon,
+.desktop-icons-parent .GithubIcon {
     height: 30px;
     width: auto;
 }
 
 .desktop-icons-parent .MailIcon {
     width: 40px;
-    height: auto;
-}
-
-.desktop-icons-parent .GithubIcon {
-    width: 30px;
     height: auto;
 }
 
@@ -71,19 +84,8 @@
     justify-content: end;
 }
 
-.navbar-name-link .DesktopNavParent {
-    margin-left: 20px;
-}
-
 .DesktopNavLink {
     margin: 0px 15px;
-}
-
-.navigation .DesktopNavLinks {
-    line-height: 50px;
-    text-align: center;
-    margin: auto 15px;
-    font-weight: 800;
 }
 
 .MobileMenuButtonParent {
@@ -101,7 +103,7 @@
     cursor: pointer;
 }
 
-.GithubIcon path,
+.NavIcon path,
 .MailIcon path,
 .MenuIcon path {
     fill: #f9f9f9;
@@ -113,31 +115,8 @@
     fill: #B2F4FF;
 }
 
-.navbar {
-    background-color: #0A1719;
-    color: #f9f9f9;
-    margin: 0px;
-    font-weight: 300;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #f9f9f9;
-}
-
-.navbar a:hover {
-    color: #B2F4FF;
-}
-
-.navbar h1 {
-    margin: 0px;
-}
-
 .navbar .navigation {
     margin: 0px;
-}
-
-.navbar .navigation a {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 120%;
@@ -145,6 +124,13 @@
 
 .navbar .navigation .selected {
     color: #5ACFE3;
+}
+
+.navigation .DesktopNavLinks {
+    line-height: 50px;
+    text-align: center;
+    margin: auto 15px;
+    font-weight: 800;
 }
 
 .MobileDrawer .selected {

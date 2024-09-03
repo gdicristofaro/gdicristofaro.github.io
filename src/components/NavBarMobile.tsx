@@ -8,15 +8,17 @@ import { GithubPath } from './GithubIcon';
 import Drawer from '@mui/material/Drawer';
 import NavBarParent from './NavBarParent';
 import NavBarNameLink from './NavBarNameLink';
+import { PageInfo } from '@/model/PageInfo';
 
 
-const NavBarDrawer = (prop: { pages: any[], drawerOpen: boolean, setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
-  let { pages, drawerOpen, setDrawerOpen } = prop;
+const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>, pathName: string }) => {
+  let { pages, drawerOpen, setDrawerOpen, pathName } = prop;
   // map other local pages to menu items
-  let normalPageComp = pages.map((linkInf, i) => (
-    <ListItem key={i} component={Link} href={linkInf.href} type='button'>
-      <ListItemText primary={<div dangerouslySetInnerHTML={{ __html: linkInf.name }}></div>} />
-    </ListItem>));
+  let normalPageComp = pages.map((linkInf, i) => {
+      return (<ListItem key={i} component={Link} href={linkInf.href} type='button' className={(pathName.toLocaleLowerCase() === linkInf.href.toLocaleLowerCase()) ? " selected" : ""}>
+        <ListItemText primary={<div>{linkInf.name}</div>} />
+      </ListItem>);
+  });
 
   let emailComp = (
     <ListItem type='button' key={"email"} component="a" href="mailto:gregdicristofaro@gmail.com">
@@ -73,13 +75,13 @@ const MobileMenuButton = (props: { setDrawerOpen: React.Dispatch<React.SetStateA
 }
 
 // pages are a series of links
-export default (props: { opacity: number, pages: any[] }) => {
-  let { opacity, pages } = props;
+export default (props: { opacity: number, pages: PageInfo[], pathName: string }) => {
+  let { opacity, pages, pathName } = props;
   let [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
     <div>
-      <NavBarDrawer {...{ pages, drawerOpen, setDrawerOpen }} />
+      <NavBarDrawer {...{ pages, drawerOpen, setDrawerOpen, pathName }} />
       <NavBarParent
         left={<MobileMenuButton {...{ drawerOpen, setDrawerOpen }} />}
         center={<NavBarNameLink opacity={opacity} />}

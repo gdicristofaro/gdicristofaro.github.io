@@ -11,6 +11,8 @@
     margin-bottom: 3px;
     /* added to ensure that size is overrided */
     font-size: 16px !important;
+    line-height: 1.25;
+
 }
 
 .ResumeHeader p {
@@ -75,6 +77,7 @@
 .Resume ul {
     list-style-type: disc;
     font-size: 100%;
+    margin-left: 30px;
 }
 
 .Resume ul ul {

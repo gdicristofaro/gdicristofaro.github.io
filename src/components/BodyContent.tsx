@@ -9,7 +9,9 @@ import Header, { HeaderHeight } from './Header';
 import Footer, { footerHeight } from './Footer';
 import { MinDesktopWidth, NavBarHeight } from './NavBarConstants';
 import NavBarDesktop from './NavBarDesktop';
-import PageInfo from '../model/PageInfo';
+import pages, {PageInfo} from '../model/PageInfo';
+import { usePathname } from 'next/navigation';
+import { ViewTransitions } from 'next-view-transitions';
 
 
 interface BodyContentSettings {
@@ -19,10 +21,12 @@ interface BodyContentSettings {
   scrollY: number
 }
 
-export const indexedPages = [PageInfo['Home'], PageInfo['Projects'], PageInfo['Resume']];
+export const indexedPages: PageInfo[] = [pages['Home'], pages['Projects'], pages['Resume']];
 
 export default (props: {children: any}) => {
   let { children } = props;
+
+  let pathName = usePathname();
 
   let [{windowHeight, mobileDrawerOpen, isScrolled, scrollY}, setSettings] = useState<BodyContentSettings>({
     windowHeight: 0, //window.innerHeight
@@ -41,8 +45,7 @@ export default (props: {children: any}) => {
     window.addEventListener('resize', onResizeEvent);
     window.addEventListener('scroll', onScrollEvent);
 
-    onResizeEvent(undefined);
-    onScrollEvent(undefined);
+    setSettings(prev => ({...prev, windowHeight: window.innerHeight, scrollY: window.scrollY}))
 
     return () => {
       window.removeEventListener('resize', onResizeEvent);
@@ -66,14 +69,7 @@ export default (props: {children: any}) => {
       className="main"
       style={{ minHeight: bodyHeight + "px" }}
     >
-      {/* <CSSTransition
-        component="div"
-        transitionName="pagetransition"
-        transitionEnterTimeout={500}
-        transitionLeaveTimeout={500}
-      > */}
         {children}
-      {/* </CSSTransition> */}
     </div>);
 
   let navbar;
@@ -83,6 +79,7 @@ export default (props: {children: any}) => {
     navbar = (
       <NavBarMobile
         // handleToggle={mobileDrawerToggler}
+        pathName={pathName}
         pages={indexedPages}
         opacity={navBarOpacity}
       />);
@@ -90,6 +87,7 @@ export default (props: {children: any}) => {
   else {
     navbar = (
       <NavBarDesktop
+        pathName={pathName}
         pages={indexedPages}
         opacity={navBarOpacity}
       />
