@@ -12,7 +12,6 @@
 }
 
 .main {
-  max-width: 800px;
   margin: 0px auto;
   padding: 10px;
   background-color: #eee;
@@ -44,6 +43,11 @@
   color: #5ACFE3;
 }
 
+.page-content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .page-transition {
   opacity: 0;
