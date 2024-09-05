@@ -1,6 +1,6 @@
-import puppeteer from 'puppeteer';
-import {promises} from 'fs';
-import path from 'path';
+const puppeteer = require('puppeteer');
+const promises = require('fs').promises;
+const path = require('path');
 
 async function printPDF(dir: string) {
     const resumecss = await promises.readFile(path.join(dir, "src/styles/resume.css"), 'utf-8');
@@ -10,12 +10,12 @@ async function printPDF(dir: string) {
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
     await page.setContent(htmlStr, { waitUntil: 'networkidle0' });
-    const pdf = await page.pdf({ format: 'LETTER' });
+    const pdf = await page.pdf({ format: 'LETTER', margin: { left: '1in', top: '1in', right: '1in', bottom: '1in' } });
 
-    const pdfPath = path.join(dir, "resume.pdf");
+    const pdfPath = path.join(dir, "public/resume.pdf");
 
     await browser.close();
-    await promises.appendFile(pdfPath, Buffer.from(pdf));
+    await promises.writeFile(pdfPath, Buffer.from(pdf));
 }
 
 printPDF(__dirname).finally(() => console.log("done."));
