@@ -8,7 +8,7 @@
 }
 
 .header-inner {
-    height: 300px;
+    height: 285px;
 }
 
 .header-circle-photo {
@@ -26,6 +26,8 @@
 
 .header-dot {
     font-size: 75%;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .header a {
