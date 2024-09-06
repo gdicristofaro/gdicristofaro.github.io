@@ -29,10 +29,10 @@ export default (props: {children: any}) => {
   let pathName = usePathname();
 
   let [{windowHeight, mobileDrawerOpen, isScrolled, scrollY}, setSettings] = useState<BodyContentSettings>({
-    windowHeight: 0, //window.innerHeight
+    windowHeight: 0,
     mobileDrawerOpen: false,
     isScrolled: false,
-    scrollY: 0 //window.scrollY
+    scrollY: 0
   });
 
   useEffect(() => {

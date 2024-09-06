@@ -2,7 +2,6 @@ import { ListItem, ListItemText, ListItemIcon, SvgIcon, List } from '@mui/materi
 import React, { useState } from 'react';
 import { MailPath } from './MailIcon';
 import MenuIcon from './MenuIcon';
-// import { DarkTheme } from './Theme';
 import Link from 'next/link';
 import { GithubPath } from './GithubIcon';
 import Drawer from '@mui/material/Drawer';
@@ -44,7 +43,6 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
   let pagesComp = [...normalPageComp, emailComp, githubComp];
 
   return (
-    // <MuiThemeProvider theme={DarkTheme}>
     <Drawer
       open={drawerOpen}
       onClose={() => setDrawerOpen(false)}
@@ -61,7 +59,6 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
         </List>
       </div>
     </Drawer>
-    // </MuiThemeProvider>
   );
 }
 
