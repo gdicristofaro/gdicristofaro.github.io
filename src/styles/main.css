@@ -14,26 +14,3 @@
 @import 'pages/resume.css';
 
 @import 'resume.css';
-
-/*
-.baseHeaderFooter {
-  background-color: #0A1719;
-  color: #f9f9f9;
-  margin: 0px;
-  font-weight: 300;
-}
-.baseHeaderFooter a {
-  text-decoration: none;
-  color: #f9f9f9;
-}
-.baseHeaderFooter a:hover {
-  color: #B2F4FF;
-}
-
- .smallImg path {
-  fill: #f9f9f9;
-}
-.smallImg:hover path {
-  fill: #B2F4FF;
-} 
-  */
