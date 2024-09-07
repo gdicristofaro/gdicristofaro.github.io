@@ -1,0 +1,23 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(22, 35, 37);
+        color: #eee;
+    }
+
+    .main a {
+        color: #5ACFE3;
+    }
+
+    .main a:hover {
+        color: #B2F4FF;
+    }
+
+    .MuiCard-root {
+        background-color: rgb(32, 47, 48);
+        color: #eee;
+    }
+
+    .ResumeHorizontalDivider {
+        border-color: #eee;
+    }
+}

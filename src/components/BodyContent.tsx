@@ -1,6 +1,5 @@
 'use client';
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from '@mui/material';
 
@@ -11,14 +10,12 @@ import { MinDesktopWidth, NavBarHeight } from './NavBarConstants';
 import NavBarDesktop from './NavBarDesktop';
 import pages, {PageInfo} from '../model/PageInfo';
 import { usePathname } from 'next/navigation';
-import { ViewTransitions } from 'next-view-transitions';
 
 
 interface BodyContentSettings {
   windowHeight: number,
-  mobileDrawerOpen: boolean,
-  isScrolled: boolean,
-  scrollY: number
+  scrollY: number,
+  showFooter: boolean
 }
 
 export const indexedPages: PageInfo[] = [pages['Home'], pages['Projects'], pages['Resume']];
@@ -28,11 +25,10 @@ export default (props: {children: any}) => {
 
   let pathName = usePathname();
 
-  let [{windowHeight, mobileDrawerOpen, isScrolled, scrollY}, setSettings] = useState<BodyContentSettings>({
+  let [{windowHeight, scrollY, showFooter}, setSettings] = useState<BodyContentSettings>({
     windowHeight: 0,
-    mobileDrawerOpen: false,
-    isScrolled: false,
-    scrollY: 0
+    scrollY: 0,
+    showFooter: false
   });
 
   useEffect(() => {
@@ -45,7 +41,7 @@ export default (props: {children: any}) => {
     window.addEventListener('resize', onResizeEvent);
     window.addEventListener('scroll', onScrollEvent);
 
-    setSettings(prev => ({...prev, windowHeight: window.innerHeight, scrollY: window.scrollY}))
+    setSettings(prev => ({...prev, windowHeight: window.innerHeight, scrollY: window.scrollY, showFooter: true }))
 
     return () => {
       window.removeEventListener('resize', onResizeEvent);
@@ -103,7 +99,7 @@ export default (props: {children: any}) => {
       </div>
       <div style={{ height: (HeaderHeight + NavBarHeight) + 'px' }}></div>
       {main}
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 }
