@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
 
 export default () => (
   <div className="homepage-main page-transition page-content">
