@@ -34,7 +34,7 @@ export default (props: {
         />
       </a>
       <CardContent>
-        <Typography gutterBottom component="h2" className="ProjectCellTitle">
+        <Typography gutterBottom component="h1" className="ProjectCellTitle">
           {header}
         </Typography>
         <Typography component="p" className="ProjectCellParagraph">

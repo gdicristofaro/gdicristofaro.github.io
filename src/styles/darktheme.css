@@ -12,8 +12,12 @@
         color: #B2F4FF;
     }
 
-    .MuiCard-root {
+    .MuiCard-root, .MuiPaper-root {
         background-color: rgb(32, 47, 48);
+        color: #eee;
+    }
+
+    .drawer-svgicon {
         color: #eee;
     }
 

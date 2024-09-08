@@ -15,7 +15,12 @@
     filter: brightness(50%)
 }
 
-.ProjectCellTitle {
-    font-size: 1.5rem;
-    font-weight: 400;
+.ProjectCell .ProjectCellTitle {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+.ProjectCell .ProjectCellParagraph {
+    font-size: 14px;
 }
