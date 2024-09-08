@@ -41,6 +41,10 @@
   color: #5ACFE3;
 }
 
+.description-text {
+  font-size: 18px;
+}
+
 .page-content {
   max-width: 800px;
   margin-left: auto;

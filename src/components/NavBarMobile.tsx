@@ -22,7 +22,7 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
   let emailComp = (
     <ListItem type='button' key={"email"} component="a" href="mailto:gregdicristofaro@gmail.com">
       <ListItemIcon>
-        <SvgIcon viewBox="0 0 20 20" style={{ marginRight: 0 }}>
+        <SvgIcon className="drawer-svgicon" viewBox="0 0 20 20">
           <MailPath />
         </SvgIcon>
       </ListItemIcon>
@@ -33,7 +33,7 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
     <ListItem type='button' key={"github"}
       component="a" href="https://github.com/gdicristofaro">
       <ListItemIcon>
-        <SvgIcon viewBox="0 0 18 18" style={{ marginRight: 0 }}>
+        <SvgIcon className="drawer-svgicon" viewBox="0 0 18 18">
           <GithubPath />
         </SvgIcon>
       </ListItemIcon>

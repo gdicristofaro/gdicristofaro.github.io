@@ -9,7 +9,7 @@
 .Resume * {
     margin-top: 3px;
     margin-bottom: 3px;
-    /* added to ensure that size is overrided */
+    /* added to ensure that size is overridden */
     font-size: 16px !important;
     line-height: 1.25;
 
