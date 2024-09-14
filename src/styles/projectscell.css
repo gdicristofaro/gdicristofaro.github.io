@@ -8,11 +8,12 @@
 
 .ProjectCellImage {
     height: 200px;
-    transition: .5s
+    transition: .5s;
+    filter: brightness(85%);
 }
 
 .ProjectCellImage:hover {
-    filter: brightness(50%)
+    filter: brightness(100%);
 }
 
 .ProjectCell .ProjectCellTitle {
