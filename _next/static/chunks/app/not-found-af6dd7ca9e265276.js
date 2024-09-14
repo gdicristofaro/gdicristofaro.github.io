@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[160],{6097:function(n,e,t){Promise.resolve().then(t.bind(t,8709))},8709:function(n,e,t){"use strict";t.r(e);var u=t(7437),f=t(2265);e.default=()=>((0,f.useEffect)(()=>{window.location.href="/"},[]),(0,u.jsx)("div",{}))}},function(n){n.O(0,[971,23,744],function(){return n(n.s=6097)}),_N_E=n.O()}]);
