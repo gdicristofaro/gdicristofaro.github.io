@@ -12,7 +12,8 @@
         color: #B2F4FF;
     }
 
-    .MuiCard-root, .MuiPaper-root {
+    .MuiDrawer-root.MuiDrawer-modal.MuiModal-root > .MuiPaper-root.MuiDrawer-paper, 
+    .MuiCard-root.MuiPaper-root {
         background-color: rgb(32, 47, 48);
         color: #eee;
     }

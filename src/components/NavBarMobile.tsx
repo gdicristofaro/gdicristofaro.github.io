@@ -14,9 +14,9 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
   let { pages, drawerOpen, setDrawerOpen, pathName } = prop;
   // map other local pages to menu items
   let normalPageComp = pages.map((linkInf, i) => {
-      return (<ListItem key={i} component={Link} href={linkInf.href} type='button' className={(pathName.toLocaleLowerCase() === linkInf.href.toLocaleLowerCase()) ? " selected" : ""}>
-        <ListItemText primary={<div>{linkInf.name}</div>} />
-      </ListItem>);
+    return (<ListItem key={i} component={Link} href={linkInf.href} type='button' className={(pathName.toLocaleLowerCase() === linkInf.href.toLocaleLowerCase()) ? " selected" : ""}>
+      <ListItemText primary={<div>{linkInf.name}</div>} />
+    </ListItem>);
   });
 
   let emailComp = (
@@ -44,6 +44,9 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
 
   return (
     <Drawer
+      PaperProps={{
+        sx: {}
+      }}
       open={drawerOpen}
       onClose={() => setDrawerOpen(false)}
     >
