@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build-resume && npm run build && touch out/.nojekyll",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -16,7 +17,7 @@
     "@mui/icons-material": "^6.0.0",
     "@mui/material": "^6.0.0",
     "@types/react-transition-group": "^4.4.11",
-    "next": "14.2.7",
+    "next": "^14.2.12",
     "next-view-transitions": "^0.3.0",
     "react": "^18",
     "react-dom": "^18"
