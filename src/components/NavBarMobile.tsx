@@ -1,4 +1,4 @@
-import { ListItem, ListItemText, ListItemIcon, SvgIcon, List } from '@mui/material';
+import { ListItem, ListItemText, ListItemIcon, SvgIcon, List, ListItemButton, Divider } from '@mui/material';
 import React, { useState } from 'react';
 import { MailPath } from './MailIcon';
 import MenuIcon from './MenuIcon';
@@ -11,42 +11,35 @@ import { PageInfo } from '@/model/PageInfo';
 
 
 const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>, pathName: string }) => {
-  let { pages, drawerOpen, setDrawerOpen, pathName } = prop;
+  const { pages, drawerOpen, setDrawerOpen, pathName } = prop;
   // map other local pages to menu items
-  let normalPageComp = pages.map((linkInf, i) => {
-    return (<ListItem key={i} component={Link} href={linkInf.href} type='button' className={(pathName.toLocaleLowerCase() === linkInf.href.toLocaleLowerCase()) ? " selected" : ""}>
-      <ListItemText primary={<div>{linkInf.name}</div>} />
+  const normalPageComp = pages.map((linkInf, i) => {
+    return (<ListItem key={i} disableGutters disablePadding className={(pathName.toLocaleLowerCase() === linkInf.href.toLocaleLowerCase()) ? " selected" : ""}>
+      <ListItemButton href={linkInf.href}>
+        <ListItemText primary={<div>{linkInf.name}</div>} />  
+      </ListItemButton>
     </ListItem>);
   });
 
-  let emailComp = (
-    <ListItem type='button' key={"email"} component="a" href="mailto:gregdicristofaro@gmail.com">
-      <ListItemIcon>
-        <SvgIcon className="drawer-svgicon" viewBox="0 0 20 20">
-          <MailPath />
+  const externalComps = [
+    { text: 'Email', href: 'mailto:gregdicristofaro@gmail.com', viewbox: '0 0 20 20', svgpath: (<MailPath/>)},
+    { text: 'GitHub', href: 'https://github.com/gdicristofaro', viewbox: '0 0 18 18', svgpath: (<GithubPath/>)}
+  ].map(({text, href, viewbox, svgpath}) => (
+    <ListItem key={text} disableGutters disablePadding>
+      <ListItemButton href={href}>
+      <ListItemIcon className='drawer-icon'>
+        <SvgIcon className="drawer-svgicon" viewBox={viewbox}>
+          {svgpath}
         </SvgIcon>
       </ListItemIcon>
-      <ListItemText primary="Email" />
-    </ListItem>);
+      <ListItemText primary={text} />
+      </ListItemButton>
+    </ListItem>));
 
-  let githubComp = (
-    <ListItem type='button' key={"github"}
-      component="a" href="https://github.com/gdicristofaro">
-      <ListItemIcon>
-        <SvgIcon className="drawer-svgicon" viewBox="0 0 18 18">
-          <GithubPath />
-        </SvgIcon>
-      </ListItemIcon>
-      <ListItemText primary="GitHub" />
-    </ListItem>);
-
-  let pagesComp = [...normalPageComp, emailComp, githubComp];
+  const pagesComp = [...normalPageComp, (<Divider key="divider"/>), ...externalComps];
 
   return (
     <Drawer
-      PaperProps={{
-        sx: {}
-      }}
       open={drawerOpen}
       onClose={() => setDrawerOpen(false)}
     >
@@ -58,7 +51,11 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
         onKeyDown={() => setDrawerOpen(false)}
       >
         <List>
-          {pagesComp}
+          {normalPageComp}
+        </List>
+        <Divider/>
+        <List>
+          {externalComps}
         </List>
       </div>
     </Drawer>
@@ -66,7 +63,7 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
 }
 
 const MobileMenuButton = (props: { setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
-  let { setDrawerOpen } = props;
+  const { setDrawerOpen } = props;
   return (
     <div className="MobileMenuButtonParent" onClick={() => setDrawerOpen((prev: boolean) => !prev)}>
       <MenuIcon />
@@ -75,12 +72,12 @@ const MobileMenuButton = (props: { setDrawerOpen: React.Dispatch<React.SetStateA
 }
 
 // pages are a series of links
-export default (props: { opacity: number, pages: PageInfo[], pathName: string }) => {
-  let { opacity, pages, pathName } = props;
-  let [drawerOpen, setDrawerOpen] = useState(false);
+const NavBarMobile = (props: { opacity: number, pages: PageInfo[], pathName: string }) => {
+  const { opacity, pages, pathName } = props;
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
-    <div>
+    <div className="MobileNavParent">
       <NavBarDrawer {...{ pages, drawerOpen, setDrawerOpen, pathName }} />
       <NavBarParent
         left={<MobileMenuButton {...{ drawerOpen, setDrawerOpen }} />}
@@ -90,3 +87,5 @@ export default (props: { opacity: number, pages: PageInfo[], pathName: string })
     </div>
   )
 }
+
+export default NavBarMobile;

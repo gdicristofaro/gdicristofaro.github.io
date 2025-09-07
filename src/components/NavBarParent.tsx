@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 // retrieves nav bar component given left, center, right component
-export default (props: { left: any, center: any, right: any, className?: string }) => {
-  let { left, center, right, className } = props;
+const NavBarParent = (props: { left: ReactNode, center: ReactNode, right: ReactNode, className?: string }) => {
+  const { left, center, right, className } = props;
 
   return (
     <div className={"navbar" + (className ? " " + className : "")}>
@@ -12,3 +12,5 @@ export default (props: { left: any, center: any, right: any, className?: string 
     </div>
   );
 };
+
+export default NavBarParent;

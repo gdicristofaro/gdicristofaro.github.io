@@ -12,11 +12,14 @@
         color: #B2F4FF;
     }
 
-    .MuiDrawer-root.MuiDrawer-modal.MuiModal-root > .MuiPaper-root.MuiDrawer-paper, 
-    .MuiCard-root.MuiPaper-root {
+    .MuiDrawer-root > .MuiDrawer-paper {
         background-color: rgb(32, 47, 48);
         color: #eee;
     }
+
+     .MuiDrawer-root > .MuiDrawer-paper hr.MuiDivider-root {
+        background-color: rgba(238, 238, 238, 0.50)
+     }
 
     .drawer-svgicon {
         color: #eee;

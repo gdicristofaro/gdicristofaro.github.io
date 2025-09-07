@@ -1,8 +1,8 @@
 import React from 'react';
 
 // link to main website with name
-export default (props: { opacity: number }) => {
-  let { opacity } = props;
+const NavBarNameLink = (props: { opacity: number }) => {
+  const { opacity } = props;
 
   return (
     <div className="navbar-name-div"
@@ -16,3 +16,5 @@ export default (props: { opacity: number }) => {
     </div>
   );
 };
+
+export default NavBarNameLink;

@@ -10,7 +10,7 @@ import { PageInfo } from '@/model/PageInfo';
 
 // desktop icons to go to the right
 const DesktopIconsParent = (props: {opacity: number}) => {
-  let {opacity} = props;
+  const {opacity} = props;
 
   return (
     <div className="desktop-icons-parent" style={{opacity, visibility: opacity <= 0 ? "hidden": "visible"}}>
@@ -26,7 +26,7 @@ const DesktopIconsParent = (props: {opacity: number}) => {
 
 // desktop version containing links for navigation; opacity is always 1
 const DesktopNavLinks = (props: {pages: PageInfo[], pathName: string}) => {
-  let {pages, pathName} = props;
+  const {pages, pathName} = props;
 
   // render pages
   const pagesEls = pages.map(function(linkInf, i) {
@@ -47,8 +47,8 @@ const DesktopNavLinks = (props: {pages: PageInfo[], pathName: string}) => {
 
 
 // pages are a series of links
-export default (props: {opacity: number, pathName:string, pages: PageInfo[]}) => {
-  let {opacity, pathName, pages} = props;
+const NavBarDesktop = (props: {opacity: number, pathName:string, pages: PageInfo[]}) => {
+  const {opacity, pathName, pages} = props;
   return (
     <NavBarParent
       className="DesktopNavParent"
@@ -58,3 +58,5 @@ export default (props: {opacity: number, pathName:string, pages: PageInfo[]}) =>
     />
   );
 }
+
+export default NavBarDesktop;

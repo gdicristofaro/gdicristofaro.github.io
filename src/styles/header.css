@@ -12,9 +12,10 @@
 }
 
 .header-circle-photo {
+    position: relative;
     height: 200px;
-    width: auto;
-    margin: 0px auto;
+    width: 200px;
+    margin: 5px auto;
     display: block;
 }
 

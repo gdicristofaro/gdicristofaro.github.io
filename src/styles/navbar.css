@@ -1,13 +1,12 @@
 .navbar {
     min-height: 50px;
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    margin: 0;
+    margin: 0 10px;
+    padding: 0;
     position: relative;
     background-color: #0A1719;
     color: #f9f9f9;
@@ -49,7 +48,7 @@
     text-align: center;
 }
 
-.navbar-child-left {
+.navbar-child-right {
     text-align: right;
 }
 
@@ -91,7 +90,6 @@
 .MobileMenuButtonParent {
     padding: 0;
     width: 45px;
-    margin-left: 20px;
     margin-top: auto;
     margin-bottom: auto;
     height: 30px;
@@ -133,14 +131,36 @@
     font-weight: 800;
 }
 
+.MobileDrawer {
+    min-width: 35dvw;
+}
+
 .MobileDrawer .selected {
     background-color: #5ACFE3;
 }
 
-.MobileDrawer .selected h3 {
+.MobileDrawer .selected span {
     color: #303030;
 }
 
 .MobileDrawer .selected:hover {
     background-color: #75E6F9;
+}
+
+.MobileDrawer .drawer-icon {
+    min-width: 42px;
+}
+
+
+
+@media screen and (min-width: 700px) {
+    .MobileNavParent {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .DesktopNavParent {
+        display: none;
+    }
 }

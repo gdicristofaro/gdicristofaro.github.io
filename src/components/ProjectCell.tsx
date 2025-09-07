@@ -2,8 +2,8 @@ import { CardActions, Button, Card, CardMedia, CardContent, Typography } from '@
 import React from 'react';
 
 
-export default (props: { 
-  img: any, 
+const ProjectCell = (props: { 
+  img: string, 
   header: string, 
   subheader?: string, 
   description: string,
@@ -11,9 +11,9 @@ export default (props: {
   alternateHref?: string, 
   alternateHrefTitle?: string}) => {
 
-  let {img, header, description, href, alternateHref, alternateHrefTitle} = props;
+  const {img, header, description, href, alternateHref, alternateHrefTitle} = props;
 
-  let alternateLink = alternateHref ?
+  const alternateLink = alternateHref ?
       (<CardActions>
         <Button size="small" color="primary" href={alternateHref}>
           {alternateHrefTitle}
@@ -45,3 +45,5 @@ export default (props: {
     </Card>
   );
 }
+
+export default ProjectCell;

@@ -1,4 +1,4 @@
-export default [
+const projects = [
   {
     img: '/img/constantqtransform.png',
     header: 'Constant Q Transform',
@@ -64,3 +64,5 @@ export default [
     href: 'https://github.com/gdicristofaro/ConcentrationGame'
   }
 ];
+
+export default projects;

@@ -3,7 +3,7 @@ import React from 'react'
 
 export const footerHeight = 50;
 
-export default () => (
+const Footer = () => (
   <div className="footer">
     <p className="footer-paragraph">
       <a href="http://www.gdicristofaro.com">gdicristofaro.com</a>
@@ -13,4 +13,6 @@ export default () => (
       <a href="http://www.github.com/gdicristofaro">GitHub</a>
     </p>
   </div>
-)
+);
+
+export default Footer;

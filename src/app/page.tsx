@@ -1,10 +1,13 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-export default () => (
+const Page = () => (
   <div className="homepage-main page-transition page-content">
     <h1 className="homepage-header page-header">Hello!</h1>
-    <img className="homepage-profile-picture" src="/img/profile.jpg" alt="my profile picture" />
+    <div className="homepage-profile-picture" >
+      <Image unoptimized fill src="/img/profile.jpg" alt="my profile picture" />
+    </div>
     <p className="homepage-paragraph description-text">
       Hello, and welcome to my website.
       You can read more about my work history on my <Link href="/resume">resum&eacute;</Link>.
@@ -15,3 +18,5 @@ export default () => (
     <p className="homepage-paragraph description-text">Greg DiCristofaro</p>
   </div>
 );
+
+export default Page;

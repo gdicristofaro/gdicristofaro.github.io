@@ -8,9 +8,10 @@
 
 .homepage-profile-picture {
     float: left;
+    position: relative;
     margin-right: 20px;
     height: 200px;
-    width: auto;
+    width: 144px;
 }
 
 .homepage-paragraph {

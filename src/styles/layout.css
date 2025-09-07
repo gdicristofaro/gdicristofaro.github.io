@@ -35,10 +35,10 @@
 .main a {
   text-decoration: none;
   color: #38808C;
-}
 
-.main a:hover {
-  color: #5ACFE3;
+  &:hover {
+    color: #5ACFE3;
+  }
 }
 
 .description-text {

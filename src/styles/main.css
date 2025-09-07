@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'body.css';
-@import 'layout.css';
-@import 'footer.css';
-@import 'header.css';
-@import 'navbar.css';
-@import 'projectscell.css';
-@import 'drawer.css';
+@import './body.css';
+@import './layout.css';
+@import './footer.css';
+@import './header.css';
+@import './navbar.css';
+@import './projectscell.css';
+@import './drawer.css';
 
-@import 'pages/home.css';
-@import 'pages/projects.css';
-@import 'pages/resume.css';
+@import './pages/home.css';
+@import './pages/projects.css';
+@import './pages/resume.css';
 
-@import 'resume.css';
+@import './resume.css';
 
-@import 'darktheme.css';
+@import './darktheme.css';
