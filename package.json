@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "serve": "npx serve@latest out",
-    "build-resume": "ts-node ./build-resume.ts",
+    "build-resume": "npx tsx build-resume.ts",
     "start": "next start",
     "lint": "eslint",
     "lint-fix": "eslint --fix",
@@ -27,6 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/puppeteer":"^7.0.4",
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4",
     "eslint": "^9",
@@ -34,7 +35,7 @@
     "@eslint/eslintrc": "^3",
     "puppeteer": "^24.19.0",
     "gh-pages": "^6.1.1",
-    "ts-node": "^10.9.2",
+    "tsx":"^4.20.5",
     "raw-loader": "^4.0.2",
     "file-loader": "^6.2.0"
   }
