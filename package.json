@@ -11,7 +11,7 @@
     "lint": "eslint",
     "lint-fix": "eslint --fix",
     "predeploy": "npm run build-resume && npm run build && touch out/.nojekyll",
-    "deploy": "gh-pages -d out -t true"
+    "deploy": "gh-pages -d out -t"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
