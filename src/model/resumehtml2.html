@@ -1,0 +1,498 @@
+<!-- TODO telephone??? location??? -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greg DiCristofaro - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #555;
+            --highlight-color: #007bff;
+        }
+
+        .primary-color {
+            color: var(--primary-color)
+        }
+
+        .secondary-color {
+            color: var(--secondary-color);
+        }
+
+        .highlight-color {
+            color: var(--highlight-color);
+        }
+
+        .resume-container {
+            /* TODO remove this */
+            padding: .25in;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .icon {
+            width: 1em;
+            aspect-ratio: 1 / 1;
+            ;
+        }
+
+        .mr-1\/2 {
+            margin-right: 0.125rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-gray-800 mb-1 uppercase">Greg DiCristofaro</h1>
+            <p class="font-semibold highlight-color mb-1">Software Engineer</p>
+            <div class="flex gap-x-4 text-sm text-gray-600">
+                <div>
+                    <a href="mailto:gregdicristofaro@gmail.com">
+                        <!-- https://heroicons.dev/?search=Envelope -->
+                        <svg class="highlight-color icon inline-block align-text-bottom mr-1/2" data-slot="icon"
+                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75">
+                            </path>
+                        </svg><span>gregdicristofaro@gmail.com</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.gdicristofaro.com">
+                        <!-- https://heroicons.dev/?search=Link -->
+                        <svg class="highlight-color icon inline-block align-baseline mr-1/2" data-slot="icon"
+                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244">
+                            </path>
+                        </svg><span>gdicristofaro.com</span>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.github.com/gdicristofaro">
+                        <!-- https://heroicons.dev/?search=Link -->
+                        <svg class="highlight-color icon inline-block align-baseline mr-1/2" data-slot="icon"
+                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244">
+                            </path>
+                        </svg><span>github.com/gdicristofaro</span>
+                    </a>
+
+                </div>
+
+                <div>
+                    <!-- https://heroicons.dev/?search=MapPin -->
+                    <svg class="highlight-color icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                        stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path>
+                    </svg><span>Washington D.C. Area</span>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="column-container flex">
+            <div class="left-column w-2/3 pr-6">
+                <!-- <section class="summary mb-6">
+                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
+                        Summary</h2>
+                    <p class="text-sm text-gray-800">Summary Section</p>
+                </section> -->
+
+                <section class="mb-6">
+                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
+                        Experience</h2>
+
+                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-lg text-gray-800">Software Engineer</p>
+                        <p class="font-bold mb-1 highlight-color">Sleuth Kit Labs</p>
+
+                        <div class="text-gray-600 text-xs mb-2">
+
+                            <!-- https://heroicons.dev/?search=Calendar -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5">
+                                </path>
+                            </svg><span class="italic mr-2">February 2020 - Present</span>
+
+                            <!-- https://heroicons.dev/?search=MapPin -->
+                            <svg class="icon inline-block align-baseline" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
+                                </path>
+                            </svg><span class="italic">Somerville, MA</span>
+                        </div>
+                        <ul class="text-sm list-disc ml-5 text-gray-800">
+                            <li class="mb-1">Maintain and develop features for Digital Forensics and Incident Response
+                                software: Cyber Triage, Autopsy, and The Sleuth Kit</li>
+                            <li class="mb-1">Develop and maintain Java desktop applications with Swing, JavaFX, Maven,
+                                Apache Ivy, Apache POI, SQLite, PostgreSQL, and Netbeans RCP</li>
+                            <li class="mb-1">Manage automated testing using Jenkins, Linux, Docker, Bash, Python, Apache
+                                Ant, JUnit, and Mockito</li>
+                            <li class="mb-1">Installation management using Advanced Installer, shell installation
+                                scripts, Snap packages, and Homebrew</li>
+                            <li class="mb-1">Use Python to automate database creation, web scrape for data aggregation,
+                                verify E2E regression tests fuzzy database diffing</li>
+                            <li class="mb-1">Manage data pipeline processing using Java, C++, Python, cloud updatable
+                                rules over GCP</li>
+                            <li class="mb-1">Create RESTful and Reactive web applications using Spring Boot, Jackson,
+                                Spring JDBC, Maven, React, Material UI, Angular, Typescript, Server Sent Events, Project
+                                Reactor, Styled Components, and Swagger</li>
+                            <li class="mb-1">Create server side and cloud infrastructure using Docker, JMS, ActiveMQ,
+                                AWS DynamoDb, AWS Lambda, GCP Cloud Functions, GCP BigQuery, GCP Datastore</li>
+                            <li class="mb-1">Presenter for OSDFCon 2021 (Autopsy Scoring: Finding the Relevant Data with
+                                Analysis Results)</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-lg text-gray-800">Software Engineer</p>
+                        <p class="font-bold mb-1 highlight-color">KBR</p>
+
+                        <p class="text-gray-600 text-xs mb-2">
+                            <!-- https://heroicons.dev/?search=Calendar -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5">
+                                </path>
+                            </svg><span class="italic mr-2">July 2017 - February 2020</span>
+
+                            <!-- https://heroicons.dev/?search=MapPin -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
+                                </path>
+                            </svg><span class="italic">Lexington Park, MD</span>
+
+                        </p>
+                        <ul class="text-sm list-disc ml-5 text-gray-800">
+                            <li class="mb-1">Develop RESTful applications utilizing .NET Web API and Json.NET</li>
+                            <li class="mb-1">Create RESTful client applications in Java utilizing GSON and in C#
+                                utilizing Json.NET
+                            </li>
+                            <li class="mb-1">Web-based UI development with ASP.NET Web Forms, ASP.NET MVC, Kendo UI,
+                                Bootstrap,
+                                JQuery, CSS,
+                                and HTML</li>
+                            <li class="mb-1">Data visualizations with JavaScript, TypeScript, D3.js, and SVG</li>
+                            <li class="mb-1">Database interaction with Microsoft SQL Server, T-SQL, Entity Framework,
+                                Linq to SQL,
+                                and
+                                ADO.NET</li>
+                            <li class="mb-1">Develop web applications utilizing React, Redux, and Bootstrap frontend
+                                with ASP.NET
+                                Core backend
+                            </li>
+                            <li class="mb-1">Modernize J2EE web applications built with JSP and JSF</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg text-gray-800">Music Teacher</p>
+                        <p class="font-bold mb-1 highlight-color">St. Mary's County Public Schools</p>
+
+                        <p class="text-gray-600 text-xs mb-2">
+                            <!-- https://heroicons.dev/?search=Calendar -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5">
+                                </path>
+                            </svg><span class="italic mr-2">August 2006 - June 2017</span>
+
+                            <!-- https://heroicons.dev/?search=MapPin -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
+                                </path>
+                            </svg><span class="italic">Leonardtown, MD</span>
+
+                        </p>
+                        <ul class="text-sm list-disc ml-5 text-gray-800">
+                            <li class="mb-1">
+                                <span>Scheduling &amp; Logistics</span>
+                                <ul class="list-disc list-outside ml-4">
+                                    <li class="mb-1">Organized grade level and school wide events</li>
+                                    <li class="mb-1">Determined school-wide schedule to optimize instruction and
+                                        transitions</li>
+                                </ul>
+                            </li>
+                            <li class="mb-1">
+                                <span>Leadership and Collaboration</span>
+                                <ul class="list-disc list-outside ml-4">
+                                    <li class="mb-1">On-site coordinator for Elementary All County Honor Band in charge
+                                        of preparing
+                                        public information, room reservations, personnel management, and coordinating
+                                        with the
+                                        director</li>
+                                    <li class="mb-1">Coordinated with teachers to determine scheduling for pull-out
+                                        lessons in band
+                                        to
+                                        minimize impact on classroom teachers and coordinated with teachers to organize
+                                        performances and events</li>
+                                    <li class="mb-1">Presenter for staff development sessions for the Fine Arts
+                                        Department of St.
+                                        Mary's
+                                        County Public Schools</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
+                        Education</h2>
+
+                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-lg text-gray-800">Master of Science in Software Development</p>
+                        <p class="font-bold mb-1 highlight-color">Boston University</p>
+
+                        <p class="text-gray-600 text-xs mb-2">
+                            <!-- https://heroicons.dev/?search=Calendar -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5">
+                                </path>
+                            </svg><span class="italic mr-2">9/2017 - 5/2019</span>
+                            <!-- https://heroicons.dev/?search=MapPin -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
+                                </path>
+                            </svg><span class="italic mr-2">Boston, MA</span>
+                            <!-- https://heroicons.dev/?search=AcademicCap -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5">
+                                </path>
+                            </svg><span class="italic">GPA 3.96/4.00</span>
+
+                        </p>
+                        <ul class="text-sm list-disc ml-5 text-gray-800">
+                            <li class="mb-1">Classes in Python Development, Agile SDLC, Data Structures and Algorithms,
+                                Database Design and Implementation, Server-Side Development, and Angular Development.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-lg text-gray-800">Software Engineering Certificate</p>
+                        <p class="font-bold mb-1 highlight-color">Harvard University</p>
+
+                        <p class="text-gray-600 text-xs mb-2">
+                            <!-- https://heroicons.dev/?search=Calendar -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5">
+                                </path>
+                            </svg><span class="italic mr-2">9/2012 - 12/2014</span>
+                            <!-- https://heroicons.dev/?search=MapPin -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
+                                </path>
+                            </svg><span class="italic mr-2">Cambridge, MA</span>
+                            <!-- https://heroicons.dev/?search=AcademicCap -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5">
+                                </path>
+                            </svg><span class="italic">GPA 4.00/4.00</span>
+
+                        </p>
+                        <ul class="text-sm list-disc ml-5 text-gray-800">
+                            <li class="mb-1">Classes included Programming Microsoft .NET, Systems Programming and
+                                Machine
+                                Organization, and Software Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-lg text-gray-800">Master of Music in Music Education</p>
+                        <p class="font-bold mb-1 highlight-color">University of the Arts</p>
+
+                        <p class="text-gray-600 text-xs mb-2">
+                            <!-- https://heroicons.dev/?search=Calendar -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5">
+                                </path>
+                            </svg><span class="italic mr-2">6/2012 - 12/2015</span>
+                            <!-- https://heroicons.dev/?search=MapPin -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z">
+                                </path>
+                            </svg><span class="italic mr-2">Philadelphia, PA</span>
+                            <!-- https://heroicons.dev/?search=AcademicCap -->
+                            <svg class="icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                                stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5">
+                                </path>
+                            </svg><span class="italic">GPA 4.00/4.00</span>
+
+                        </p>
+                        <ul class="text-sm list-disc ml-5 text-gray-800">
+                            <li class="mb-1">Thesis: Designed cross-platform music composition software to foster
+                                creativity for young students that processes audio, visualizes music in a sequencer 
+                                and renders standard music notation</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="right-column w-1/3">
+                <section class="projects mb-6">
+                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
+                        Projects</h2>
+                    <!-- TODO remove these or add back in??? 
+                        <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-gray-800 mb-1">SeamCarve</p>
+                        <p class="text-gray-600 text-xs">Scala implementation of the Seam-Carving Algorithm for content-aware image resizing <a href="https://github.com/gdicristofaro/SeamCarve">https://github.com/gdicristofaro/SeamCarve</a>
+                        </p>
+                    </div>
+                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-gray-800 mb-1">CSPSolver</p>
+                        <p class="text-gray-600 text-xs">Class scheduling program based on the AC-3 algorithm utilizing Apache POI API to import
+                        from excel documents written in Scala <a href="https://github.com/gdicristofaro/CSPSolver">https://github.com/gdicristofaro/CSPSolver</a></p>
+                    </div>
+                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-gray-800 mb-1">SpellChecker</p>
+                        <p class="text-gray-600 text-xs">Spell-checking algorithm built in C checking words against a dictionary file utilizing a
+                        self-developed hash map with buckets <a href="https://github.com/gdicristofaro/SpellChecker">https://github.com/gdicristofaro/SpellChecker</a></p>
+                    </div> -->
+                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-gray-800 mb-1">constantqjs</p>
+                        <p class="text-gray-600 text-xs">Implementation of the Constant-Q transform in TypeScript and C++ for performing spectral
+                        analysis on music utilizing Angular development, Chart.js, Emscripten, WebAssembly, Web Audio
+                        API, and Web Workers <a href="https://github.com/gdicristofaro/constantqjs">https://github.com/gdicristofaro/constantqjs</a></p>
+                    </div>
+                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-gray-800 mb-1">CalendarMaker</p>
+                        <p class="text-gray-600 text-xs">Calendar making application developed with Node.js, Webpack, TypeScript, React, Moment.js,
+                        Material-UI, and PptxGenJS <a href="https://github.com/gdicristofaro/CalendarMaker">https://github.com/gdicristofaro/CalendarMaker</a></p>
+                    </div>
+                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-gray-800 mb-1">sci-fi-crawl</p>
+                        <p class="text-gray-600 text-xs">Sci-fi customizable opening credit text using React, TypeScript, Material UI, Base64 encoding,
+                        and CSS animations <a href="https://github.com/gdicristofaro/sci-fi-crawl">https://github.com/gdicristofaro/sci-fi-crawl</a></p>
+                    </div>
+                    <div class="mb-4 text-sm">
+                        <p class="font-bold text-gray-800 mb-1">PSDtoSVG</p>
+                        <p class="text-gray-600 text-xs">Python web application for converting Photoshop files into SVG's for data visualization <a href="https://github.com/gdicristofaro/PSDtoSVG">https://github.com/gdicristofaro/PSDtoSVG</a></p>
+                    </div>
+
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
+                        Achievements</h2>
+                    <div class="mb-3 text-sm pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold text-gray-800 flex items-center"><span
+                                class="highlight-color mr-1 text-sm mb-1">✓</span> Presenter
+                        </p>
+                        <p class="text-gray-600 text-xs">Presenter for OSDFCon 2021 (Autopsy Scoring: Finding the Relevant Data with Analysis Results)</p>
+                    </div>
+                    <div class="mb-3 text-sm">
+                        <p class="font-bold text-gray-800 flex items-center"><span
+                                class="highlight-color mr-1 text-sm mb-1">✓</span> KBR Excellence Award</p>
+                        <p class="text-gray-600 text-xs">Excellence award for meeting criteria for contract</p>
+                        <!-- TODO get correct wording -->
+                    </div>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
+                        Skills</h2>
+                    <div class="skill-item mb-4 text-sm">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Java</span>
+                            <!-- TODO add technologies 
+Experienced	in	Java,	C,	C#,	SQL,	TypeScript,	Javascript,	HTML,	CSS,	JQuery,	and	React
+Working	knowledge	of	Linux,	Go,	C++,	PHP,	Python,	Scala,	and	F# -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- <section class="mb-6">
+                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
+                        Courses</h2>
+                    <div class="mb-3 text-sm pb-3 border-b border-dotted border-neutral-400">
+                        <p class="font-bold mb-1 highlight-color">Course Name</p>
+                        <p class="text-gray-600 text-xs">Course Description</p>
+                    </div>
+                    <div class="mb-3 text-sm">
+                        <p class="font-bold mb-1 highlight-color">Course Name</p>
+                        <p class="text-gray-600 text-xs">Course Description</p>
+                    </div>
+                </section> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
