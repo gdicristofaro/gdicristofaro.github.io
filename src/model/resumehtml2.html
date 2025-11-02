@@ -1,6 +1,3 @@
-<!-- TODO telephone??? -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,10 +26,13 @@
         }
 
         .resume-container {
-            /* TODO remove this */
-            /* padding: .25in; */
-
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        @media print {
+            .print-border-none {
+                border-style: none !important;
+            }
         }
 
         .icon {
@@ -49,10 +49,24 @@
 
 <body>
     <div class="resume-container">
-        <header class="mb-6">
+        <header class="mb-6 break-inside-avoid-page">
             <h1 class="text-3xl font-bold text-gray-800 mb-1 uppercase">Greg DiCristofaro</h1>
             <p class="font-semibold highlight-color mb-1">Software Engineer</p>
-            <div class="flex gap-x-4 text-sm text-gray-600">
+            <div class="flex gap-x-3 text-sm text-gray-600">
+                <div>
+                    <a href="tel:+2155104508">
+                        <!-- https://heroicons.dev/?search=phone -->
+                        <svg class="highlight-color icon inline-block align-text-bottom mr-1/2" data-slot="icon"
+                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z">
+                            </path>
+                        </svg>
+                        <span>(215) 510-4508</span>
+                    </a>
+                </div>
+
                 <div>
                     <a href="mailto:gregdicristofaro@gmail.com">
                         <!-- https://heroicons.dev/?search=Envelope -->
@@ -93,29 +107,31 @@
 
                 </div>
 
-                <div>
-                    <!-- https://heroicons.dev/?search=MapPin -->
-                    <svg class="highlight-color icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
+                <!-- <div> -->
+                <!-- https://heroicons.dev/?search=MapPin -->
+                <!-- <svg class="highlight-color icon inline-block align-baseline mr-1/2" data-slot="icon" fill="none"
                         stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
                         </path>
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path>
-                    </svg><span>Washington D.C. Area</span>
-                </div>
+                    </svg><span>Washington D.C. Area</span> -->
+                <!-- </div> -->
 
             </div>
         </header>
 
         <div class="column-container flex">
             <div class="left-column w-2/3 pr-6">
-                <section class="summary mb-6">
+                <section class="summary mb-6 break-inside-avoid-page">
                     <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
                         Summary</h2>
-                    <p class="text-sm text-gray-800">Highly accomplished <span class="font-bold">Full-Stack Software Engineer</span> with 8+ years of
+                    <p class="text-sm text-gray-800">Highly accomplished <span class="font-bold">Full-Stack Software
+                            Engineer</span> with 8+ years of
                         experience in enterprise software development. Expertise includes Java (Spring Boot), C++,
-                        Python, SQL, C# (ASP.NET Core) and modern front-end frameworks (React, Angular). Proven ability to design, test, and
+                        Python, SQL, C# (ASP.NET Core) and modern front-end frameworks (React, Angular). Proven ability
+                        to design, test, and
                         deploy high-performance, resilient applications leveraging cloud services (GCP, AWS) and modern
                         DevOps practices (Docker, Jenkins).</p>
                 </section>
@@ -124,7 +140,7 @@
                     <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
                         Experience</h2>
 
-                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                    <div class="mb-4 break-inside-avoid-page">
                         <p class="font-bold text-lg text-gray-800">Software Engineer</p>
                         <p class="font-bold mb-1 highlight-color">Sleuth Kit Labs</p>
 
@@ -153,26 +169,35 @@
                         </div>
                         <ul class="text-sm list-disc ml-5 text-gray-800">
                             <li class="mb-1">Develop <span class="font-bold">Digital Forensics and Incident Response
-                                software:</span> Cyber Triage, Autopsy, and The Sleuth Kit</li>
-                            <li class="mb-1">Expand <span class="font-bold">optimized data pipeline processing</span> handling complex SQL queries over large data sets using Java, C++,
+                                    software:</span> Cyber Triage, Autopsy, and The Sleuth Kit</li>
+                            <li class="mb-1">Expanded and optimized <span class="font-bold">data pipeline
+                                    processing</span>
+                                handling complex SQL queries over large data sets using Java, C++,
                                 Python, SQL and cloud updatable rules over GCP</li>
-                            <li class="mb-1"><span class="font-bold">Modernized testing infrastructure</span> using Jenkins, Nginx, Docker, Linux, Bash,
+                            <li class="mb-1"><span class="font-bold">Modernized testing infrastructure</span> using
+                                Jenkins, Nginx, Docker, Linux, Bash,
                                 Python, Apache Ant, JUnit, and Mockito</li>
-                            <li class="mb-1">Provide internal and customer documentation for features</li>
-                            <li class="mb-1">Develop Desktop Applications with Swing, JavaFX, Maven,
-                                Apache Ivy, Apache POI, SQLite, PostgreSQL, and Netbeans RCP</li>
-
-                            <li class="mb-1">Create installation packages with Advanced Installer, shell installation
-                                scripts, Snap packages, and Homebrew</li>
-                            <li class="mb-1">Create RESTful and Reactive web applications using Spring Boot, Jackson,
-                                Spring JDBC, Maven, React, Material UI, Angular, Typescript, Server Sent Events, Project
-                                Reactor, Styled Components, and Swagger</li>
-                            <li class="mb-1">Create Cloud and server infrastructure using Docker, JMS, ActiveMQ,
+                            <li class="mb-1"><span class="font-bold">Standardized multi-platform deployment (Windows,
+                                    Linux, macOS)</span> through new Snap, Homebrew, and Advanced Installer packages,
+                                streamlining the installation process for end-users.</li>
+                            <li class="mb-1">Provide internal and <span class="font-bold">customer
+                                    documentation</span> for complex features</li>
+                            <li class="mb-1">
+                                Architected and built <span class="font-bold">RESTful and Reactive web
+                                    applications</span> using Spring Boot, Swagger, Angular,
+                                and React (Material UI), leveraging Project Reactor and Server Sent Events (SSE) for
+                                real-time data streaming.
+                            </li>
+                            <li class="mb-1">Developed <span class="font-bold">serverless and containerized cloud
+                                    infrastructure</span> using Docker, JMS, ActiveMQ,
                                 AWS DynamoDb, AWS Lambda, GCP Cloud Functions, GCP BigQuery, and GCP Datastore</li>
+                            <li class="mb-1">Develop <span class="font-bold">Java Desktop Applications</span> with
+                                Swing, JavaFX, Maven,
+                                Apache Ivy, Apache POI, SQLite, PostgreSQL, and Netbeans RCP</li>
                         </ul>
                     </div>
 
-                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                    <div class="mb-4 pt-3 border-t border-dotted border-neutral-400 break-inside-avoid-page print-border-none">
                         <p class="font-bold text-lg text-gray-800">Software Engineer</p>
                         <p class="font-bold mb-1 highlight-color">KBR</p>
 
@@ -200,18 +225,18 @@
 
                         </p>
                         <ul class="text-sm list-disc ml-5 text-gray-800">
-                            <li class="mb-1">Modernize J2EE web applications built with JSP and JSF</li>
-                            <li class="mb-1">Create data visualizations with JavaScript, TypeScript, D3.js, and SVG</li>
-                            <li class="mb-1">Query large datasets using Microsoft SQL Server, T-SQL, Entity Framework,
-                                Linq to SQL, and ADO.NET</li>
-                            <li class="mb-1">Develop RESTful applications utilizing ASP.NET Core, .NET Web API,
-                                Json.NET</li>
-                            <li class="mb-1">Web-based UI development with React, Redux, Bootstrap, ASP.NET Web Forms,
-                                ASP.NET MVC, Kendo UI,
-                                Bootstrap, JQuery, CSS, and HTML</li>
+                            <li class="mb-1">Modernized large J2EE web applications built with JSP and JSF</li>
+                            <li class="mb-1">Create <span class="font-bold">data visualizations</span> with JavaScript,
+                                TypeScript, <span class="font-bold">D3.js</span>, and SVG to present complex data to
+                                customers</li>
+                            <li class="mb-1">Developed and maintained <span class="font-bold">Web-based UI and RESTful
+                                    services</span> development with <span class="font-bold">React and ASP.NET
+                                    Core</span></li>
+                            <li class="mb-1">Queried large datasets using Microsoft SQL Server, T-SQL, Entity Framework,
+                                and Linq to SQL.</li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="break-inside-avoid-page">
                         <p class="font-bold text-lg text-gray-800">Music Teacher</p>
                         <p class="font-bold mb-1 highlight-color">St. Mary's County Public Schools</p>
 
@@ -239,42 +264,17 @@
 
                         </p>
                         <ul class="text-sm list-disc ml-5 text-gray-800">
-                            <li class="mb-1">
-                                <span>Scheduling &amp; Logistics</span>
-                                <ul class="list-disc list-outside ml-4">
-                                    <li class="mb-1">Organized grade level and school wide events</li>
-                                    <li class="mb-1">Determined school-wide schedule to optimize instruction and
-                                        transitions</li>
-                                </ul>
-                            </li>
-                            <li class="mb-1">
-                                <span>Leadership and Collaboration</span>
-                                <ul class="list-disc list-outside ml-4">
-                                    <li class="mb-1">On-site coordinator for Elementary All County Honor Band in charge
-                                        of preparing
-                                        public information, room reservations, personnel management, and coordinating
-                                        with the
-                                        director</li>
-                                    <li class="mb-1">Coordinated with teachers to determine scheduling for pull-out
-                                        lessons in band
-                                        to
-                                        minimize impact on classroom teachers and coordinated with teachers to organize
-                                        performances and events</li>
-                                    <li class="mb-1">Presenter for staff development sessions for the Fine Arts
-                                        Department of St.
-                                        Mary's
-                                        County Public Schools</li>
-                                </ul>
-                            </li>
+                            <li class="mb-1">Demonstrated strong organizational, leadership, and logistics skills by
+                                coordinating school-wide schedules and leading public-facing events.</li>
                         </ul>
                     </div>
                 </section>
 
-                <section class="mb-6">
+                <section class="mb-6 break-inside-avoid-page">
                     <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
                         Education</h2>
 
-                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                    <div class="mb-4">
                         <p class="font-bold text-lg text-gray-800">Master of Science in Software Development</p>
                         <p class="font-bold mb-1 highlight-color">Boston University</p>
 
@@ -308,14 +308,9 @@
                             </svg><span class="italic">GPA 3.96 / 4.00</span>
 
                         </p>
-                        <!-- <ul class="text-sm list-disc ml-5 text-gray-800">
-                            <li class="mb-1">Classes in Python Development, Agile SDLC, Data Structures and Algorithms,
-                                Database Design and Implementation, Server-Side Development, and Angular Development.
-                            </li>
-                        </ul> -->
                     </div>
 
-                    <div class="mb-4 pb-3 border-b border-dotted border-neutral-400">
+                    <div class="mb-4 pt-3 border-t border-dotted border-neutral-400">
                         <p class="font-bold text-lg text-gray-800">Software Engineering Certificate</p>
                         <p class="font-bold mb-1 highlight-color">Harvard University</p>
 
@@ -349,14 +344,9 @@
                             </svg><span class="italic">GPA 4.00 / 4.00</span>
 
                         </p>
-                        <!-- <ul class="text-sm list-disc ml-5 text-gray-800">
-                            <li class="mb-1">Classes included Programming Microsoft .NET, Systems Programming and
-                                Machine
-                                Organization, and Software Design</li>
-                        </ul> -->
                     </div>
 
-                    <div class="mb-4 pb-3">
+                    <div class="mb-4 pt-3 border-t border-dotted border-neutral-400">
                         <p class="font-bold text-lg text-gray-800">Master of Music in Music Education</p>
                         <p class="font-bold mb-1 highlight-color">University of the Arts</p>
 
@@ -391,85 +381,59 @@
 
                         </p>
 
-                        <span class="text-sm text-gray-800">Thesis: Designed cross-platform music composition software to foster
-                                creativity for young students that processes audio, visualizes music in a sequencer
-                                and renders standard music notation</span>
-
-                        <!-- <ul class="text-sm list-disc ml-5 text-gray-800">
-                            <li class="mb-1">Thesis: Designed cross-platform music composition software to foster
-                                creativity for young students that processes audio, visualizes music in a sequencer
-                                and renders standard music notation</li>
-                        </ul> -->
+                        <span class="text-sm text-gray-800 italic">Thesis: Designed cross-platform music composition
+                            software to foster creativity for young students that processes audio, visualizes music in a
+                            sequencer
+                            and renders standard music notation</span>
                     </div>
+                </section>
             </div>
 
             <div class="right-column w-1/3">
-                <section class="projects mb-6">
-                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
-                        Projects</h2>
-                    <!-- TODO remove these or add back in??? 
-                        <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
-                        <p class="font-bold text-gray-800 mb-1">SeamCarve</p>
-                        <p class="text-gray-600 text-xs">Scala implementation of the Seam-Carving Algorithm for content-aware image resizing <a href="https://github.com/gdicristofaro/SeamCarve">https://github.com/gdicristofaro/SeamCarve</a>
-                        </p>
-                    </div>
-                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
-                        <p class="font-bold text-gray-800 mb-1">CSPSolver</p>
-                        <p class="text-gray-600 text-xs">Class scheduling program based on the AC-3 algorithm utilizing Apache POI API to import
-                        from Excel documents written in Scala <a href="https://github.com/gdicristofaro/CSPSolver">https://github.com/gdicristofaro/CSPSolver</a></p>
-                    </div>
-                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
-                        <p class="font-bold text-gray-800 mb-1">SpellChecker</p>
-                        <p class="text-gray-600 text-xs">Spell-checking algorithm built in C checking words against a dictionary file utilizing a
-                        self-developed hash map with buckets <a href="https://github.com/gdicristofaro/SpellChecker">https://github.com/gdicristofaro/SpellChecker</a></p>
-                    </div> -->
-                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
-                        <p class="font-bold text-gray-800 mb-1">constantqjs</p>
-                        <p class="text-gray-600 text-xs">Implementation of the Constant-Q transform in TypeScript and
-                            C++ for performing spectral
-                            analysis on music utilizing Angular development, Chart.js, Emscripten, WebAssembly, Web
-                            Audio
-                            API, and Web Workers <a
-                                href="https://github.com/gdicristofaro/constantqjs">https://github.com/gdicristofaro/constantqjs</a>
-                        </p>
-                    </div>
-                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
-                        <p class="font-bold text-gray-800 mb-1">CalendarMaker</p>
-                        <p class="text-gray-600 text-xs">Calendar making application developed with Node.js, Webpack,
-                            TypeScript, React, Moment.js,
-                            Material-UI, and PptxGenJS <a
-                                href="https://github.com/gdicristofaro/CalendarMaker">https://github.com/gdicristofaro/CalendarMaker</a>
-                        </p>
-                    </div>
-                    <div class="mb-4 text-sm pb-3 border-b border-dotted border-neutral-400">
-                        <p class="font-bold text-gray-800 mb-1">sci-fi-crawl</p>
-                        <p class="text-gray-600 text-xs">Sci-fi customizable opening credit text using React,
-                            TypeScript, Material UI, Base64 encoding,
-                            and CSS animations <a
-                                href="https://github.com/gdicristofaro/sci-fi-crawl">https://github.com/gdicristofaro/sci-fi-crawl</a>
-                        </p>
-                    </div>
-                    <div class="mb-4 text-sm">
-                        <p class="font-bold text-gray-800 mb-1">PSDtoSVG</p>
-                        <p class="text-gray-600 text-xs">Python web application for converting Photoshop files into
-                            SVG's for data visualization <a
-                                href="https://github.com/gdicristofaro/PSDtoSVG">https://github.com/gdicristofaro/PSDtoSVG</a>
-                        </p>
+                <section class="mb-6 break-inside-avoid-page">
+                    <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-2">
+                        Skills</h2>
+
+                    <div class="skill-item mb-2 text-sm">
+                        <span class="text-sm font-bold text-gray-800 mb-1">Languages:</span>
+                        <span class="text-sm text-gray-800">Java, C, C++, Python, TypeScript, C#, Rust, Bash, SQL</span>
                     </div>
 
+                    <div class="skill-item mb-2 text-sm">
+                        <span class="text-sm font-bold text-gray-800 mb-1">Web/Backend:</span>
+                        <span class="text-sm text-gray-800">Spring Boot, React, Angular, ASP.NET Core, Project Reactor,
+                            Server Sent Events (SSE), WebAssembly</span>
+                    </div>
+
+                    <div class="skill-item mb-2 text-sm">
+                        <span class="text-sm font-bold text-gray-800 mb-1">Cloud/DevOps:</span>
+                        <span class="text-sm text-gray-800">GCP (BigQuery, Cloud Functions, Datastore), AWS (Lambda,
+                            DynamoDB), Docker, Jenkins, Nginx, Linux</span>
+                    </div>
+
+                    <div class="skill-item mb-2 text-sm">
+                        <span class="text-sm font-bold text-gray-800 mb-1">Databases:</span>
+                        <span class="text-sm text-gray-800">PostgreSQL, SQLite, MS SQL Server</span>
+                    </div>
+
+                    <div class="skill-item mb-2 text-sm">
+                        <span class="text-sm font-bold text-gray-800 mb-1">Desktop:</span>
+                        <span class="text-sm text-gray-800">JavaFX, Swing</span>
+                    </div>
                 </section>
 
-                <section class="mb-6">
+
+                <section class="mb-6 break-inside-avoid-page">
                     <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
                         Achievements</h2>
-                    <div class="mb-3 text-sm pb-3 border-b border-dotted border-neutral-400">
+                    <div class="mb-3 text-sm">
                         <p class="font-bold text-gray-800 flex items-center"><span
                                 class="highlight-color mr-1 text-sm mb-1">✓</span> Presenter
                         </p>
                         <p class="text-gray-600 text-xs">Presenter for OSDFCon 2021 (Autopsy Scoring: Finding the
                             Relevant Data with Analysis Results)</p>
                     </div>
-                    <div class="mb-3 text-sm">
+                    <div class="mb-3 text-sm pt-3 border-t border-dotted border-neutral-400">
                         <p class="font-bold text-gray-800 flex items-center"><span
                                 class="highlight-color mr-1 text-sm mb-1">✓</span>KBR Certificate of Appreciation
                         </p>
@@ -478,31 +442,65 @@
                     </div>
                 </section>
 
-                <section class="mb-6">
+                <section class="projects mb-6">
                     <h2 class="text-xl font-semibold uppercase text-gray-800 pb-1 border-b-2 border-gray-800 mb-3">
-                        Skills</h2>
-                    <div class="skill-item mb-4 text-sm">
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">CSS</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">HTML</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Java</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">React</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">C#</span>
-                            <span
-                                class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Typescript</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Bash</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">SQL</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Python</span>
-                            <span
-                                class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Angular</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Spring
-                                Boot</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">C/C++</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Rust</span>
-                            <span class="bg-neutral-200 shadow-sm text-xs font-bold px-2.5 py-0.5 rounded">Git</span>
-                        </div>
+                        Projects</h2>
+                    <div class="mb-4 text-sm break-inside-avoid-page">
+                        <p class="font-bold text-gray-800 mb-1">constantqjs</p>
+                        <p class="text-gray-600 text-xs">Implemented the Constant-Q transform for spectral analysis
+                            using <span class="font-bold">C++ compiled to WebAssembly</span> (via Emscripten),
+                            integrating with <span class="font-bold">TypeScript/Angular</span> for real-time
+                            visualization (Chart.js, Web Audio API).<a
+                                href="https://github.com/gdicristofaro/constantqjs">https://github.com/gdicristofaro/constantqjs</a>
+                        </p>
+                    </div>
+                    <div class="mb-4 text-sm pt-3 border-t border-dotted border-neutral-400 break-inside-avoid-page ">
+                        <p class="font-bold text-gray-800 mb-1">sci-fi-crawl</p>
+                        <p class="text-gray-600 text-xs">Sci-fi customizable opening credit text using React,
+                            TypeScript, Material UI, and CSS animations <a
+                                href="https://github.com/gdicristofaro/sci-fi-crawl">https://github.com/gdicristofaro/sci-fi-crawl</a>
+                        </p>
+                    </div>
+                    <div class="mb-4 text-sm pt-3 border-t border-dotted border-neutral-400 break-inside-avoid-page print-border-none">
+                        <p class="font-bold text-gray-800 mb-1">CalendarMaker</p>
+                        <p class="text-gray-600 text-xs">Calendar making application developed with TypeScript, React,
+                            Moment.js,
+                            Material-UI, and PptxGenJS <a
+                                href="https://github.com/gdicristofaro/CalendarMaker">https://github.com/gdicristofaro/CalendarMaker</a>
+                        </p>
+                    </div>
+                    <div class="mb-4 text-sm pt-3 border-t border-dotted border-neutral-400 break-inside-avoid-page">
+                        <p class="font-bold text-gray-800 mb-1">PSDtoSVG</p>
+                        <p class="text-gray-600 text-xs">Python web application for converting Photoshop files into
+                            SVG's for data visualization <a
+                                href="https://github.com/gdicristofaro/PSDtoSVG">https://github.com/gdicristofaro/PSDtoSVG</a>
+                        </p>
+                    </div>
+                    <div class="mb-4 text-sm pt-3 border-t border-dotted border-neutral-400 break-inside-avoid-page">
+                        <p class="font-bold text-gray-800 mb-1">SeamCarve</p>
+                        <p class="text-gray-600 text-xs">Scala implementation of the Seam-Carving Algorithm for
+                            content-aware image resizing <a
+                                href="https://github.com/gdicristofaro/SeamCarve">https://github.com/gdicristofaro/SeamCarve</a>
+                        </p>
+                    </div>
+                    <div class="mb-4 text-sm pt-3 border-t border-dotted border-neutral-400 break-inside-avoid-page">
+                        <p class="font-bold text-gray-800 mb-1">CSPSolver</p>
+                        <p class="text-gray-600 text-xs">Class scheduling program based on the AC-3 algorithm utilizing
+                            Apache POI API to import
+                            from Excel documents written in Scala <a
+                                href="https://github.com/gdicristofaro/CSPSolver">https://github.com/gdicristofaro/CSPSolver</a>
+                        </p>
+                    </div>
+                    <div class="mb-4 text-sm pt-3 border-t border-dotted border-neutral-400 break-inside-avoid-page">
+                        <p class="font-bold text-gray-800 mb-1">SpellChecker</p>
+                        <p class="text-gray-600 text-xs">Spell-checking algorithm built in C checking words against a
+                            dictionary file utilizing a
+                            self-developed hash map with buckets <a
+                                href="https://github.com/gdicristofaro/SpellChecker">https://github.com/gdicristofaro/SpellChecker</a>
+                        </p>
                     </div>
                 </section>
+
             </div>
         </div>
     </div>
