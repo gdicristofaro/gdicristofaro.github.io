@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 @import './body.css';
 @import './layout.css';
 @import './footer.css';
@@ -14,6 +11,6 @@
 @import './pages/projects.css';
 @import './pages/resume.css';
 
-@import './resume.css';
-
 @import './darktheme.css';
+
+@import './resume.css';

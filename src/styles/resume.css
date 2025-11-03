@@ -1,92 +1,43 @@
-.Resume {
-    font-family: Garamond, Georgia, serif;
-    font-size: 15px;
-    /*font-family: 'Roboto', sans-serif;*/
-    max-width: 800px;
-    margin: 0px auto;
+.resume-container {
+    --highlight-color: #00798f;
+    /*#007bff;*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.Resume * {
-    margin-top: 3px;
-    margin-bottom: 3px;
-    /* added to ensure that size is overridden */
-    font-size: 16px !important;
-    line-height: 1.25;
-
+.resume-container header a {
+    color: var(--color-gray-600);
 }
 
-.ResumeHeader p {
-    text-align: center;
-    font-size: 100%;
+.highlight-color,
+.resume-container .column-container a {
+    color: var(--highlight-color);
 }
 
-.ResumeTitle {
-    font-weight: 800;
-    font-size: 150%;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+@media (prefers-color-scheme: dark) {
+
+    .highlight-color,
+    .resume-container .column-container a {
+        color: #5ACFE3;
+    }
+
+    .resume-container header a {
+        color: var(--color-gray-300);
+    }
 }
 
-.ResumeHorizontalDivider {
-    width: 100%;
-    border-top: 2px solid black;
-    height: 0px;
-    margin: 10px 0px 20px 0px;
-}
-
-.ResumeSectionItem {
-    margin-left: 30px;
-    margin-bottom: 20px;
-    page-break-inside: avoid;
-}
-
-.ResumeItemDescription {
-    margin-left: 20px;
-}
-
-.ResumeSection {
-    margin-bottom: 30px;
-}
-
-.ResumeSection h1 {
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 100%;
-}
-
-.ResumeItemHeader {
-    font-weight: 800;
-}
-
-.ResumeLeftRight {
-    display: table;
-    width: 100%;
-}
-
-.ResumeLeftRight>div {
-    display: table-cell;
-}
-
-.ResumeLeftRight>.ResumeDate {
-    text-align: right;
-}
-
-.ResumeDate {
-    font-style: italic;
-}
-
-.Resume ul {
-    list-style-type: disc;
-    font-size: 100%;
-    padding-inline-start: 30px; /* overrides tailwind styling from base */
-}
-
-.Resume ul ul {
-    list-style-type: circle;
-}
 
 @media print {
-    .ResumeHeader a {
-        text-decoration: none;
-        color: black;
+    .print-border-none {
+        border-style: none !important;
     }
+}
+
+.icon {
+    width: 1em;
+    aspect-ratio: 1 / 1;
+    ;
+}
+
+.mr-1\/2 {
+    margin-right: 0.125rem;
 }

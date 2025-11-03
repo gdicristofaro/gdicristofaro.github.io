@@ -4,9 +4,7 @@ import Projects from '../../model/Projects'
 
 
 const Page = () => (
-  <div className="ProjectsParent page-transition">
-    <h1 className="page-header">Projects</h1>
-    <p className="description-text projects-text">Here are some of the projects I have created.</p>
+  <div className="ProjectsParent page-transition mt-5">
     {Projects.map((dataObj, i) => (<ProjectCell {...dataObj} key={i} />))}
   </div>
 );

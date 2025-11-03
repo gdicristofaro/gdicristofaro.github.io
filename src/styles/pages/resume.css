@@ -5,6 +5,9 @@
 
 .ResumePage .ProjectCell {
     max-width: 350px;
-    margin: 20px;
     display: inline-block;
+}
+
+.resume-width {
+    max-width: 65rem;
 }

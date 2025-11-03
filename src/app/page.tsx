@@ -3,8 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const Page = () => (
-  <div className="homepage-main page-transition page-content">
-    <h1 className="homepage-header page-header">Hello!</h1>
+  <div className="homepage-main page-transition page-content mt-8">
     <div className="homepage-profile-picture" >
       <Image unoptimized fill src="/img/profile.jpg" alt="my profile picture" />
     </div>
