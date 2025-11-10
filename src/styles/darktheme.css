@@ -28,4 +28,9 @@
     .ResumeHorizontalDivider {
         border-color: #eee;
     }
+
+    .ProjectCell.MuiCard-root {
+        background-color: rgb(32, 47, 48);
+        color: #eee;
+    }
 }
