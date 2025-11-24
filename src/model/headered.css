@@ -1,0 +1,7 @@
+.content-section a {
+    color: var(--highlight-color);
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+}
