@@ -14,7 +14,17 @@ async function writeHtml(dir: string) {
 
     console.log(`writing headered file with title: ${headeredTitle} from content path: ${headerContentPath} to output file: ${outputFile}`);
     const headeredContent = await promises.readFile(headerContentPath, 'utf-8');
-    const headeredHtml = await marked.parse(headeredContent);
+
+
+    let renderer = new marked.Renderer();
+
+    (renderer as any).list = (body: any, ordered: any, level: any) => {
+        const text = body.items.map((item: any) => renderer.listitem(item)).join("\n");
+        return `<ul class='list-disc pl-5'>${text}</ul>`;
+    };
+
+
+    const headeredHtml = await marked.parse(headeredContent, { renderer });
 
     const metaTitle = `Greg DiCristofaro - ${htmlEntities(headeredTitle)}`;
 
