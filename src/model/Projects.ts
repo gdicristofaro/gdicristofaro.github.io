@@ -7,21 +7,29 @@ const projects = [
     alternateHref: 'https://gdicristofaro.github.io/constantqjs/',
     alternateHrefTitle: 'Live Demo'
   },
-  {
-    img: '/img/calendarmaker.png',
-    header: 'CalendarMaker',
-    description: "Generates powerpoint of year long calendar with custom events, pictures and banners written with react, material ui and PptxGenJS",
-    href: 'https://www.github.com/gdicristofaro/CalendarMaker',
-    alternateHref: 'https://gdicristofaro.github.io/CalendarMaker/',
+    {
+    img: '/img/scificrawl.png',
+    header: 'Sci-Fi Crawl',
+    description: "Creates a customizable shareable Sci-Fi style crawl with playback controls using React, Material UI, and CSS animations.  The crawl can be shared by copying the url, which contains all the necessary information to recreate the crawl.",
+    href: 'https://github.com/gdicristofaro/sci-fi-crawl',
+    alternateHref: 'https://gdicristofaro.github.io/sci-fi-crawl/',
     alternateHrefTitle: 'Live Demo'
   },
+  // {
+  //   img: '/img/calendarmaker.png',
+  //   header: 'CalendarMaker',
+  //   description: "Generates powerpoint of year long calendar with custom events, pictures and banners written with react, material ui and PptxGenJS",
+  //   href: 'https://www.github.com/gdicristofaro/CalendarMaker',
+  //   alternateHref: 'https://gdicristofaro.github.io/CalendarMaker/',
+  //   alternateHrefTitle: 'Live Demo'
+  // },
   {
     img: '/img/psdtosvg.png',
     header: 'PSDtoSVG',
     description: "Using python, this app creates an svg by generating svg paths for all layers of an svg except for the bottom most layer.  The bottom most layer is converted to a dataurl to be embedded in the svg.  The generated svg can be utilized for various data visualizations.",
     href: 'https://www.github.com/gdicristofaro/PSDtoSVG',
-    alternateHref: 'https://psdtosvg.herokuapp.com/',
-    alternateHrefTitle: 'Live Demo'
+    // alternateHref: 'https://psdtosvg.herokuapp.com/',
+    // alternateHrefTitle: 'Live Demo'
   },
   {
     img: '/img/mapmaker.png',
@@ -36,8 +44,8 @@ const projects = [
     header: 'Seam Carve',
     description: "Scala implementation of the Seam-Carving Algorithm. This project was first created in 2013.  The project utilizes play framework, xuggle, nodejs/npm/gulp, material ui, fancybox, jquery, react, react dropzone, react swipeable views, and whammy.",
     href: 'https://github.com/gdicristofaro/SeamCarve',
-    alternateHref: 'https://seamcarve.herokuapp.com/',
-    alternateHrefTitle: 'Live Demo'
+    // alternateHref: 'https://seamcarve.herokuapp.com/',
+    // alternateHrefTitle: 'Live Demo'
   },
   {
     img: '/img/NPuzzle.png',
