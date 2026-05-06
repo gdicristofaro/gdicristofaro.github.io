@@ -28,8 +28,8 @@ const projects = [
     header: 'PSDtoSVG',
     description: "Using python, this app creates an svg by generating svg paths for all layers of an svg except for the bottom most layer.  The bottom most layer is converted to a dataurl to be embedded in the svg.  The generated svg can be utilized for various data visualizations.",
     href: 'https://www.github.com/gdicristofaro/PSDtoSVG',
-    // alternateHref: 'https://psdtosvg.herokuapp.com/',
-    // alternateHrefTitle: 'Live Demo'
+    alternateHref: 'https://gdicristofaro.github.io/PSDtoSVG/',
+    alternateHrefTitle: 'Live Demo'
   },
   {
     img: '/img/mapmaker.png',
