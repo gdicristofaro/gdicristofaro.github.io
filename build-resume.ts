@@ -3,6 +3,8 @@ import { promises } from "fs";
 import path from "path";
 import fs from "fs";
 
+const PAGE_MARGIN = "0.5in";
+
 async function printPDF(dir: string, outputPath?: string) {
   const resumecss = await promises.readFile(
     path.join(dir, "src/styles/resume.css"),
@@ -32,7 +34,7 @@ async function printPDF(dir: string, outputPath?: string) {
   await page.setContent(htmlStr, { waitUntil: "networkidle0" });
   const pdf = await page.pdf({
     format: "LETTER",
-    margin: { left: ".5in", top: ".5in", right: ".5in", bottom: ".5in" },
+    margin: { left: PAGE_MARGIN, top: PAGE_MARGIN, right: PAGE_MARGIN, bottom: PAGE_MARGIN },
   });
 
   const pdfPath = outputPath || path.join(dir, "public/resume.pdf");
