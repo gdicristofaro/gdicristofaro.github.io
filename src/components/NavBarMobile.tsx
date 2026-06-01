@@ -2,7 +2,7 @@ import { ListItem, ListItemText, ListItemIcon, SvgIcon, List, ListItemButton, Di
 import React, { useState } from 'react';
 import { MailPath } from './MailIcon';
 import MenuIcon from './MenuIcon';
-import Link from 'next/link';
+import { Link as RouterLink } from 'react-router-dom';
 import { GithubPath } from './GithubIcon';
 import Drawer from '@mui/material/Drawer';
 import NavBarParent from './NavBarParent';
@@ -15,7 +15,7 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
   // map other local pages to menu items
   const normalPageComp = pages.map((linkInf, i) => {
     return (<ListItem key={i} disableGutters disablePadding className={(pathName.toLocaleLowerCase() === linkInf.href.toLocaleLowerCase()) ? " selected" : ""}>
-      <ListItemButton href={linkInf.href}>
+      <ListItemButton component={RouterLink} to={linkInf.href}>
         <ListItemText primary={<div>{linkInf.name}</div>} />  
       </ListItemButton>
     </ListItem>);

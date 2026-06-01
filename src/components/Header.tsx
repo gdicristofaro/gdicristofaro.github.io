@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React, { ReactNode } from 'react';
 
 export const HeaderHeight = 285;
@@ -14,7 +13,7 @@ const Header = (props: { opacity: number, children?: ReactNode }) => {
     <div className="header" style={{ margin: "0px", padding: "0px" }}>
       <div className="header-inner" style={{ opacity: opacity }}>
         <div className="header-circle-photo">
-          <Image unoptimized fill alt="a circle with a picture of me" title="A picture of me!" src="/img/circleIcon.png" />
+          <img alt="a circle with a picture of me" title="A picture of me!" src="/img/circleIcon.png" />
         </div>
         <h1 className="header-letterhead">Greg DiCristofaro</h1>
         <p className="header-letterhead">

@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCell from '../../components/ProjectCell';
-import { default as ResumeHtml } from '../../model/resumehtml.html';
+import { default as ResumeHtml } from '../../model/resumehtml.html?raw';
 
 const Page = () => (<div className="page-transition">
     <div className="ml-3 mr-3">

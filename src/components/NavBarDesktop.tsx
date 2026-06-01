@@ -1,7 +1,7 @@
 import React from 'react';
 import MailIcon from './MailIcon';
 import GithubIcon from './GithubIcon';
-import Link from 'next/link';
+import { Link as RouterLink } from 'react-router-dom';
 import NavBarParent from './NavBarParent';
 import NavBarNameLink from './NavBarNameLink';
 import { PageInfo } from '@/model/PageInfo';
@@ -33,7 +33,7 @@ const DesktopNavLinks = (props: {pages: PageInfo[], pathName: string}) => {
     if (linkInf.href.toLocaleLowerCase() === pathName.toLocaleLowerCase()) {
       return (<span className="DesktopNavLink selected" key={i}>{linkInf.name}</span>);
     } else {
-      return (<Link className="DesktopNavLink" key={i} href={linkInf.href}>{linkInf.name}</Link>);
+      return (<RouterLink className="DesktopNavLink" key={i} to={linkInf.href}>{linkInf.name}</RouterLink>);
     }
 
   });
