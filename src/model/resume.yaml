@@ -1,0 +1,144 @@
+name: Greg DiCristofaro
+title: Software Engineer
+phone: (215) 510-4508
+email: gregdicristofaro@gmail.com
+summary: TBD
+workExperience:
+- title: Software Engineer
+  company: Sleuth Kit Labs
+  timeSpan: February 2020 - April 2026
+  location: Somerville, MA
+  workItems:
+  - Developed **Digital Forensics and Incident Response software:** Cyber Triage, Autopsy, and The Sleuth Kit in an Agile/Scrum environment
+  - Expanded and optimized **data pipeline processing** handling complex SQL queries over large data sets using Python, Java, C++
+  - Created **web crawling and scraping** scripts aggegating open source data for enriching the data pipeline aggregating new features
+  - Designed and implemented cloud updatable heuristics served to on-premises deployments via **GCP Datastore, BigQuery and Cloud Functions**, then compiled into optimized predicate matching data structures
+  - > 
+    **Modernized testing and CI/CD infrastructure** using Jenkins, Docker, Linux, Bash, GitHub Actions, Python, and JUnit/Mockito
+  - >
+    **Standardized multi-platform deployment (Windows, Linux, macOS)** through Snap, Homebrew, and Advanced Installer packages
+  - Provided internal and **customer documentation** for complex features
+  - Architected and built **RESTful API and Reactive web applications** using Spring Boot, Swagger, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming
+  - Developed parallelized data ingest utilizing**Docker, JMS, ActiveMQ** for coordination
+  - Utilized AWS DynamoDB, AWS Lambda creating a file hash lookup web service for third-party integration
+  - Worked with AWS S3 and Azure Blob Storage as data sources for upload and download
+  - Developed **serverless and containerized cloud infrastructure** using Docker, JMS, ActiveMQ, AWS DynamoDB, AWS Lambda, AWS S3, GCP Cloud Functions, GCP BigQuery, and GCP Datastore
+  - Developed **Java Desktop Applications** with Swing, JavaFX, Maven, Apache Ivy, Apache POI, SQLite, PostgreSQL, and Netbeans RCP; **Contributed to ControlsFX**, a popular JavaFX controls library
+- title: Software Engineer
+  company: KBR
+  timeSpan: July 2017 - February 2020
+  location: Lexington Park, MD
+  workItems:
+  - Developed Single Sign On (SSO) and Role-Based Access Control (RBAC) web application
+  - Queried large datasets using Microsoft SQL Server, T-SQL, Entity Framework, and Linq to SQL
+  - Created tooling to **generate parameterized queries** improving performance and security
+  - Created **data visualizations** with JavaScript, TypeScript, **D3.js**, and SVG to present complex data to customers
+  - Developed and maintained **Web-based UI and RESTful API services** with **React and ASP.NET Core**
+  - Modernized large J2EE web applications built with JSP and JSF winning an award of excellence for customer satisfaction
+- title: Music Teacher
+  company: St. Mary's County Public Schools
+  timeSpan: August 2006 - June 2017
+  location: Leonardtown, MD
+  workItems:
+  - Built software for classroom use and tooling to automate school scheduling
+  - Created school-wide schedules and led public-facing events
+education:
+- degree: Master of Science in Software Development
+  institution: Boston University
+  timeSpan: September 2017 - May 2019
+  location: Boston, MA
+  gpa: 3.96 / 4.00
+- degree: Software Engineering Certificate
+  institution: Harvard University
+  timeSpan: September 2012 - December 2014
+  location: Cambridge, MA
+  gpa: 4.00 / 4.00
+- degree: Master of Music in Music Education
+  institution: University of the Arts
+  timeSpan: June 2012 - December 2015
+  location: Philadelphia, PA
+  gpa: 4.00 / 4.00
+  items:
+  - Designed cross-platform music composition software to foster creativity for young students that processes PCM audio data, visualizes music in a sequencer and renders standard music notation
+- degree: Bachelor of Science in Music Education
+  institution: Pennsylvania State University
+  timeSpan: August 2002 - May 2006
+  location: University Park, PA
+  gpa: 3.71 / 4.00
+skills:
+- category: Languages
+  items: 
+  - Python
+  - Bash
+  - SQL
+  - C
+  - C++
+  - TypeScript
+  - Java
+  - C#
+  - Rust
+  - HTML/CSS
+- category: Web/Backend
+  items: 
+  - Flask
+  - React
+  - Angular
+  - Spring Boot
+  - ASP.NET Core
+  - Server Sent Events (SSE)
+  - WebAssembly
+- category: Cloud/DevOps
+  items: 
+  - GCP (BigQuery, Cloud Functions, Datastore)
+  - AWS (Lambda, DynamoDB, S3)
+  - Azure Blob Storage
+  - Docker
+  - Jenkins
+  - Linux
+- category: Databases
+  items: 
+  - PostgreSQL
+  - MS SQL Server
+  - SQLite
+- category: Desktop
+  items: 
+  - Tauri
+  - JavaFX
+  - Swing
+- category: Development/VCS Tools
+  items: 
+  - Git
+  - GitHub
+  - Claude Code
+  - Copilot
+  - Antigravity
+  - Visual Studio Code
+  - Visual Studio IDE
+  - IntelliJ IDEA IDE
+achievements:
+- title: Presenter
+  description: Presenter for OSDFCon 2021 (Autopsy Scoring: Finding the Relevant Data with Analysis Results)
+- title: KBR Certificate of Appreciation
+  description: In recognition of outstanding performance & commitment to excellence (2019)
+projects:
+- name: constantqjs
+  description: Implemented the Constant-Q transform for spectral analysis using C++ compiled to WebAssembly (via Emscripten), integrating with TypeScript/Angular for real-time visualization (Chart.js, Web Audio API)
+  link: https://github.com/gdicristofaro/constantqjs
+- name: sci-fi-crawl
+  description: Sci-fi customizable opening credit text using React, TypeScript, Material UI, and CSS animations
+  link: https://github.com/gdicristofaro/sci-fi-crawl
+- name: PSDtoSVG
+  description: Python web application for converting Photoshop files into SVG's for data visualization
+  link: https://github.com/gdicristofaro/PSDtoSVG
+- name: SeamCarve
+  description: Scala implementation of the Seam-Carving Algorithm for content-aware image resizing
+  link: https://github.com/gdicristofaro/SeamCarve
+- name: CSPSolver
+  description: Class scheduling program based on the AC-3 algorithm utilizing Apache POI API to import from Excel documents written in Scala
+  link: https://github.com/gdicristofaro/CSPSolver
+- name: CalendarMaker
+  description: Calendar making application developed with TypeScript, React, Moment.js, Material-UI, and PptxGenJS
+  link: https://github.com/gdicristofaro/CalendarMaker
+- name: SpellChecker
+  description: Spell-checking algorithm built in C checking words against a dictionary file utilizing a self-developed hash map with buckets
+  link: https://github.com/gdicristofaro/SpellChecker
