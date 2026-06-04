@@ -2,7 +2,13 @@ name: Greg DiCristofaro
 title: Software Engineer
 phone: (215) 510-4508
 email: gregdicristofaro@gmail.com
-summary: TBD
+website: https://www.gdicristofaro.com
+github: https://www.github.com/gdicristofaro
+margin: .5
+leftColumn: w-3/5
+rightColumn: w-2/5
+summary: >
+  **Software Engineer** with 8+ years of experience in data pipeline processing and former K-12 music **educator**. Proven ability to design, test, and deploy high-performance, resilient applications leveraging cloud services (GCP, AWS) and modern DevOps practices (Docker, Jenkins).
 workExperience:
 - title: Software Engineer
   company: Sleuth Kit Labs
@@ -117,7 +123,8 @@ skills:
   - IntelliJ IDEA IDE
 achievements:
 - title: Presenter
-  description: Presenter for OSDFCon 2021 (Autopsy Scoring: Finding the Relevant Data with Analysis Results)
+  description: >
+    Presenter for OSDFCon 2021 (Autopsy Scoring: Finding the Relevant Data with Analysis Results)
 - title: KBR Certificate of Appreciation
   description: In recognition of outstanding performance & commitment to excellence (2019)
 projects:
