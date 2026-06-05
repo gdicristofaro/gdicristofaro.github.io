@@ -2,41 +2,44 @@ import { ListItem, ListItemText, ListItemIcon, SvgIcon, List, ListItemButton, Di
 import React, { useState } from 'react';
 import { MailPath } from './MailIcon';
 import MenuIcon from './MenuIcon';
-import Link from 'next/link';
 import { GithubPath } from './GithubIcon';
 import Drawer from '@mui/material/Drawer';
 import NavBarParent from './NavBarParent';
 import NavBarNameLink from './NavBarNameLink';
 import { PageInfo } from '@/model/PageInfo';
+import { useNavigate } from 'react-router-dom';
 
 
 const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>, pathName: string }) => {
   const { pages, drawerOpen, setDrawerOpen, pathName } = prop;
-  // map other local pages to menu items
+  const navigate = useNavigate();
+
   const normalPageComp = pages.map((linkInf, i) => {
-    return (<ListItem key={i} disableGutters disablePadding className={(pathName.toLocaleLowerCase() === linkInf.href.toLocaleLowerCase()) ? " selected" : ""}>
-      <ListItemButton href={linkInf.href}>
-        <ListItemText primary={<div>{linkInf.name}</div>} />  
-      </ListItemButton>
-    </ListItem>);
+    const isSelected = pathName.toLocaleLowerCase() === linkInf.href.toLocaleLowerCase();
+    return (
+      <ListItem key={i} disableGutters disablePadding className={isSelected ? "selected" : ""}>
+        <ListItemButton onClick={() => navigate(linkInf.href)}>
+          <ListItemText primary={<div>{linkInf.name}</div>} />
+        </ListItemButton>
+      </ListItem>
+    );
   });
 
   const externalComps = [
-    { text: 'Email', href: 'mailto:gregdicristofaro@gmail.com', viewbox: '0 0 20 20', svgpath: (<MailPath/>)},
-    { text: 'GitHub', href: 'https://github.com/gdicristofaro', viewbox: '0 0 18 18', svgpath: (<GithubPath/>)}
-  ].map(({text, href, viewbox, svgpath}) => (
+    { text: 'Email', href: 'mailto:gregdicristofaro@gmail.com', viewbox: '0 0 20 20', svgpath: (<MailPath />) },
+    { text: 'GitHub', href: 'https://github.com/gdicristofaro', viewbox: '0 0 18 18', svgpath: (<GithubPath />) }
+  ].map(({ text, href, viewbox, svgpath }) => (
     <ListItem key={text} disableGutters disablePadding>
       <ListItemButton href={href}>
-      <ListItemIcon className='drawer-icon'>
-        <SvgIcon className="drawer-svgicon" viewBox={viewbox}>
-          {svgpath}
-        </SvgIcon>
-      </ListItemIcon>
-      <ListItemText primary={text} />
+        <ListItemIcon className='drawer-icon'>
+          <SvgIcon className="drawer-svgicon" viewBox={viewbox}>
+            {svgpath}
+          </SvgIcon>
+        </ListItemIcon>
+        <ListItemText primary={text} />
       </ListItemButton>
-    </ListItem>));
-
-  const pagesComp = [...normalPageComp, (<Divider key="divider"/>), ...externalComps];
+    </ListItem>
+  ));
 
   return (
     <Drawer
@@ -53,14 +56,14 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
         <List>
           {normalPageComp}
         </List>
-        <Divider/>
+        <Divider />
         <List>
           {externalComps}
         </List>
       </div>
     </Drawer>
   );
-}
+};
 
 const MobileMenuButton = (props: { setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
   const { setDrawerOpen } = props;
@@ -69,9 +72,8 @@ const MobileMenuButton = (props: { setDrawerOpen: React.Dispatch<React.SetStateA
       <MenuIcon />
     </div>
   );
-}
+};
 
-// pages are a series of links
 const NavBarMobile = (props: { opacity: number, pages: PageInfo[], pathName: string }) => {
   const { opacity, pages, pathName } = props;
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -85,7 +87,7 @@ const NavBarMobile = (props: { opacity: number, pages: PageInfo[], pathName: str
         right={undefined}
       />
     </div>
-  )
-}
+  );
+};
 
 export default NavBarMobile;

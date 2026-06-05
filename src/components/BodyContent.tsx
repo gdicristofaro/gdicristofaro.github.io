@@ -1,5 +1,3 @@
-'use client';
-
 import React, { ReactNode, useEffect, useState } from 'react';
 import NavBarMobile from './NavBarMobile';
 import Header, { HeaderHeight } from './Header';
@@ -7,13 +5,12 @@ import Footer, { footerHeight } from './Footer';
 import { NavBarHeight } from './NavBarConstants';
 import NavBarDesktop from './NavBarDesktop';
 import pages, { PageInfo } from '../model/PageInfo';
-import { usePathname } from 'next/navigation';
+import { useLocation } from 'react-router-dom';
 
 
 interface BodyContentSettings {
   windowHeight: number,
   scrollY: number,
-  showFooter: boolean
 }
 
 export const indexedPages: PageInfo[] = [pages['Home'], pages['Projects'], pages['Resume']];
@@ -21,25 +18,22 @@ export const indexedPages: PageInfo[] = [pages['Home'], pages['Projects'], pages
 const BodyContent = (props: { children: ReactNode }) => {
   const { children } = props;
 
-  const pathName = usePathname();
+  const { pathname: pathName } = useLocation();
 
-  const [{ windowHeight, scrollY, showFooter }, setSettings] = useState<BodyContentSettings>({
-    windowHeight: 0,
-    scrollY: 0,
-    showFooter: false
-  });
+  const [{ windowHeight, scrollY }, setSettings] = useState<BodyContentSettings>(() => ({
+    windowHeight: window.innerHeight,
+    scrollY: window.scrollY,
+  }));
 
   useEffect(() => {
     const onResizeEvent = () =>
-      setSettings((prevSettings) => ({ ...prevSettings, windowWidth: window.innerWidth, windowHeight: window.innerHeight }));
+      setSettings((prev) => ({ ...prev, windowHeight: window.innerHeight }));
 
     const onScrollEvent = () =>
-      setSettings((prevSettings) => ({ ...prevSettings, scrollY: window.scrollY }));
+      setSettings((prev) => ({ ...prev, scrollY: window.scrollY }));
 
     window.addEventListener('resize', onResizeEvent);
     window.addEventListener('scroll', onScrollEvent);
-
-    setSettings(prev => ({ ...prev, windowHeight: window.innerHeight, scrollY: window.scrollY, showFooter: true }))
 
     return () => {
       window.removeEventListener('resize', onResizeEvent);
@@ -53,7 +47,6 @@ const BodyContent = (props: { children: ReactNode }) => {
   const navBarOpacity = ((headerShownPercent - .75) * 4);
   const headerOpacity = 1 - headerShownPercent;
 
-  // spacer for content so that it doesn't hide behind header
   const headerShift = Math.max(-scrollY, -HeaderHeight);
 
   const main = (
@@ -70,7 +63,6 @@ const BodyContent = (props: { children: ReactNode }) => {
         <Header opacity={headerOpacity}>
           <NavBarMobile
             key="mobile-nav-parent"
-            // handleToggle={mobileDrawerToggler}
             pathName={pathName}
             pages={indexedPages}
             opacity={navBarOpacity}
@@ -85,9 +77,9 @@ const BodyContent = (props: { children: ReactNode }) => {
       </div>
       <div style={{ height: (HeaderHeight + NavBarHeight) + 'px' }}></div>
       {main}
-      {showFooter && <Footer />}
+      <Footer />
     </div>
   );
-}
+};
 
 export default BodyContent;

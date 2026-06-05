@@ -5,11 +5,12 @@
 /coverage
 
 # production
-/build
-
+/dist
+/out
 /.next
 
-/out
+# typescript
+*.tsbuildinfo
 
 # misc
 .DS_Store
