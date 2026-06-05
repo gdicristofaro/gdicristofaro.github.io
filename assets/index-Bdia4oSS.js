@@ -159,7 +159,7 @@ rightColumn: w-1/3
 # This is a hack but hide the border if at the bottom of the page which can't really be done with CSS
 projectNoPrintBorderIdx: [0]
 summary: >
-  **Software Engineer** with 8+ years of experience designing, testing, and deploying full-stack applications across a wide range of domains. Expertise spans Java (Spring Boot), Python, C++, TypeScript, C# (ASP.NET Core), modern frontend frameworks (React, Angular), cloud infrastructure (GCP, AWS), and CI/CD practices (Docker, Jenkins, GitHub Actions). Former **educator of 11 years** with a proven track record of collaboration and translating complex technical concepts for non-technical audiences.
+  **Software Engineer** with 8+ years of experience designing, testing, and deploying full-stack applications across a wide range of domains. Expertise spans Java (Spring Boot), Python, C++, TypeScript, C# (ASP.NET Core), modern frontend frameworks (React, Angular), cloud infrastructure (GCP, AWS), and CI/CD practices (Docker, Jenkins, GitHub Actions). Former **educator of 11 years** with a proven track record of collaborating and translating complex technical concepts for non-technical audiences.
 workExperience:
 - title: Software Engineer
   company: Sleuth Kit Labs
@@ -179,12 +179,12 @@ workExperience:
   - Authored internal and **customer-facing documentation** for complex features
   - >
     Architected and built **RESTful API and Reactive web applications** using Spring Boot, Swagger, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming
-  - Utilized AWS DynamoDB, AWS Lambda creating a **file hash lookup web service** for third-party integration
+  - Built a **file hash lookup web service** using AWS DynamoDB and Lambda for third-party integration
   - Integrated **AWS S3** and **Azure Blob Storage** as data sources for file upload and retrieval
   - >
     Architected **parallel data ingestion system** using Docker, JMS, ActiveMQ, and AWS SQS for coordination, improving scalability of data processing
   - Developed third-party integrations in **Go**
-  - Utilized **Node.js** in web application development, Desktop (Tauri) development, and development utilities
+  - Leveraged **Node.js** across web application development, desktop tooling (Tauri), and build utilities
   # - >
   #   Developed **Java Desktop Applications** with Swing, JavaFX, Maven, Apache Ivy, Apache POI, SQLite, PostgreSQL, and Netbeans RCP; **Contributed to ControlsFX**, a popular JavaFX controls library
 - title: Software Engineer
@@ -198,7 +198,7 @@ workExperience:
     Architected and created tooling to **generate parameterized queries**, improving query performance from minutes to milliseconds and eliminating SQL injection vulnerabilities
   - Created **data visualizations** with JavaScript, TypeScript, **D3.js**, and SVG to present complex data to customers
   - >
-    Led creation and deployment of a **React and ASP.NET Core** web application with CMS and Authentication/Authorization capabilities collaborating with stakeholders and UX designer
+    Led creation and deployment of a **React and ASP.NET Core** web application with CMS and Authentication/Authorization capabilities, collaborating with stakeholders and a UX designer
   - Modernized large J2EE web applications built with JSP and JSF, earning an **award of excellence** for customer satisfaction
 - title: Music Teacher
   company: St. Mary's County Public Schools
