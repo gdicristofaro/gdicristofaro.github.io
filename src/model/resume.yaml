@@ -24,7 +24,7 @@ workExperience:
   - >
     Designed and implemented cloud updatable heuristics served to on-premises deployments via **GCP Datastore, BigQuery and Cloud Functions**, then compiled into optimized predicate matching data structures with runtimes in milliseconds for millions of files
   - >
-    **Modernized testing and CI/CD infrastructure** using Jenkins, Docker, Linux, Bash, GitHub Actions, Python, JUnit/Mockito, SonarQube, and Playwright
+    **Modernized testing and CI/CD infrastructure** using Jenkins, Docker, Linux, Bash, GitHub Actions, CircleCI, Python, JUnit/Mockito, SonarQube, and Playwright
   - >
     **Standardized multi-platform deployment (Windows, Linux, macOS)** through Snap, Homebrew, and Advanced Installer packages
   - Authored internal and **customer-facing documentation** for complex features
@@ -33,7 +33,7 @@ workExperience:
   - Utilized AWS DynamoDB, AWS Lambda creating a **file hash lookup web service** for third-party integration
   - Integrated **AWS S3** and **Azure Blob Storage** as data sources for file upload and retrieval
   - >
-    Architected **parallel data ingestion system** using Docker, JMS, ActiveMQ, and AWS SQS for coordination, improving performance and scalability of data processing
+    Architected **parallel data ingestion system** using Docker, JMS, ActiveMQ, and AWS SQS for coordination, improving scalability of data processing
   - Developed third-party integrations in **Go**
   - Utilized **Node.js** in web application development, Desktop (Tauri) development, and development utilities
   # - >
