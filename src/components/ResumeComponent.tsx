@@ -219,7 +219,7 @@ export default function ResumeComponent({
               Projects
             </h2>
             {projects.map((project, i) => (
-              <div key={i} className={`mb-4 text-sm break-inside-avoid-page${i > 0 ? ' pt-3 border-t border-dotted border-neutral-400 print-border-none' : ''}`}>
+              <div key={i} className={`mb-4 text-sm break-inside-avoid-page${i > 0 ? ' pt-3 border-t border-dotted border-neutral-400 ' : ' print-border-none '}`}>
                 <p className="font-bold text-gray-800 dark:text-gray-100 mb-1">{project.name}</p>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {md(project.description)}{' '}
