@@ -7,8 +7,10 @@ github: https://www.github.com/gdicristofaro
 margin: .25
 leftColumn: w-2/3
 rightColumn: w-1/3
+# This is a hack but hide the border if at the bottom of the page which can't really be done with CSS
+projectNoPrintBorderIdx: [0]
 summary: >
-  **Software Engineer** with 8+ years of experience designing, testing, and deploying full-stack applications across a wide range of domains. Expertise spans Java (Spring Boot), Python, C++, TypeScript, C# (ASP.NET Core), modern frontend frameworks (React, Angular), cloud infrastructure (GCP, AWS), and CI/CD practices (Docker, Jenkins, GitHub Actions).  Former **educator of 11 years** bringing a track record for collaboration and translating complex technical concepts for non-technical audiences.
+  **Software Engineer** with 8+ years of experience designing, testing, and deploying full-stack applications across a wide range of domains. Expertise spans Java (Spring Boot), Python, C++, TypeScript, C# (ASP.NET Core), modern frontend frameworks (React, Angular), cloud infrastructure (GCP, AWS), and CI/CD practices (Docker, Jenkins, GitHub Actions). Former **educator of 11 years** with a proven track record of collaboration and translating complex technical concepts for non-technical audiences.
 workExperience:
 - title: Software Engineer
   company: Sleuth Kit Labs
@@ -16,8 +18,8 @@ workExperience:
   location: Somerville, MA
   workItems:
   - >
-    Developed **Digital Forensics and Incident Response software:** Cyber Triage, Autopsy, and The Sleuth Kit in an Agile/Scrum environment
-  - Expanded and optimized **data pipeline processing** handling complex SQL queries over large data sets using Python, Java, C++
+    Developed **Digital Forensics and Incident Response** software: Cyber Triage, Autopsy, and The Sleuth Kit in an Agile/Scrum environment
+  - Expanded and optimized **data pipeline processing** including complex SQL queries over large data sets using Python, Java, and C++
   - Created **web crawling and scraping** scripts aggregating open source data to enrich the data pipeline with new features
   - >
     Designed and implemented cloud updatable heuristics served to on-premises deployments via **GCP Datastore, BigQuery and Cloud Functions**, then compiled into optimized predicate matching data structures with runtimes in milliseconds for millions of files
@@ -25,11 +27,11 @@ workExperience:
     **Modernized testing and CI/CD infrastructure** using Jenkins, Docker, Linux, Bash, GitHub Actions, Python, JUnit/Mockito, SonarQube, and Playwright
   - >
     **Standardized multi-platform deployment (Windows, Linux, macOS)** through Snap, Homebrew, and Advanced Installer packages
-  - Provided internal and **customer documentation** for complex features
+  - Authored internal and **customer-facing documentation** for complex features
   - >
     Architected and built **RESTful API and Reactive web applications** using Spring Boot, Swagger, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming
   - Utilized AWS DynamoDB, AWS Lambda creating a **file hash lookup web service** for third-party integration
-  - Worked with **AWS S3** and **Azure Blob Storage** as data sources for upload and download
+  - Integrated **AWS S3** and **Azure Blob Storage** as data sources for file upload and retrieval
   - >
     Architected **parallel data ingestion system** using Docker, JMS, ActiveMQ, and AWS SQS for coordination, improving performance and scalability of data processing
   - Developed third-party integrations in **Go**
@@ -42,13 +44,13 @@ workExperience:
   location: Lexington Park, MD
   workItems:
   - Developed **Single Sign On (SSO) and Role-Based Access Control (RBAC)** web application
-  - Queried large datasets using Microsoft SQL Server, T-SQL, Entity Framework, and Linq to SQL
+  - Queried large datasets using **Microsoft SQL Server, Entity Framework**, T-SQL, and Linq to SQL
   - >
     Architected and created tooling to **generate parameterized queries**, improving query performance from minutes to milliseconds and eliminating SQL injection vulnerabilities
   - Created **data visualizations** with JavaScript, TypeScript, **D3.js**, and SVG to present complex data to customers
   - >
     Led creation and deployment of a **React and ASP.NET Core** web application with CMS and Authentication/Authorization capabilities collaborating with stakeholders and UX designer
-  - Modernized large J2EE web applications built with JSP and JSF winning an **award of excellence** for customer satisfaction
+  - Modernized large J2EE web applications built with JSP and JSF, earning an **award of excellence** for customer satisfaction
 - title: Music Teacher
   company: St. Mary's County Public Schools
   timeSpan: August 2006 - June 2017
@@ -57,7 +59,7 @@ workExperience:
   - >
     Built software tools for classroom use, including a **constraint-based scheduling system (CSPSolver)** to automate school scheduling
   - Demonstrated strong organizational, leadership, and logistics skills by coordinating school-wide schedules and leading public-facing events
-  - Created resources and curriculum scaffolded for success at multiple levels
+  - Developed differentiated and scaffolded resources and curriculum to support student success at multiple skill levels
 education:
 - degree: Master of Science in Software Development
   institution: Boston University
@@ -79,7 +81,7 @@ education:
   location: Philadelphia, PA
   gpa: 4.00 / 4.00
   items:
-  - Designed cross-platform music composition software to foster creativity for young students that processes PCM audio data, visualizes music in a sequencer and renders standard music notation
+  - Designed cross-platform music composition software to foster creativity for young students that processed PCM audio data, visualized music in a sequencer, and rendered standard music notation
 # - degree: Bachelor of Science in Music Education
 #   institution: Pennsylvania State University
 #   timeSpan: August 2002 - May 2006
@@ -97,13 +99,10 @@ skills:
   - SQL
   - C
   - C++
-  - Go
-  #- Rust
-  #- PHP
   - HTML/CSS
+  - Go
 - category: Web/Backend
   items:
-  #- Flask
   - React
   - Angular
   - Spring Boot
@@ -111,6 +110,7 @@ skills:
   - Server Sent Events (SSE)
   - WebAssembly
   - Node.js
+  - Flask
 - category: Cloud/DevOps
   items:
   - GCP (BigQuery, Cloud Functions, Datastore)
@@ -119,7 +119,7 @@ skills:
   - Docker
   - Jenkins
   - SonarQube
-  #- Playwright
+  - Playwright
   - Linux
 - category: Databases
   items:

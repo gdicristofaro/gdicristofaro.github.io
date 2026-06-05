@@ -47,4 +47,5 @@ export interface ResumeData {
   skills: SkillCategory[];
   achievements: Achievement[];
   projects: Project[];
+  projectNoPrintBorderIdx: number[];
 }

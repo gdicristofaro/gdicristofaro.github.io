@@ -18,6 +18,7 @@ const __dirname = dirname(__filename);
 
 const DEFAULT_YAML_PATH = "src/model/resume.yaml";
 const DEFAULT_OUTPUT_PDF = "public/resume.pdf";
+const DEFAULT_OUTPUT_HTML = "src/model/resume.html";
 
 async function buildHtml(yamlPath: string): Promise<{ html: string; data: ResumeData }> {
   const [resumeCss, yamlContent] = await Promise.all([
@@ -69,6 +70,9 @@ async function buildDefault(outputPdf: string): Promise<void> {
   const yamlPath = path.resolve(__dirname, DEFAULT_YAML_PATH);
   const { html, data } = await buildHtml(yamlPath);
   const margin = typeof data.margin === 'number' ? data.margin : 0.5;
+  const htmlPath = path.resolve(__dirname, DEFAULT_OUTPUT_HTML);
+  await fsPromises.writeFile(htmlPath, html);
+  console.log(`Saved HTML: ${htmlPath}`);
   await printPdf(html, path.resolve(__dirname, outputPdf), margin);
 }
 

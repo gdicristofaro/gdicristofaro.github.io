@@ -90,6 +90,7 @@ export default function ResumeComponent({
   skills,
   achievements,
   projects,
+  projectNoPrintBorderIdx
 }: ResumeData) {
   return (
     <div className="resume-container">
@@ -126,14 +127,14 @@ export default function ResumeComponent({
 
       <div className="column-container sm:flex">
         <div className={`left-column sm:${leftColumn} pr-6`}>
-          <section className="summary mb-6 break-inside-avoid-page">
+          <section className="summary mb-5 break-inside-avoid-page">
             <h2 className="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-3">
               Summary
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-300">{md(summary)}</p>
           </section>
 
-          <section className="mb-6">
+          <section className="mb-5">
             <h2 className="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-3">
               Experience
             </h2>
@@ -156,12 +157,12 @@ export default function ResumeComponent({
             ))}
           </section>
 
-          <section className="mb-6 break-inside-avoid-page">
+          <section className="break-inside-avoid-page">
             <h2 className="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-3">
               Education
             </h2>
             {education.map((edu, i) => (
-              <div key={i} className={`mb-4${i > 0 ? ' pt-3 border-t border-dotted border-neutral-400' : ''}`}>
+              <div key={i} className={`${i < education.length - 1 ? 'mb-4' : ''} ${i > 0 ? 'pt-3 border-t border-dotted border-neutral-400' : ''}`}>
                 <p className="font-bold text-lg text-gray-800 dark:text-gray-100">{edu.degree}</p>
                 <p className="font-bold mb-1 text-base highlight-color">{edu.institution}</p>
                 <p className="text-gray-600 dark:text-gray-300 text-xs mb-2">
@@ -186,7 +187,7 @@ export default function ResumeComponent({
         </div>
 
         <div className={`right-column sm:${rightColumn}`}>
-          <section className="mb-6 break-inside-avoid-page">
+          <section className="mb-5 break-inside-avoid-page">
             <h2 className="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-2">
               Skills
             </h2>
@@ -199,7 +200,7 @@ export default function ResumeComponent({
             ))}
           </section>
 
-          <section className="mb-6 break-inside-avoid-page">
+          <section className="mb-5 break-inside-avoid-page">
             <h2 className="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-3">
               Achievements
             </h2>
@@ -214,12 +215,12 @@ export default function ResumeComponent({
             ))}
           </section>
 
-          <section className="projects mb-6">
+          <section className="projects">
             <h2 className="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-3">
               Projects
             </h2>
             {projects.map((project, i) => (
-              <div key={i} className={`mb-4 text-sm break-inside-avoid-page${i > 0 ? ' pt-3 border-t border-dotted border-neutral-400 ' : ' print-border-none '}`}>
+              <div key={i} className={`text-sm break-inside-avoid-page${i < projects.length - 1 ? ' mb-1 pb-3 border-b border-dotted border-neutral-400' + (projectNoPrintBorderIdx.includes(i) ? ' print-border-none' : '') : ' mb-4'}`}>
                 <p className="font-bold text-gray-800 dark:text-gray-100 mb-1">{project.name}</p>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {md(project.description)}{' '}
