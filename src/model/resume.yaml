@@ -18,7 +18,7 @@ workExperience:
   - >
     Developed **Digital Forensics and Incident Response software:** Cyber Triage, Autopsy, and The Sleuth Kit in an Agile/Scrum environment
   - Expanded and optimized **data pipeline processing** handling complex SQL queries over large data sets using Python, Java, C++
-  - Created **web crawling and scraping** scripts aggregating open source data for enriching the data pipeline aggregating new features
+  - Created **web crawling and scraping** scripts aggregating open source data to enrich the data pipeline with new features
   - >
     Designed and implemented cloud updatable heuristics served to on-premises deployments via **GCP Datastore, BigQuery and Cloud Functions**, then compiled into optimized predicate matching data structures with runtimes in milliseconds for millions of files
   - >
@@ -28,7 +28,6 @@ workExperience:
   - Provided internal and **customer documentation** for complex features
   - >
     Architected and built **RESTful API and Reactive web applications** using Spring Boot, Swagger, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming
-  - Developed parallelized data ingest utilizing **Docker, JMS, ActiveMQ, AWS SQS** for coordination
   - Utilized AWS DynamoDB, AWS Lambda creating a **file hash lookup web service** for third-party integration
   - Worked with **AWS S3** and **Azure Blob Storage** as data sources for upload and download
   - >
@@ -45,7 +44,7 @@ workExperience:
   - Developed **Single Sign On (SSO) and Role-Based Access Control (RBAC)** web application
   - Queried large datasets using Microsoft SQL Server, T-SQL, Entity Framework, and Linq to SQL
   - >
-    Architected and created tooling to **generate parameterized queries** improving performance from minutes to milliseconds for queries and removed SQL injection threats
+    Architected and created tooling to **generate parameterized queries**, improving query performance from minutes to milliseconds and eliminating SQL injection vulnerabilities
   - Created **data visualizations** with JavaScript, TypeScript, **D3.js**, and SVG to present complex data to customers
   - >
     Led creation and deployment of a **React and ASP.NET Core** web application with CMS and Authentication/Authorization capabilities collaborating with stakeholders and UX designer
@@ -66,7 +65,7 @@ education:
   location: Boston, MA
   gpa: 3.96 / 4.00
   items:
-  - Classes in web applications using RESTful APIs, Node.js, Express, and MongoDB
+  - Coursework covering web application development with RESTful APIs, Node.js, Express, and MongoDB
 - degree: Software Engineering Certificate
   institution: Harvard University
   timeSpan: September 2012 - December 2014
@@ -159,14 +158,14 @@ projects:
   link: https://gdicristofaro.github.io/sci-fi-crawl/
   #link: https://github.com/gdicristofaro/sci-fi-crawl
 - name: PSDtoSVG
-  description: Python web application for converting Photoshop files into SVG's for data visualization
+  description: Python web application for converting Photoshop files into SVGs for data visualization
   link: https://gdicristofaro.github.io/PSDtoSVG/
   #link: https://github.com/gdicristofaro/PSDtoSVG
 - name: SeamCarve
   description: Scala implementation of the Seam-Carving Algorithm for content-aware image resizing
   link: https://github.com/gdicristofaro/SeamCarve
 - name: CSPSolver
-  description: Class scheduling program based on the AC-3 algorithm utilizing Apache POI API to import from Excel documents written in Scala
+  description: Class scheduling program written in Scala based on the AC-3 algorithm, importing data from Excel documents via Apache POI
   link: https://github.com/gdicristofaro/CSPSolver
 - name: CalendarMaker
   description: Calendar making application developed with TypeScript, React, Moment.js, Material-UI, and PptxGenJS
