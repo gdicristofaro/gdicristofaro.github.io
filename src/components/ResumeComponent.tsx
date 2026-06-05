@@ -172,13 +172,14 @@ export default function ResumeComponent({
                   <AcademicCapIcon />
                   <span className="italic">GPA {edu.gpa}</span>
                 </p>
-                {edu.items && edu.items.length > 0 && (
-                  <ul className="text-sm text-gray-600 dark:text-gray-300 italic list-disc ml-5">
+                {edu.items && edu.items.length > 0 && (edu.items.length === 1 ? 
+                (<span className="text-sm text-gray-600 dark:text-gray-300 italic">{md(edu.items[0])}</span>) : 
+                (<ul className="text-sm text-gray-600 dark:text-gray-300 italic list-disc ml-5">
                     {edu.items.map((item, j) => (
                       <li key={j}>{md(item)}</li>
                     ))}
                   </ul>
-                )}
+                ))}
               </div>
             ))}
           </section>

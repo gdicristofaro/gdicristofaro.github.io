@@ -1,6 +1,6 @@
 import * as puppeteer from "puppeteer";
 import { promises as fsPromises, watch } from "fs";
-import path from "path";
+import path, { dirname } from "path";
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { load as loadYaml } from 'js-yaml';
@@ -8,6 +8,13 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
 import ResumeComponent from './src/components/ResumeComponent';
 import type { ResumeData } from './src/model/ResumeData';
+import { fileURLToPath } from "url";
+
+// Full path to the current file
+const __filename = fileURLToPath(import.meta.url);
+
+// Path to the current file's directory
+const __dirname = dirname(__filename);
 
 const DEFAULT_YAML_PATH = "src/model/resume.yaml";
 const DEFAULT_OUTPUT_PDF = "public/resume.pdf";
@@ -40,7 +47,7 @@ ${resumeHtml}
 async function printPdf(html: string, outputPath: string, marginInches: number): Promise<void> {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  await page.setContent(html, { waitUntil: "networkidle0" });
+  await page.setContent(html, { waitUntil: "domcontentloaded" });
   const pdf = await page.pdf({
     format: "LETTER",
     margin: {
