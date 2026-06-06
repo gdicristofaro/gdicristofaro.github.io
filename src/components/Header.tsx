@@ -10,8 +10,7 @@ const Header = (props: { opacity: number, children?: ReactNode }) => {
       <div className="header-inner" style={{ opacity: opacity }}>
         <div className="header-circle-photo">
           <img
-            alt="a circle with a picture of me"
-            title="A picture of me!"
+            alt="Greg DiCristofaro"
             src="/img/circleIcon.png"
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
           />

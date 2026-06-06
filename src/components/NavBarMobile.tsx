@@ -68,7 +68,13 @@ const NavBarDrawer = (prop: { pages: PageInfo[], drawerOpen: boolean, setDrawerO
 const MobileMenuButton = (props: { setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
   const { setDrawerOpen } = props;
   return (
-    <div className="MobileMenuButtonParent" onClick={() => setDrawerOpen((prev: boolean) => !prev)}>
+    <div
+      className="MobileMenuButtonParent"
+      role="button"
+      tabIndex={0}
+      onClick={() => setDrawerOpen((prev: boolean) => !prev)}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setDrawerOpen((prev: boolean) => !prev); }}
+    >
       <MenuIcon />
     </div>
   );

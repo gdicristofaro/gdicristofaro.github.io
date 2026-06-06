@@ -32,6 +32,7 @@
     "@types/yargs": "^17.0.35",
     "@vitejs/plugin-react": "^6.0.2",
     "eslint": "^9.0.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
     "gh-pages": "^6.3.0",

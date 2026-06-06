@@ -6,7 +6,7 @@ const Home = () => (
     <div className="homepage-profile-picture">
       <img
         src="/img/profile.jpg"
-        alt="my profile picture"
+        alt="Greg DiCristofaro"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
       />
     </div>

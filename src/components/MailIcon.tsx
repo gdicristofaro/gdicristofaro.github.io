@@ -6,7 +6,8 @@ export const MailPath = () => (<path d="M 18,0 H 2 C 0.9,0 0.01,0.9 0.01,2 L 0,1
 const MailIcon = () => {
   return (<svg
     version="1.1"
-    role="Email"
+    role="img"
+    aria-label="Email"
     className="MailIcon NavIcon"
     x="0px" y="0px"
     viewBox="0 0 20 16"
