@@ -195,7 +195,7 @@ workExperience:
   - Developed **Single Sign On (SSO) and Role-Based Access Control (RBAC)** web application
   - Queried large datasets using **Microsoft SQL Server, Entity Framework**, T-SQL, and Linq to SQL
   - >
-    Architected and created tooling to **generate parameterized queries**, improving query performance from minutes to milliseconds and eliminating SQL injection vulnerabilities
+    Built tooling to **generate parameterized queries** tailored to the deployment environment, improving query performance from minutes to milliseconds and eliminating SQL injection vulnerabilities
   - Created **data visualizations** with JavaScript, TypeScript, **D3.js**, and SVG to present complex data to customers
   - >
     Led creation and deployment of a **React and ASP.NET Core** web application with CMS and Authentication/Authorization capabilities, collaborating with stakeholders and a UX designer
