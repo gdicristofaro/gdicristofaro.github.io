@@ -151,15 +151,15 @@ achievements:
 projects:
 - name: constantqjs
   description: Implemented the Constant-Q transform for **spectral analysis** using C++ compiled to **WebAssembly** (via Emscripten), integrating with **TypeScript/Angular** for real-time visualization (Chart.js, Web Audio API)
-  link: https://gdicristofaro.github.io/constantqjs/
+  link: https://gdicristofaro.github.io/constantqjs
   #link: https://github.com/gdicristofaro/constantqjs
 - name: sci-fi-crawl
   description: Sci-fi customizable opening credit text using **React, TypeScript, Material UI, and CSS animations**
-  link: https://gdicristofaro.github.io/sci-fi-crawl/
+  link: https://gdicristofaro.github.io/sci-fi-crawl
   #link: https://github.com/gdicristofaro/sci-fi-crawl
 - name: PSDtoSVG
   description: Python web application for converting Photoshop files into SVGs for data visualization
-  link: https://gdicristofaro.github.io/PSDtoSVG/
+  link: https://gdicristofaro.github.io/PSDtoSVG
   #link: https://github.com/gdicristofaro/PSDtoSVG
 - name: SeamCarve
   description: Scala implementation of the Seam-Carving Algorithm for content-aware image resizing
