@@ -39,6 +39,8 @@ export interface ResumeData {
   website: string;
   github: string;
   margin: number;
+  sectionMargin: number | undefined;
+  subsectionMargin: number | undefined;
   defaultFontSize: string | undefined;
   leftColumn: string;
   rightColumn: string;
