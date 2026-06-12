@@ -39,6 +39,7 @@ export interface ResumeData {
   website: string;
   github: string;
   margin: number;
+  defaultFontSize: string | undefined;
   leftColumn: string;
   rightColumn: string;
   summary: string;

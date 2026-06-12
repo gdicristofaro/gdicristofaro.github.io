@@ -5,6 +5,7 @@ email: gregdicristofaro@gmail.com
 website: https://www.gdicristofaro.com
 github: https://www.github.com/gdicristofaro
 margin: .25
+defaultFontSize: 15.5px
 leftColumn: w-2/3
 rightColumn: w-1/3
 # This is a hack but hide the border if at the bottom of the page which can't really be done with CSS

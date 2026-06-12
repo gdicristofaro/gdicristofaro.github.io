@@ -35,6 +35,7 @@ async function buildHtml(yamlPath: string): Promise<{ html: string; data: Resume
     <meta charset="UTF-8">
     <title>${data.name} - Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>${data.defaultFontSize ? `html { font-size: ${data.defaultFontSize} }` : ''}</style>
     <style>${resumeCss}</style>
 </head>
 <body>

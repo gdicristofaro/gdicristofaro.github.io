@@ -139,7 +139,7 @@ export default function ResumeComponent({
               Experience
             </h2>
             {workExperience.map((job, i) => (
-              <div key={i} className={`mb-4 break-inside-avoid-page${i > 0 ? ' pt-3 border-t border-dotted border-neutral-400 print-border-none' : ''}`}>
+              <div key={i} className={`mb-4 break-inside-avoid-page${i > 0 ? ' border-t border-dotted border-neutral-400 print-border-none' : ''}`}>
                 <p className="font-bold text-lg text-gray-800 dark:text-gray-100">{job.title}</p>
                 <p className="font-bold text-base mb-1 highlight-color">{job.company}</p>
                 <div className="text-gray-600 dark:text-gray-300 text-xs mb-2">
@@ -224,8 +224,8 @@ export default function ResumeComponent({
                 <p className="font-bold text-gray-800 dark:text-gray-100 mb-1">{project.name}</p>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {md(project.description)}{' '}
-                  <a className="highlight-color" href={project.link}>{project.link}</a>
                 </p>
+                {project.link && <a className="highlight-color break-all" href={project.link}>{project.link.replaceAll(/^https?:\/\/(www)?/gi, '')}</a>}
               </div>
             ))}
           </section>
