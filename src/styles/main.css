@@ -1,16 +1,66 @@
 @import "tailwindcss";
-@import './body.css';
-@import './layout.css';
-@import './footer.css';
-@import './header.css';
-@import './navbar.css';
-@import './projectscell.css';
-@import './drawer.css';
 
-@import './pages/home.css';
-@import './pages/projects.css';
-@import './pages/resume.css';
-
-@import './darktheme.css';
-
+/* Shared resume styles, also injected into the standalone PDF build pipeline */
 @import './resume.css';
+
+/*
+ * Site palette, modeled after constantqjs/src/styles/theme.scss:
+ * semantic color tokens defined with light-dark() so light/dark mode is
+ * resolved automatically from `color-scheme` rather than `dark:` variants.
+ */
+@theme {
+  /* surfaces */
+  --color-page: light-dark(#eeeeee, rgb(22, 35, 37));
+  --color-card: light-dark(#ffffff, rgb(32, 47, 48));
+  --color-bar: #0a1719;
+
+  /* text */
+  --color-body: light-dark(#0a1719, #eeeeee);
+  --color-on-bar: #f9f9f9;
+
+  /* brand / accent */
+  --color-accent: #5acfe3;
+  --color-accent-hover: #b2f4ff;
+  --color-link: light-dark(#38808c, #5acfe3);
+  --color-link-hover: light-dark(#5acfe3, #b2f4ff);
+  --color-highlight: light-dark(#00798f, #5acfe3);
+
+  /* typography */
+  --font-sans: 'Roboto', sans-serif;
+
+  /* animation */
+  --animate-fade-in: fade-in 0.2s ease-in-out forwards;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: 13px;
+    font-family: var(--font-sans);
+    background-color: var(--color-page);
+    color: var(--color-body);
+  }
+
+  *:focus {
+    outline: none;
+  }
+}

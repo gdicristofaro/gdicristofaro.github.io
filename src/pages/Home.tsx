@@ -1,24 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const linkClass = 'text-link hover:text-link-hover';
+
 const Home = () => (
-  <div className="homepage-main page-transition page-content mt-8">
-    <div className="homepage-profile-picture">
+  <div className="mx-auto mt-8 block max-w-[800px] animate-fade-in opacity-0">
+    <div className="relative float-left mr-5 h-[200px] w-[144px]">
       <img
         src="/img/profile.jpg"
         alt="Greg DiCristofaro"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+        className="absolute inset-0 h-full w-full object-cover"
       />
     </div>
-    <p className="homepage-paragraph description-text">
+    <p className="mt-0 text-[18px]">
       Hello, and welcome to my website.
-      You can read more about my work history on my <Link to="/resume">resum&eacute;</Link>.
-      Also, you can find some of my <Link to="/projects">software projects</Link> on this website.
-      All of these projects can also be found on my <a href="https://github.com/gdicristofaro">GitHub account</a> as well.
-      If you have any questions, feel free to email me at <a href="mailto:gregdicristofaro@gmail.com">gregdicristofaro@gmail.com</a>.
+      You can read more about my work history on my <Link className={linkClass} to="/resume">resum&eacute;</Link>.
+      Also, you can find some of my <Link className={linkClass} to="/projects">software projects</Link> on this website.
+      All of these projects can also be found on my <a className={linkClass} href="https://github.com/gdicristofaro">GitHub account</a> as well.
+      If you have any questions, feel free to email me at <a className={linkClass} href="mailto:gregdicristofaro@gmail.com">gregdicristofaro@gmail.com</a>.
     </p>
-    <p className="homepage-paragraph description-text">Thanks,</p>
-    <p className="homepage-paragraph description-text">Greg DiCristofaro</p>
+    <p className="mt-0 text-[18px]">Thanks,</p>
+    <p className="mt-0 text-[18px]">Greg DiCristofaro</p>
   </div>
 );
 

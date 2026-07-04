@@ -1,29 +1,36 @@
-import React, { ReactNode } from 'react';
+import React from "react";
 
-export const HeaderHeight = 285;
+const letterhead = "m-0 text-center";
+const linkClass = "text-xs/5 text-on-bar no-underline hover:text-accent-hover";
+const dotClass = "text-xs/5 mx-1";
 
-const Header = (props: { opacity: number, children?: ReactNode }) => {
-  const { opacity, children } = props;
-
+const Header = () => {
   return (
-    <div className="header" style={{ margin: "0px", padding: "0px" }}>
-      <div className="header-inner" style={{ opacity: opacity }}>
-        <div className="header-circle-photo">
-          <img
-            alt="Greg DiCristofaro"
-            src="/img/circleIcon.png"
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-        </div>
-        <h1 className="header-letterhead">Greg DiCristofaro</h1>
-        <p className="header-letterhead">
-          <a href="http://www.gdicristofaro.com">www.gdicristofaro.com</a>
-          <span className="header-dot">•</span>
-          <a href="http://www.github.com/gdicristofaro">www.github.com/gdicristofaro</a>
-        </p>
-        <p className="header-letterhead"><a href="mailto:gregdicristofaro@gmail.com">gregdicristofaro@gmail.com</a></p>
+    <div className="m-0 w-full bg-bar px-0 py-2 font-light text-on-bar">
+      <div className="relative mx-auto mb-2 block h-50 w-50">
+        <img
+          alt="Greg DiCristofaro"
+          src="/img/circleIcon.png"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
       </div>
-      {children}
+      <h1 className={`${letterhead} text-xl font-light text-accent`}>
+        Greg DiCristofaro
+      </h1>
+      <p className={letterhead}>
+        <a className={linkClass} href="http://www.gdicristofaro.com">
+          www.gdicristofaro.com
+        </a>
+        <span className={dotClass}>•</span>
+        <a className={linkClass} href="http://www.github.com/gdicristofaro">
+          www.github.com/gdicristofaro
+        </a>
+      </p>
+      <p className={letterhead}>
+        <a className={linkClass} href="mailto:gregdicristofaro@gmail.com">
+          gregdicristofaro@gmail.com
+        </a>
+      </p>
     </div>
   );
 };

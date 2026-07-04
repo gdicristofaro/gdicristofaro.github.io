@@ -1,16 +1,12 @@
 import React from 'react';
 
 // link to main website with name
-const NavBarNameLink = (props: { opacity: number }) => {
-  const { opacity } = props;
-
+const NavBarNameLink = () => {
   return (
-    <div className="navbar-name-div"
-      style={{ opacity, visibility: opacity <= 0 ? 'hidden' : 'visible' }}
-    >
-      <a href="http://www.gdicristofaro.com/">
+    <div className="leading-[50px]">
+      <a className="no-underline" href="http://www.gdicristofaro.com/">
         <div>
-          <h1 className="navbar-name-text header-letterhead">Greg DiCristofaro</h1>
+          <h1 className="m-0 text-left text-[160%] font-light text-accent">Greg DiCristofaro</h1>
         </div>
       </a>
     </div>

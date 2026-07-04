@@ -1,54 +1,70 @@
-import React from 'react';
-import MailIcon from './MailIcon';
-import GithubIcon from './GithubIcon';
-import { Link } from 'react-router-dom';
-import NavBarParent from './NavBarParent';
-import NavBarNameLink from './NavBarNameLink';
-import { PageInfo } from '@/model/PageInfo';
+import React from "react";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
+import { SiGithub } from "@icons-pack/react-simple-icons";
+import { Link } from "react-router-dom";
+import NavBarParent from "./NavBarParent";
+import NavBarNameLink from "./NavBarNameLink";
+import { PageInfo } from "@/model/PageInfo";
 
-
-const DesktopIconsParent = (props: { opacity: number }) => {
-  const { opacity } = props;
-
+const DesktopIconsParent = () => {
   return (
-    <div className="desktop-icons-parent" style={{ opacity, visibility: opacity <= 0 ? "hidden" : "visible" }}>
-      <a className="email-link" href="mailto:gregdicristofaro@gmail.com">
-        <MailIcon />
+    <div className="flex flex-row justify-end text-right">
+      <a
+        className="mx-[10px] text-on-bar hover:text-accent-hover"
+        href="mailto:gregdicristofaro@gmail.com"
+        aria-label="Email"
+      >
+        <EnvelopeIcon className="h-[30px] w-auto" />
       </a>
-      <a href="http://www.github.com/gdicristofaro">
-        <GithubIcon />
+      <a
+        className="text-on-bar hover:text-accent-hover"
+        href="http://www.github.com/gdicristofaro"
+        aria-label="GitHub"
+      >
+        <SiGithub />
       </a>
     </div>
   );
 };
 
-const DesktopNavLinks = (props: { pages: PageInfo[], pathName: string }) => {
+const DesktopNavLinks = (props: { pages: PageInfo[]; pathName: string }) => {
   const { pages, pathName } = props;
 
   const pagesEls = pages.map(function (linkInf, i) {
     if (linkInf.href.toLocaleLowerCase() === pathName.toLocaleLowerCase()) {
-      return (<span className="DesktopNavLink selected" key={i}>{linkInf.name}</span>);
+      return (
+        <span className="mx-[15px] text-accent" key={i}>
+          {linkInf.name}
+        </span>
+      );
     } else {
-      return (<Link className="DesktopNavLink" key={i} to={linkInf.href}>{linkInf.name}</Link>);
+      return (
+        <Link
+          className="mx-[15px] text-on-bar no-underline hover:text-accent-hover"
+          key={i}
+          to={linkInf.href}
+        >
+          {linkInf.name}
+        </Link>
+      );
     }
   });
 
   return (
-    <div className="DesktopNavLinks">
-      <div className='navigation'>{pagesEls}</div>
-    </div>
+    <div className="m-0 text-[120%] font-semibold uppercase">{pagesEls}</div>
   );
 };
 
-const NavBarDesktop = (props: { opacity: number, pathName: string, pages: PageInfo[] }) => {
-  const { opacity, pathName, pages } = props;
+const NavBarDesktop = (props: { pathName: string; pages: PageInfo[] }) => {
+  const { pathName, pages } = props;
   return (
-    <NavBarParent
-      className="DesktopNavParent"
-      left={<NavBarNameLink opacity={opacity} />}
-      center={<DesktopNavLinks pages={pages} pathName={pathName} />}
-      right={<DesktopIconsParent opacity={opacity} />}
-    />
+    <div className="hidden min-[700px]:block">
+      <NavBarParent
+        left={<NavBarNameLink />}
+        center={<DesktopNavLinks pages={pages} pathName={pathName} />}
+        right={<DesktopIconsParent />}
+      />
+    </div>
   );
 };
 

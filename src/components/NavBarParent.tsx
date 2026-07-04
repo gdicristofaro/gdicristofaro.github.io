@@ -5,10 +5,10 @@ const NavBarParent = (props: { left: ReactNode, center: ReactNode, right: ReactN
   const { left, center, right, className } = props;
 
   return (
-    <div className={"navbar" + (className ? " " + className : "")}>
-      <div className="navbar-child navbar-child-left">{left}</div>
-      <div className="navbar-child navbar-child-center">{center}</div>
-      <div className="navbar-child navbar-child-right">{right}</div>
+    <div className={"relative mx-[10px] flex min-h-[50px] flex-row flex-wrap items-center justify-center bg-bar p-0 font-light text-on-bar" + (className ? " " + className : "")}>
+      <div className="flex-1 whitespace-nowrap text-left">{left}</div>
+      <div className="flex-1 whitespace-nowrap text-center">{center}</div>
+      <div className="flex-1 whitespace-nowrap text-right">{right}</div>
     </div>
   );
 };

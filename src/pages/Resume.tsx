@@ -8,12 +8,12 @@ import resumeYamlRaw from '../model/resume.yaml?raw';
 const resumeData = load(resumeYamlRaw) as ResumeData;
 
 const Resume = () => (
-  <div className="page-transition">
-    <div className="ml-3 mr-3">
-      <div className="ml-auto mr-auto mt-5 mb-5 resume-width">
+  <div className="animate-fade-in opacity-0">
+    <div className="mx-3">
+      <div className="mx-auto my-5 max-w-[65rem]">
         <ResumeComponent {...resumeData} />
       </div>
-      <div className="ml-auto mr-auto mb-5 resume-width">
+      <div className="mx-auto mb-5 max-w-[65rem]">
         <ProjectCell
           img="/img/resumeThumb.png"
           header="PDF Version"
