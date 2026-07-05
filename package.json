@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "test": "vitest run",
     "preview": "vite preview",
     "build-resume": "npx tsx build-resume.ts",
     "lint": "eslint",
@@ -43,6 +44,7 @@
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.60.1",
     "vite": "^8.0.16",
+    "vitest": "^4.1.9",
     "yargs": "^18.0.0"
   }
 }

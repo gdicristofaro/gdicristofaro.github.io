@@ -1,8 +1,7 @@
 import React, { ReactNode } from "react";
-import NavBarMobile from "./NavBarMobile";
+import NavBar from "./NavBar";
 import Header from "./Header";
 import Footer from "./Footer";
-import NavBarDesktop from "./NavBarDesktop";
 import pages, { PageInfo } from "../model/PageInfo";
 import { useLocation } from "react-router-dom";
 
@@ -18,20 +17,11 @@ const BodyContent = (props: { children: ReactNode }) => {
   const { pathname: pathName } = useLocation();
 
   return (
-    <div>
+    <div className="scroll-exit-fade-scope">
       <Header />
       <div className="flex min-h-dvh flex-col">
         <div className="sticky top-0 z-999 bg-bar">
-          <NavBarMobile
-            key="mobile-nav-parent"
-            pathName={pathName}
-            pages={indexedPages}
-          />
-          <NavBarDesktop
-            key="desktop-nav-parent"
-            pathName={pathName}
-            pages={indexedPages}
-          />
+          <NavBar pathName={pathName} pages={indexedPages} />
         </div>
         <div className="grow p-1">{children}</div>
         <Footer />

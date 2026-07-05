@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Shared resume styles, also injected into the standalone PDF build pipeline */
-@import './resume.css';
+@import "./resume.css";
 
 /*
  * Site palette, modeled after constantqjs/src/styles/theme.scss:
@@ -26,7 +26,7 @@
   --color-highlight: light-dark(#00798f, #5acfe3);
 
   /* typography */
-  --font-sans: 'Roboto', sans-serif;
+  --font-sans: "Roboto", sans-serif;
 
   /* animation */
   --animate-fade-in: fade-in 0.2s ease-in-out forwards;
@@ -45,6 +45,57 @@
   }
 }
 
+/* fades an element out as it scrolls off the top of the viewport: fully
+   opaque while the page is at the top, fully transparent once the element
+   has left the scrollport (i.e. when the sticky nav bar reaches the top).
+   No-op in browsers without scroll-driven animations. */
+@keyframes scroll-exit-fade {
+  to {
+    opacity: 0;
+  }
+}
+
+/* the opposite fade, for elements that take over from the fading one:
+   fully transparent through 80% of the range, then fading in over the
+   last fifth; visibility keeps them unclickable/unfocusable while
+   fully faded out */
+@keyframes scroll-exit-fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@layer components {
+  @supports (animation-timeline: view()) {
+    .scroll-exit-fade {
+      /* names the exit timeline so .scroll-exit-fade-in elements can
+         animate against it; the animation shorthand resets
+         animation-timeline, so timeline/range must be declared after it */
+      view-timeline-name: --scroll-exit-fade;
+      animation: scroll-exit-fade linear both;
+      animation-timeline: view();
+      animation-range: exit;
+    }
+
+    /* on a common ancestor: makes the timeline named above reachable by
+       .scroll-exit-fade-in elements outside the fading element's subtree */
+    .scroll-exit-fade-scope {
+      timeline-scope: --scroll-exit-fade;
+    }
+
+    .scroll-exit-fade-in {
+      animation: scroll-exit-fade-in linear both;
+      animation-timeline: --scroll-exit-fade;
+      animation-range: exit;
+    }
+  }
+}
+
 @layer base {
   html,
   body {
@@ -60,7 +111,9 @@
     color: var(--color-body);
   }
 
-  *:focus {
+  /* suppress focus rings for pointer interactions only; keyboard focus
+     (:focus-visible) keeps the browser's visible outline (WCAG 2.4.7) */
+  *:focus:not(:focus-visible) {
     outline: none;
   }
 }
