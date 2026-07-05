@@ -1,43 +1,41 @@
 .resume-container {
-    --highlight-color: #00798f;
-    /*#007bff;*/
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* darkened from #00798f for >= 4.5:1 contrast on the page background */
+  --highlight-color-light: #00798f;
+  --highlight-color-dark: #5acfe3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .resume-container header a {
-    color: var(--color-gray-600);
+  color: var(--color-gray-600);
 }
 
 .highlight-color,
 .resume-container .column-container a {
-    color: var(--highlight-color);
+  color: var(--highlight-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
+  .highlight-color,
+  .resume-container .column-container a {
+    color: var(--highlight-color-dark);
+  }
 
-    .highlight-color,
-    .resume-container .column-container a {
-        color: #5ACFE3;
-    }
-
-    .resume-container header a {
-        color: var(--color-gray-300);
-    }
+  .resume-container header a {
+    color: var(--color-gray-300);
+  }
 }
 
-
 @media print {
-    .print-border-none {
-        border-style: none !important;
-    }
+  .print-border-none {
+    border-style: none !important;
+  }
 }
 
 .icon {
-    width: 1em;
-    aspect-ratio: 1 / 1;
-    ;
+  width: 1em;
+  aspect-ratio: 1 / 1;
 }
 
 .mr-1\/2 {
-    margin-right: 0.125rem;
+  margin-right: 0.125rem;
 }

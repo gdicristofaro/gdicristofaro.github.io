@@ -1,9 +1,9 @@
-import React from 'react';
-import { load } from 'js-yaml';
-import ProjectCell from '../components/ProjectCell';
-import ResumeComponent from '../components/ResumeComponent';
-import type { ResumeData } from '../model/ResumeData';
-import resumeYamlRaw from '../model/resume.yaml?raw';
+import React from "react";
+import { load } from "js-yaml";
+import ProjectCard from "../components/ProjectCard";
+import ResumeComponent from "../components/ResumeComponent";
+import type { ResumeData } from "../model/ResumeData";
+import resumeYamlRaw from "../model/resume.yaml?raw";
 
 const resumeData = load(resumeYamlRaw) as ResumeData;
 
@@ -14,7 +14,7 @@ const Resume = () => (
         <ResumeComponent {...resumeData} />
       </div>
       <div className="mx-auto mb-5 max-w-[65rem]">
-        <ProjectCell
+        <ProjectCard
           img="/img/resumeThumb.png"
           header="PDF Version"
           description="Download the PDF version of my r&eacute;sum&eacute; here"

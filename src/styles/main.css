@@ -10,7 +10,7 @@
  */
 @theme {
   /* surfaces */
-  --color-page: light-dark(#eeeeee, rgb(22, 35, 37));
+  --color-page: light-dark(#f4f4f4, rgb(22, 35, 37));
   --color-card: light-dark(#ffffff, rgb(32, 47, 48));
   --color-bar: #0a1719;
 
@@ -21,8 +21,8 @@
   /* brand / accent */
   --color-accent: #5acfe3;
   --color-accent-hover: #b2f4ff;
-  --color-link: light-dark(#38808c, #5acfe3);
-  --color-link-hover: light-dark(#5acfe3, #b2f4ff);
+  --color-link: light-dark(#00798f, #5acfe3);
+  --color-link-hover: light-dark(#2ba6bf, #b2f4ff);
   --color-highlight: light-dark(#00798f, #5acfe3);
 
   /* typography */

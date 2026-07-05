@@ -111,7 +111,10 @@ const NavBar = (props: { pages: PageInfo[]; pathName: string }) => {
               href="mailto:gregdicristofaro@gmail.com"
               aria-label="Email"
             >
-              <EnvelopeIcon className="h-[30px] w-auto" />
+              {/* the envelope glyph only fills 21x16.5 of the default
+                  24x24 viewBox; crop to its bounds so the drawn icon
+                  spans the full h-6 height like the GitHub icon */}
+              <EnvelopeIcon viewBox="1.5 3.75 21 16.5" className="h-6 w-auto" />
             </a>
             <a
               className="text-on-bar hover:text-accent-hover"
