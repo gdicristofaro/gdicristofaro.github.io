@@ -13,20 +13,18 @@ const ProjectCard = (props: {
     props;
 
   return (
-    <div className="m-[10px] inline-block max-w-[350px] overflow-hidden rounded-lg bg-card text-left align-top text-body shadow-md">
+    <div className="m-2.5 inline-block max-w-87.5 overflow-hidden rounded-lg bg-card text-left align-top text-body shadow-md">
       <a href={href} className="block">
         <img
           src={img}
           title={header}
           alt={header}
-          className="h-[200px] w-full object-cover brightness-80 transition-[filter] duration-500 hover:brightness-100"
+          className="h-50 w-full object-cover brightness-80 transition-[filter] duration-500 hover:brightness-100"
         />
       </a>
       <div className="p-4">
-        <h1 className="mb-2 text-[24px] font-medium leading-[1.25]">
-          {header}
-        </h1>
-        <p className="text-[14px]">{description}</p>
+        <h1 className="mb-2 text-2xl font-medium leading-tight">{header}</h1>
+        <p className="text-sm">{description}</p>
       </div>
       {alternateHref && (
         <div className="px-4 pb-3">

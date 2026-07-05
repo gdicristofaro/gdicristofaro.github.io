@@ -25,6 +25,17 @@
   --color-link-hover: light-dark(#2ba6bf, #b2f4ff);
   --color-highlight: light-dark(#00798f, #5acfe3);
 
+  /* nav drawer selected item: text on an accent background, and the
+     hover shade for an already-selected item */
+  --color-on-accent: #303030;
+  --color-accent-bright: #75e6f9;
+
+  /* width at which the nav switches from the drawer to the full bar */
+  --breakpoint-desktop: 700px;
+
+  /* minimum width of the mobile nav drawer */
+  --container-drawer: 35dvw;
+
   /* typography */
   --font-sans: "Roboto", sans-serif;
 
@@ -35,6 +46,9 @@
 :root {
   color-scheme: light dark;
 }
+
+/* styles the link marking the current page */
+@custom-variant aria-current-page (&[aria-current="page"]);
 
 @keyframes fade-in {
   from {

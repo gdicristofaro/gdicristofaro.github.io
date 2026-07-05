@@ -10,10 +10,10 @@ const resumeData = load(resumeYamlRaw) as ResumeData;
 const Resume = () => (
   <div className="animate-fade-in opacity-0">
     <div className="mx-3">
-      <div className="mx-auto my-5 max-w-[65rem]">
+      <div className="mx-auto my-5 max-w-260">
         <ResumeComponent {...resumeData} />
       </div>
-      <div className="mx-auto mb-5 max-w-[65rem]">
+      <div className="mx-auto mb-5 max-w-260">
         <ProjectCard
           img="/img/resumeThumb.png"
           header="PDF Version"

@@ -22,9 +22,9 @@ const externalLinks = [
 
 // link to main website with name
 const NameLink = () => (
-  <div className="scroll-exit-fade-in leading-[50px]">
+  <div className="scroll-exit-fade-in leading-12.5">
     <a className="no-underline" href="http://www.gdicristofaro.com/">
-      <span className="block text-left text-[160%] font-light text-accent">
+      <span className="block text-left text-xl font-light text-accent">
         Greg DiCristofaro
       </span>
     </a>
@@ -32,13 +32,13 @@ const NameLink = () => (
 );
 
 const desktopLinkClass =
-  "mx-[15px] text-on-bar no-underline hover:text-accent-hover aria-[current=page]:text-accent aria-[current=page]:decoration-2";
+  "mx-3.75 text-on-bar no-underline hover:text-accent-hover aria-current-page:text-accent aria-current-page:decoration-2";
 
 const drawerItemClass =
-  "flex w-full items-center gap-3 px-4 py-2 text-left text-body no-underline hover:bg-black/5 dark:hover:bg-white/10 aria-[current=page]:bg-accent aria-[current=page]:font-semibold aria-[current=page]:text-[#303030] aria-[current=page]:hover:bg-[#75e6f9]";
+  "flex w-full items-center gap-3 px-4 py-2 text-left text-body no-underline hover:bg-black/5 dark:hover:bg-white/10 aria-current-page:bg-accent aria-current-page:font-semibold aria-current-page:text-on-accent aria-current-page:hover:bg-accent-bright";
 
 // the page links, marked up once for both layouts; the current page is
-// conveyed with aria-current and styled via the aria-[current=page] variants
+// conveyed with aria-current and styled via the aria-current-page variant
 const PageLinks = (props: {
   pages: PageInfo[];
   pathName: string;
@@ -79,35 +79,35 @@ const NavBar = (props: { pages: PageInfo[]; pathName: string }) => {
 
   return (
     <nav aria-label="Main">
-      <div className="relative mx-[10px] flex min-h-[50px] flex-row flex-wrap items-center justify-center bg-bar p-0 font-light text-on-bar">
+      <div className="relative mx-2.5 flex min-h-12.5 flex-row flex-wrap items-center justify-center bg-bar p-0 font-light text-on-bar">
         <div className="flex-1 whitespace-nowrap text-left">
           <button
             type="button"
             popoverTarget={DRAWER_ID}
-            className="my-auto cursor-pointer text-on-bar hover:text-accent-hover min-[700px]:hidden"
+            className="my-auto cursor-pointer text-on-bar hover:text-accent-hover desktop:hidden"
           >
-            <Bars3Icon className="h-[30px] w-auto" />
+            <Bars3Icon className="h-7.5 w-auto" />
             <span className="sr-only">Menu</span>
           </button>
-          <div className="hidden min-[700px]:block">
+          <div className="hidden desktop:block">
             <NameLink />
           </div>
         </div>
         <div className="flex-1 whitespace-nowrap text-center">
-          <div className="min-[700px]:hidden">
+          <div className="desktop:hidden">
             <NameLink />
           </div>
           <PageLinks
             pages={pages}
             pathName={pathName}
-            listClassName="hidden justify-center text-[120%] font-semibold uppercase min-[700px]:flex"
+            listClassName="hidden justify-center text-base font-semibold uppercase desktop:flex"
             itemClassName={desktopLinkClass}
           />
         </div>
         <div className="flex-1 whitespace-nowrap text-right">
-          <div className="scroll-exit-fade-in hidden flex-row justify-end text-right min-[700px]:flex">
+          <div className="scroll-exit-fade-in hidden flex-row justify-end text-right desktop:flex">
             <a
-              className="mx-[10px] text-on-bar hover:text-accent-hover"
+              className="mx-2.5 text-on-bar hover:text-accent-hover"
               href="mailto:gregdicristofaro@gmail.com"
               aria-label="Email"
             >
@@ -131,10 +131,10 @@ const NavBar = (props: { pages: PageInfo[]; pathName: string }) => {
         ref={drawerRef}
         popover="auto"
         className={
-          "fixed inset-y-0 left-0 right-auto m-0 h-full min-w-[35dvw] border-0 bg-card p-0 py-2 text-body shadow-xl " +
+          "fixed inset-y-0 left-0 right-auto m-0 h-full min-w-drawer border-0 bg-card p-0 py-2 text-body shadow-xl " +
           "-translate-x-full transition-all transition-discrete duration-300 open:translate-x-0 starting:open:-translate-x-full " +
           "backdrop:bg-black/50 backdrop:opacity-0 backdrop:transition-all backdrop:transition-discrete backdrop:duration-300 open:backdrop:opacity-100 starting:open:backdrop:opacity-0 " +
-          "min-[700px]:hidden"
+          "desktop:hidden"
         }
       >
         <PageLinks

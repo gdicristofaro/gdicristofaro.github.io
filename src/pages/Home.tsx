@@ -5,15 +5,15 @@ const linkClass =
   "text-link underline underline-offset-2 hover:text-link-hover";
 
 const Home = () => (
-  <div className="mx-auto mt-8 block max-w-[800px] animate-fade-in opacity-0">
-    <div className="relative float-left mr-5 h-[200px] w-[144px]">
+  <div className="mx-auto mt-8 block max-w-200 animate-fade-in opacity-0">
+    <div className="relative float-left mr-5 h-50 w-36">
       <img
         src="/img/profile.jpg"
         alt="Greg DiCristofaro"
         className="absolute inset-0 h-full w-full object-cover"
       />
     </div>
-    <p className="mt-0 text-[18px]">
+    <p className="mt-0 text-lg">
       Hello, and welcome to my website. You can read more about my work history
       on my{" "}
       <Link className={linkClass} to="/resume">
@@ -33,8 +33,8 @@ const Home = () => (
       </a>
       .
     </p>
-    <p className="mt-0 text-[18px]">Thanks,</p>
-    <p className="mt-0 text-[18px]">Greg DiCristofaro</p>
+    <p className="mt-0 text-lg">Thanks,</p>
+    <p className="mt-0 text-lg">Greg DiCristofaro</p>
   </div>
 );
 
