@@ -95,7 +95,34 @@ describe('mobile nav (400px)', () => {
     await page.click('#site-nav-drawer ul li:nth-child(2) a');
     await page.waitForFunction(() => location.pathname === '/projects');
     await waitForDrawer(false);
+    // pathname updates synchronously but React commits aria-current a tick
+    // later, so wait on the DOM state rather than sampling it immediately
+    await page.waitForFunction(
+      () =>
+        document
+          .querySelector('#site-nav-drawer a[aria-current="page"]')
+          ?.textContent?.trim() === 'Projects',
+    );
     expect(await currentPageLinks('#site-nav-drawer')).toEqual(['Projects']);
+  });
+
+  it('closes the drawer when the current page link is clicked', async () => {
+    await page.click('nav button[popovertarget]');
+    await waitForDrawer(true);
+    await page.click('#site-nav-drawer a[aria-current="page"]');
+    await waitForDrawer(false);
+    expect(await page.evaluate(() => location.pathname)).toBe('/projects');
+  });
+
+  it('moves keyboard focus into the drawer when it opens', async () => {
+    await page.click('nav button[popovertarget]');
+    await waitForDrawer(true);
+    const focusInDrawer = await page.evaluate(
+      () => document.activeElement?.closest('#site-nav-drawer') !== null,
+    );
+    expect(focusInDrawer).toBe(true);
+    await page.keyboard.press('Escape');
+    await waitForDrawer(false);
   });
 });
 
@@ -129,5 +156,44 @@ describe('desktop nav (1200px)', () => {
   it('has exactly one h1 (the one in the header)', async () => {
     const count = await page.$$eval('h1', (els) => els.length);
     expect(count).toBe(1);
+  });
+
+  it('marks the current page for trailing-slash URLs', async () => {
+    await page.goto(`${BASE_URL}/projects/`, { waitUntil: 'networkidle0' });
+    expect(await currentPageLinks('nav', true)).toEqual(['Projects']);
+  });
+});
+
+describe('page structure and titles', () => {
+  beforeAll(async () => {
+    await page.setViewport({ width: 1200, height: 800 });
+    await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle0' });
+  });
+
+  it('exposes the page content as a main landmark', async () => {
+    const mainCount = await page.$$eval('main#main-content', (els) => els.length);
+    expect(mainCount).toBe(1);
+  });
+
+  it('focuses the skip link on the first Tab and reveals it', async () => {
+    await page.keyboard.press('Tab');
+    const skip = await page.evaluate(() => {
+      const el = document.activeElement as HTMLElement | null;
+      return {
+        href: el?.getAttribute('href'),
+        visible: !!el && el.offsetParent !== null,
+      };
+    });
+    expect(skip.href).toBe('#main-content');
+    expect(skip.visible).toBe(true);
+  });
+
+  it('updates document.title on navigation', async () => {
+    expect(await page.title()).toBe('Greg DiCristofaro');
+    await page.click('nav ul a[href="/projects"]');
+    await page.waitForFunction(
+      () => document.title === 'Greg DiCristofaro - Projects',
+    );
+    expect(await page.title()).toBe('Greg DiCristofaro - Projects');
   });
 });

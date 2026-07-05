@@ -23,7 +23,9 @@ const ProjectCard = (props: {
         />
       </a>
       <div className="p-4">
-        <h1 className="mb-2 text-2xl font-medium leading-tight">{header}</h1>
+        {/* h2: the page already supplies the h1; one h1 per card breaks
+            screen-reader heading navigation */}
+        <h2 className="mb-2 text-2xl font-medium leading-tight">{header}</h2>
         <p className="text-sm">{description}</p>
       </div>
       {alternateHref && (

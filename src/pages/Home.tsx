@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const linkClass =
-  "text-link underline underline-offset-2 hover:text-link-hover";
+const linkClass = "text-link font-semibold hover:text-link-hover";
 
 const Home = () => (
-  <div className="mx-auto mt-8 block max-w-200 animate-fade-in opacity-0">
+  <div className="mx-auto mt-8 block max-w-200 animate-fade-in">
     <div className="relative float-left mr-5 h-50 w-36">
       <img
         src="/img/profile.jpg"

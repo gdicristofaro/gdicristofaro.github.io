@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { Bars3Icon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Link } from "react-router-dom";
-import { PageInfo } from "@/model/PageInfo";
+import { isSamePath, PageInfo } from "@/model/PageInfo";
 
 // links the hamburger button (popoverTarget) to the drawer element
 const DRAWER_ID = "site-nav-drawer";
@@ -32,7 +32,7 @@ const NameLink = () => (
 );
 
 const desktopLinkClass =
-  "mx-3.75 text-on-bar no-underline hover:text-accent-hover aria-current-page:text-accent aria-current-page:decoration-2";
+  "mx-3.75 text-on-bar no-underline hover:text-accent-hover aria-current-page:text-accent";
 
 const drawerItemClass =
   "flex w-full items-center gap-3 px-4 py-2 text-left text-body no-underline hover:bg-black/5 dark:hover:bg-white/10 aria-current-page:bg-accent aria-current-page:font-semibold aria-current-page:text-on-accent aria-current-page:hover:bg-accent-bright";
@@ -44,8 +44,9 @@ const PageLinks = (props: {
   pathName: string;
   listClassName?: string;
   itemClassName: string;
+  onItemClick?: () => void;
 }) => {
-  const { pages, pathName, listClassName, itemClassName } = props;
+  const { pages, pathName, listClassName, itemClassName, onItemClick } = props;
   return (
     <ul className={listClassName}>
       {pages.map((linkInf) => (
@@ -53,10 +54,9 @@ const PageLinks = (props: {
           <Link
             to={linkInf.href}
             className={itemClassName}
+            onClick={onItemClick}
             aria-current={
-              linkInf.href.toLocaleLowerCase() === pathName.toLocaleLowerCase()
-                ? "page"
-                : undefined
+              isSamePath(linkInf.href, pathName) ? "page" : undefined
             }
           >
             {linkInf.name}
@@ -71,11 +71,58 @@ const NavBar = (props: { pages: PageInfo[]; pathName: string }) => {
   const { pages, pathName } = props;
   const drawerRef = useRef<HTMLDivElement>(null);
 
+  // typeof guard: browsers without the Popover API render the bar fine
+  // (the drawer is just inert there); an unguarded call would throw in
+  // this effect and blank the whole app
+  const closeDrawer = useCallback(() => {
+    const drawer = drawerRef.current;
+    if (typeof drawer?.togglePopover === "function") {
+      drawer.togglePopover(false);
+    }
+  }, []);
+
   // light dismiss only covers clicks outside the popover and Escape, so
-  // close the drawer when a link inside it navigates
+  // close the drawer when a link inside it navigates; onItemClick below
+  // covers clicks that don't change the path (current page, mailto:)
   useEffect(() => {
-    drawerRef.current?.togglePopover(false);
-  }, [pathName]);
+    closeDrawer();
+  }, [pathName, closeDrawer]);
+
+  useEffect(() => {
+    const drawer = drawerRef.current;
+    if (!drawer) {
+      return;
+    }
+
+    // the popover backdrop reads as modal, so move keyboard focus into
+    // the drawer when it opens (WCAG 2.4.3); the invoker regains focus
+    // automatically when the popover closes
+    const onToggle = (e: Event) => {
+      if ((e as ToggleEvent).newState === "open") {
+        drawer.querySelector<HTMLElement>("a")?.focus();
+      }
+    };
+    drawer.addEventListener("toggle", onToggle);
+
+    // close rather than strand an open popover in display:none when the
+    // viewport crosses the desktop breakpoint while the drawer is open
+    const breakpoint =
+      getComputedStyle(document.documentElement)
+        .getPropertyValue("--breakpoint-desktop")
+        .trim() || "700px";
+    const desktopQuery = window.matchMedia(`(min-width: ${breakpoint})`);
+    const onBreakpointChange = () => {
+      if (desktopQuery.matches) {
+        closeDrawer();
+      }
+    };
+    desktopQuery.addEventListener("change", onBreakpointChange);
+
+    return () => {
+      drawer.removeEventListener("toggle", onToggle);
+      desktopQuery.removeEventListener("change", onBreakpointChange);
+    };
+  }, [closeDrawer]);
 
   return (
     <nav aria-label="Main">
@@ -134,6 +181,7 @@ const NavBar = (props: { pages: PageInfo[]; pathName: string }) => {
           "fixed inset-y-0 left-0 right-auto m-0 h-full min-w-drawer border-0 bg-card p-0 py-2 text-body shadow-xl " +
           "-translate-x-full transition-all transition-discrete duration-300 open:translate-x-0 starting:open:-translate-x-full " +
           "backdrop:bg-black/50 backdrop:opacity-0 backdrop:transition-all backdrop:transition-discrete backdrop:duration-300 open:backdrop:opacity-100 starting:open:backdrop:opacity-0 " +
+          "motion-reduce:transition-none motion-reduce:backdrop:transition-none " +
           "desktop:hidden"
         }
       >
@@ -141,12 +189,13 @@ const NavBar = (props: { pages: PageInfo[]; pathName: string }) => {
           pages={pages}
           pathName={pathName}
           itemClassName={drawerItemClass}
+          onItemClick={closeDrawer}
         />
         <hr className="my-2 border-t border-black/10 dark:border-white/20" />
         <ul>
           {externalLinks.map(({ text, href, icon }) => (
             <li key={text}>
-              <a href={href} className={drawerItemClass}>
+              <a href={href} className={drawerItemClass} onClick={closeDrawer}>
                 {icon}
                 <span>{text}</span>
               </a>

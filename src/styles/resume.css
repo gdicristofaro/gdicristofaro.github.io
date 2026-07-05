@@ -1,7 +1,13 @@
 .resume-container {
-  /* darkened from #00798f for >= 4.5:1 contrast on the page background */
+  /* #00798f keeps >= 4.5:1 contrast on the site's #f4f4f4 page background
+     and 5:1 on the white PDF page */
   --highlight-color-light: #00798f;
   --highlight-color-dark: #5acfe3;
+  /* defined locally because the standalone PDF/headered pages use the
+     Tailwind Play CDN, which emits no --color-* theme variables; on the
+     site build these match Tailwind's own gray palette */
+  --color-gray-300: #d1d5db;
+  --color-gray-600: #4b5563;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 

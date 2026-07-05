@@ -8,7 +8,7 @@ import resumeYamlRaw from "../model/resume.yaml?raw";
 const resumeData = load(resumeYamlRaw) as ResumeData;
 
 const Resume = () => (
-  <div className="animate-fade-in opacity-0">
+  <div className="animate-fade-in">
     <div className="mx-3">
       <div className="mx-auto my-5 max-w-260">
         <ResumeComponent {...resumeData} />

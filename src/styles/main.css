@@ -91,8 +91,12 @@
          animate against it; the animation shorthand resets
          animation-timeline, so timeline/range must be declared after it */
       view-timeline-name: --scroll-exit-fade;
+      /* the default inset (auto) inherits scroll-padding-top, which exists
+         for the sticky bar and would shift the fade range ~56px early;
+         pin the timeline to the true viewport edge instead */
+      view-timeline-inset: 0;
       animation: scroll-exit-fade linear both;
-      animation-timeline: view();
+      animation-timeline: --scroll-exit-fade;
       animation-range: exit;
     }
 
@@ -116,6 +120,12 @@
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  /* keep focused/anchored elements from scrolling under the sticky nav bar
+     (50px tall; WCAG 2.4.11 focus not obscured) */
+  html {
+    scroll-padding-top: 3.5rem;
   }
 
   body {

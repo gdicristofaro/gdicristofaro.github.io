@@ -20,7 +20,7 @@ const DEFAULT_YAML_PATH = "src/model/resume.yaml";
 const DEFAULT_OUTPUT_PDF = "public/resume.pdf";
 const DEFAULT_OUTPUT_HTML = "src/model/resume.html";
 
-async function buildHtml(yamlPath: string): Promise<{ html: string; data: ResumeData }> {
+export async function buildHtml(yamlPath: string): Promise<{ html: string; data: ResumeData }> {
   const [resumeCss, yamlContent] = await Promise.all([
     fsPromises.readFile(path.resolve(__dirname, "src/styles/resume.css"), "utf-8"),
     fsPromises.readFile(yamlPath, "utf-8"),
@@ -108,27 +108,35 @@ async function watchDirectory(watchDir: string): Promise<void> {
   });
 }
 
-const argv = yargs(hideBin(process.argv))
-  .scriptName("build-resume")
-  .usage("Usage: $0 [-o <output>] [--watch <directory>]")
-  .option("o", {
-    alias: "output",
-    type: "string",
-    description: "Output PDF file path (default mode only)",
-    default: DEFAULT_OUTPUT_PDF,
-  })
-  .option("watch", {
-    alias: "w",
-    type: "string",
-    description: "Watch directory containing resume.yaml; outputs resume.html and PDF there",
-  })
-  .help()
-  .alias("h", "help")
-  .parseSync();
+function runCli(): void {
+  const argv = yargs(hideBin(process.argv))
+    .scriptName("build-resume")
+    .usage("Usage: $0 [-o <output>] [--watch <directory>]")
+    .option("o", {
+      alias: "output",
+      type: "string",
+      description: "Output PDF file path (default mode only)",
+      default: DEFAULT_OUTPUT_PDF,
+    })
+    .option("watch", {
+      alias: "w",
+      type: "string",
+      description: "Watch directory containing resume.yaml; outputs resume.html and PDF there",
+    })
+    .help()
+    .alias("h", "help")
+    .parseSync();
 
-if (argv.watch) {
-  watchDirectory(argv.watch).catch(console.error);
-} else {
-  const outputPdf = typeof argv.output === "string" ? argv.output : DEFAULT_OUTPUT_PDF;
-  buildDefault(outputPdf).finally(() => console.log("done."));
+  if (argv.watch) {
+    watchDirectory(argv.watch).catch(console.error);
+  } else {
+    const outputPdf = typeof argv.output === "string" ? argv.output : DEFAULT_OUTPUT_PDF;
+    buildDefault(outputPdf).finally(() => console.log("done."));
+  }
+}
+
+// run only when executed directly (npx tsx build-resume.ts), not when
+// imported by tests
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  runCli();
 }

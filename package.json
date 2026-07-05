@@ -9,6 +9,7 @@
     "test": "vitest run",
     "preview": "vite preview",
     "build-resume": "npx tsx build-resume.ts",
+    "build-header": "npx tsx build-with-header.ts",
     "lint": "eslint",
     "lint-fix": "eslint --fix",
     "predeploy": "npm run build-resume && npm run build && touch dist/.nojekyll",
