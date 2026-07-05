@@ -201,7 +201,9 @@ export default function ResumeComponent({
       </header>
 
       <div className="column-container sm:flex">
-        <div className={`left-column sm:${leftColumn} pr-5`}>
+        <div
+          className={`left-column mb-${sectionMargin} sm:mb-0 sm:${leftColumn} sm:pr-5`}
+        >
           <section
             className={`summary mb-${sectionMargin} break-inside-avoid-page`}
           >
