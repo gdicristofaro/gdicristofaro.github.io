@@ -3,6 +3,10 @@
 /* Shared resume styles, also injected into the standalone PDF build pipeline */
 @import "./resume.css";
 
+/* the resume markup lives in Handlebars templates rather than components, so
+   name that directory explicitly for Tailwind's class scanner */
+@source "../docsbuild/templates";
+
 /*
  * Site palette, modeled after constantqjs/src/styles/theme.scss:
  * semantic color tokens defined with light-dark() so light/dark mode is

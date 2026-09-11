@@ -1,8 +1,8 @@
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { describe, expect, it } from 'vitest';
-import { buildHeaderedHtml } from '../build-with-header';
-import { buildHtml } from '../build-resume';
+import { buildHeaderedHtml } from '../src/docsbuild/scripts/build-with-header';
+import { buildHtml } from '../src/docsbuild/scripts/build-resume';
 
 const repoRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 

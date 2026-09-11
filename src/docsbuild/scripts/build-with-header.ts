@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import { marked } from "marked";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
+import { compileHtml } from "./compile";
 
 // Full path to the current file
 const __filename = fileURLToPath(import.meta.url);
@@ -27,25 +28,25 @@ export async function buildHeaderedHtml(
 ): Promise<string> {
   const [resumeCss, headeredCss, template] = await Promise.all([
     fsPromises.readFile(
-      path.resolve(__dirname, "src/styles/resume.css"),
+      path.resolve(__dirname, "../../styles/resume.css"),
       "utf-8",
     ),
     fsPromises.readFile(
-      path.resolve(__dirname, "src/model/headered.css"),
+      path.resolve(__dirname, "../templates/headered.css"),
       "utf-8",
     ),
     fsPromises.readFile(
-      path.resolve(__dirname, "src/model/headered.html"),
+      path.resolve(__dirname, "../templates/headered.hbs"),
       "utf-8",
     ),
   ]);
 
-  const content = await marked.parse(markdown);
+  const contentHtml = await marked.parse(markdown);
   const safeTitle = htmlEntities(title);
-
-  const body = template
-    .replaceAll("{{title}}", safeTitle)
-    .replaceAll("{{content}}", content);
+  const body = compileHtml<{ title: string; contentHtml: string }>(template)({
+    title,
+    contentHtml,
+  });
 
   return `<!DOCTYPE html>
 <html lang="en">

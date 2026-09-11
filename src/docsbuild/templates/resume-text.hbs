@@ -1,0 +1,69 @@
+{{!--
+  ATS-friendly plaintext resume. Compiled with noEscape, since HTML escaping
+  would be corruption here; every value goes through `clean` (or `stripScheme`)
+  to fold Unicode punctuation to ASCII and repair folded-scalar line breaks.
+
+  Blank lines are deliberately generous: the caller squeezes runs of them and
+  trims, so section spacing stays correct no matter which sections are empty.
+--}}
+{{upper name}}
+{{clean title}}
+{{clean phone}}
+{{clean email}}
+{{stripScheme website}}
+{{stripScheme github}}
+
+SUMMARY
+{{clean summary}}
+{{#if workExperience.length}}
+
+PROFESSIONAL EXPERIENCE
+{{#each workExperience}}
+
+{{clean title}}
+{{metaLine (clean company) (clean location) (clean timeSpan)}}
+{{#each workItems}}
+- {{clean this}}
+{{/each}}
+{{/each}}
+{{/if}}
+{{#if skills.length}}
+
+TECHNICAL SKILLS
+{{#each skills}}
+{{#if (cleanJoin items)}}
+{{clean category}}: {{cleanJoin items}}
+{{/if}}
+{{/each}}
+{{/if}}
+{{#if education.length}}
+
+EDUCATION
+{{#each education}}
+
+{{clean degree}}
+{{metaLine (clean institution) (clean location) (clean timeSpan) (prefixed "GPA" gpa)}}
+{{#each items}}
+- {{clean this}}
+{{/each}}
+{{/each}}
+{{/if}}
+{{#if achievements.length}}
+
+ACHIEVEMENTS
+{{#each achievements}}
+- {{clean title}}: {{clean description}}
+{{/each}}
+{{/if}}
+{{#if projects.length}}
+
+PROJECTS
+{{#each projects}}
+
+{{clean name}}:
+{{clean description}}
+{{#if (stripScheme link)}}
+{{stripScheme link}}
+{{/if}}
+{{/each}}
+{{/if}}
