@@ -8,19 +8,16 @@
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "preview": "vite preview",
-    "build-resume": "npx tsx src/docsbuild/scripts/build-resume.ts",
-    "build-header": "npx tsx src/docsbuild/scripts/build-with-header.ts",
-    "jobapp-new": "npx tsx src/docsbuild/scripts/jobapp-new.ts",
+    "build-resume": "jobapp-resume --html src/model/resume.html --pdf public/resume.pdf",
     "lint": "eslint",
     "lint-fix": "eslint --fix",
     "predeploy": "npm run build-resume && npm run build && touch dist/.nojekyll",
-    "deploy": "gh-pages -d dist -t"
+    "deploy": "gh-pages -d dist -t",
+    "build-resume-watch": "jobapp-resume --html src/model/resume.html --pdf public/resume.pdf --watch"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@icons-pack/react-simple-icons": "^13.13.0",
-    "handlebars": "^4.7.9",
-    "js-yaml": "^4.2.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.17.0"
@@ -29,11 +26,9 @@
     "@axe-core/puppeteer": "^4.12.1",
     "@eslint/js": "^9.0.0",
     "@tailwindcss/vite": "^4.3.0",
-    "@types/js-yaml": "^4.0.9",
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.16",
     "@types/react-dom": "^19.2.3",
-    "@types/yargs": "^17.0.35",
     "@vitejs/plugin-react": "^6.0.2",
     "axe-core": "^4.12.1",
     "eslint": "^9.0.0",
@@ -42,14 +37,13 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "gh-pages": "^6.3.0",
     "globals": "^17.6.0",
-    "marked": "^18.0.5",
+    "jobappbuild": "github:gdicristofaro/JobAppBuild",
     "puppeteer": "^25.1.0",
     "tailwindcss": "^4.3.0",
     "tsx": "^4.22.4",
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.60.1",
     "vite": "^8.0.16",
-    "vitest": "^4.1.9",
-    "yargs": "^18.0.0"
+    "vitest": "^4.1.9"
   }
 }

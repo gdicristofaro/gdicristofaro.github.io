@@ -1,6 +1,9 @@
 # dependencies
 /node_modules
-/src/model/resume.html
+
+# split out of src/model/resume.html by vite-plugin-resume.ts
+/src/model/resume.css
+/src/model/resume.body.html
 
 # testing
 /coverage

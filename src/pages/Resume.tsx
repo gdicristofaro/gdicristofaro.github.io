@@ -1,14 +1,9 @@
 import React from "react";
-import { load } from "js-yaml";
 import ResumePdfCard from "../components/ResumePdfCard";
-import type { ResumeData } from "../model/ResumeData";
-import resumeYamlRaw from "../model/resume.yaml?raw";
-import renderResume from "../docsbuild/templates/resume.hbs";
-
-// the site and the PDF/plaintext builds render the same Handlebars template,
+// both generated from resume.html at build time (see vite-plugin-resume.ts),
 // so the page here can't drift from the document that gets sent out
-const resumeData = load(resumeYamlRaw) as ResumeData;
-const resumeHtml = renderResume(resumeData);
+import "../model/resume.css";
+import resumeHtml from "../model/resume.body.html?raw";
 
 const Resume = () => (
   <div className="animate-fade-in">

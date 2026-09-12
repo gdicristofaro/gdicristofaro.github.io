@@ -6,11 +6,11 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import globals from 'globals';
 
 export default tseslint.config(
-  { ignores: ['dist/**', 'node_modules/**', 'out/**', '.next/**', '**/build-*.ts', '**/build-*.js'] },
+  { ignores: ['dist/**', 'node_modules/**', 'out/**', '.next/**'] },
   js.configs.recommended,
   tseslint.configs.recommended,
   {
-    files: ['vite.config.ts'],
+    files: ['vite.config.ts', 'vite-plugin-*.ts'],
     languageOptions: {
       globals: globals.node,
     },

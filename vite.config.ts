@@ -1,17 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+import resumeSplit from './vite-plugin-resume';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
-import handlebarsPrecompile from './vite-plugin-handlebars';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [
+    resumeSplit(),
     tailwindcss(),
     react(),
-    handlebarsPrecompile(),
   ],
   resolve: {
     alias: {
