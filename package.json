@@ -8,12 +8,11 @@
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "preview": "vite preview",
-    "build-resume": "jobapp-resume --html src/model/resume.html --pdf public/resume.pdf",
+    "build-resume": "jobapp-build . --override-input-file src/model/resume.yaml --override-resume-html-output src/model/resume.html --override-resume-pdf-output public/resume.pdf --generate-resume-txt=false",
     "lint": "eslint",
     "lint-fix": "eslint --fix",
     "predeploy": "npm run build-resume && npm run build && touch dist/.nojekyll",
-    "deploy": "gh-pages -d dist -t",
-    "build-resume-watch": "jobapp-resume --html src/model/resume.html --pdf public/resume.pdf --watch"
+    "deploy": "gh-pages -d dist -t"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -45,5 +44,11 @@
     "typescript-eslint": "^8.60.1",
     "vite": "^8.0.16",
     "vitest": "^4.1.9"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "jobappbuild": true,
+    "puppeteer": true,
+    "github:gdicristofaro/JobAppBuild#b621632522c45a531cca5fdbe7ad8175c7695be8": true
   }
 }

@@ -117,9 +117,18 @@ describe('mobile nav (400px)', () => {
   it('moves keyboard focus into the drawer when it opens', async () => {
     await page.click('nav button[popovertarget]');
     await waitForDrawer(true);
-    const focusInDrawer = await page.evaluate(
-      () => document.activeElement?.closest('#site-nav-drawer') !== null,
-    );
+    // focus moves in the drawer's toggle listener, which runs as its own task
+    // and can land after the drawer is already on-screen, so wait for focus
+    // rather than reading activeElement once
+    const focusInDrawer = await page
+      .waitForFunction(
+        () => document.activeElement?.closest('#site-nav-drawer') != null,
+        { timeout: 2_000 },
+      )
+      .then(
+        () => true,
+        () => false,
+      );
     expect(focusInDrawer).toBe(true);
     await page.keyboard.press('Escape');
     await waitForDrawer(false);
