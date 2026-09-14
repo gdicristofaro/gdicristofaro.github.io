@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
-import resumeSplit from './vite-plugin-resume';
+import resumeSplit from './vite-plugin-resume.ts';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
 
