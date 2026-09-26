@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "preview": "vite preview",
-    "build-resume": "jobapp-build . --override-input-file src/model/resume.yaml --override-resume-html-output src/model/resume.html --override-resume-pdf-output public/resume.pdf --generate-resume-txt=false",
+    "build-resume": "uv run --project node_modules/jobappbuild jobapp build . --override-input-file src/model/baseresume.yaml --override-resume-html-output src/model/resume.html --override-resume-pdf-output public/resume.pdf --no-generate-resume-txt",
     "lint": "eslint",
     "lint-fix": "eslint --fix",
     "predeploy": "npm run build-resume && npm run build && touch dist/.nojekyll",
@@ -48,7 +48,6 @@
   "allowScripts": {
     "esbuild": true,
     "jobappbuild": true,
-    "puppeteer": true,
-    "github:gdicristofaro/JobAppBuild#b621632522c45a531cca5fdbe7ad8175c7695be8": true
+    "puppeteer": true
   }
 }
