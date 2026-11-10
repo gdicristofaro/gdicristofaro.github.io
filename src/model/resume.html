@@ -213,7 +213,7 @@ svg {
   .sm\:w-4\/5 { width: 80% }
 }
 </style>
-    <style data-style-scope="page">html { font-size: 15.5px }</style>
+    <style data-style-scope="page">html { font-size: 13.5px }</style>
     <style data-style-scope="resume">.resume-container {
   /* #00798f keeps >= 4.5:1 contrast on the site's #f4f4f4 page background
      and 5:1 on the white PDF page */
@@ -276,14 +276,26 @@ svg {
   </header>
 
   <div class="column-container sm:flex">
-    <div class="left-column mb-5 sm:mb-0 sm:w-2/3 sm:pr-5">
+    <div class="left-column mb-5 sm:mb-0 sm:w-7/10 sm:pr-5">
       <section class="summary mb-5 break-inside-avoid-page">
         <h2 class="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-3">Summary</h2>
-        <p class="text-sm text-gray-600 dark:text-gray-300"><span class="font-bold">Software Engineer</span> with 8+ years of experience designing, testing, and deploying full-stack applications across a wide range of domains. Expertise spans Java (Spring Boot), Python, C++, TypeScript, C# (ASP.NET Core), modern frontend frameworks (React, Angular), cloud infrastructure (GCP, AWS), and CI/CD practices (Docker, Jenkins, GitHub Actions). Former <span class="font-bold">educator of 11 years</span> with a proven track record of collaborating and translating complex technical concepts for non-technical audiences.</p>
+        <p class="text-sm text-gray-600 dark:text-gray-300"><span class="font-bold">Software Engineer</span> with 9+ years of experience designing, testing, and deploying full-stack applications across a wide range of domains. Expertise spans Java (Spring Boot), Go, Python, C++, TypeScript, C# (ASP.NET Core), modern frontend frameworks (React, Angular), cloud infrastructure (AWS, GCP), and CI/CD and infrastructure as code practices (Docker, Jenkins, GitHub Actions, Terraform). Former <span class="font-bold">educator of 11 years</span> with a proven track record of collaborating and translating complex technical concepts for non-technical audiences.</p>
       </section>
 
       <section class="mb-5">
         <h2 class="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-3">Experience</h2>
+        <div class="mb-4 break-inside-avoid-page">
+          <p class="font-bold text-lg text-gray-800 dark:text-gray-100">Software Engineer</p>
+          <p class="font-bold text-base mb-1 highlight-color">Bellese Technologies, LLC</p>
+          <div class="text-gray-600 dark:text-gray-300 text-xs mb-2"><svg class="icon inline-block align-baseline mr-1/2" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"></path></svg><span class="italic mr-2">August 2026 - Present</span><svg class="icon inline-block align-baseline mr-1/2" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path></svg><span class="italic">Owings Mills, MD</span></div>
+          <ul class="text-sm list-disc ml-5 text-gray-600 dark:text-gray-300">
+            <li class="mb-1">Develop the <span class="font-bold">Hospital Quality Reporting</span> web application as a government contractor, working within CMS&#39; AWS cloud environment and its CI/CD pipeline</li>
+            <li class="mb-1">Build and maintain <span class="font-bold">Go microservice applications</span> and an <span class="font-bold">Nx monorepo</span> of Angular frontend components</li>
+            <li class="mb-1">Develop <span class="font-bold">AWS Glue jobs</span> analyzing DynamoDB data and converting it to managed Databricks tables in S3</li>
+            <li class="mb-1">Maintain <span class="font-bold">Terraform</span> configurations for <span class="font-bold">ECS</span> image generation and AWS Glue job deployment</li>
+            <li class="mb-1">Write database update scripts for <span class="font-bold">DynamoDB</span> and shell scripts automating development environment setup</li>
+          </ul>
+        </div>
         <div class="mb-4 break-inside-avoid-page">
           <p class="font-bold text-lg text-gray-800 dark:text-gray-100">Software Engineer</p>
           <p class="font-bold text-base mb-1 highlight-color">Sleuth Kit Labs</p>
@@ -293,14 +305,11 @@ svg {
             <li class="mb-1">Expanded and optimized <span class="font-bold">data pipeline processing</span> including complex SQL queries over large data sets using Python, Java, and C++</li>
             <li class="mb-1">Created <span class="font-bold">web crawling and scraping</span> scripts aggregating open source data to enrich the data pipeline with new features</li>
             <li class="mb-1">Designed and implemented cloud updatable heuristics served to on-premises deployments via <span class="font-bold">GCP Datastore, BigQuery and Cloud Functions</span>, then compiled into optimized predicate matching data structures with runtimes in milliseconds for millions of files</li>
-            <li class="mb-1"><span class="font-bold">Modernized testing and CI/CD infrastructure</span> using Jenkins, Docker, Linux, Bash, GitHub Actions, CircleCI, Python, JUnit/Mockito, SonarQube, and Playwright</li>
+            <li class="mb-1"><span class="font-bold">Modernized testing and CI/CD infrastructure</span> using Jenkins, Docker, Linux, Bash, GitHub Actions, Python, JUnit/Mockito, SonarQube, and Playwright</li>
             <li class="mb-1"><span class="font-bold">Standardized multi-platform deployment (Windows, Linux, macOS)</span> through Snap, Homebrew, and Advanced Installer packages</li>
-            <li class="mb-1">Authored internal and <span class="font-bold">customer-facing documentation</span> for complex features</li>
             <li class="mb-1">Architected and built <span class="font-bold">RESTful API and Reactive web applications</span> using Spring Boot, Swagger, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming</li>
-            <li class="mb-1">Built a <span class="font-bold">file hash lookup web service</span> using AWS DynamoDB and Lambda for third-party integration</li>
             <li class="mb-1">Integrated <span class="font-bold">AWS S3</span> and <span class="font-bold">Azure Blob Storage</span> as data sources for file upload and retrieval</li>
             <li class="mb-1">Architected <span class="font-bold">parallel data ingestion system</span> using Docker, JMS, ActiveMQ, and AWS SQS for coordination, improving scalability of data processing</li>
-            <li class="mb-1">Developed third-party integrations in <span class="font-bold">Go</span></li>
             <li class="mb-1">Leveraged <span class="font-bold">Node.js</span> across web application development, desktop tooling (Tauri), and build utilities</li>
           </ul>
         </div>
@@ -350,7 +359,7 @@ svg {
       </section>
     </div>
 
-    <div class="right-column sm:w-1/3">
+    <div class="right-column sm:w-3/10">
       <section class="mb-5 break-inside-avoid-page">
         <h2 class="text-xl font-semibold uppercase text-gray-800 dark:text-gray-100 pb-1 border-b-2 border-gray-800 dark:border-gray-100 mb-2">Skills</h2>
         <div class="skill-item mb-2 text-sm">
@@ -360,7 +369,7 @@ svg {
           <span class="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Web/Backend:</span> <span class="text-sm text-gray-600 dark:text-gray-300">React, Angular, Spring Boot, ASP.NET Core, Server Sent Events (SSE), WebAssembly, Node.js, Flask</span>
         </div>
         <div class="skill-item mb-2 text-sm">
-          <span class="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Cloud/DevOps:</span> <span class="text-sm text-gray-600 dark:text-gray-300">GCP (BigQuery, Cloud Functions, Datastore), AWS (Lambda, DynamoDB, S3, SQS), Azure Blob Storage, Docker, Jenkins, SonarQube, Playwright, Linux</span>
+          <span class="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Cloud/DevOps:</span> <span class="text-sm text-gray-600 dark:text-gray-300">GCP (BigQuery, Cloud Functions, Datastore), AWS (ECS, Glue, Lambda, DynamoDB, S3, SQS), Azure Blob Storage, Terraform, Docker, Jenkins, SonarQube, Playwright, Linux</span>
         </div>
         <div class="skill-item mb-2 text-sm">
           <span class="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Databases:</span> <span class="text-sm text-gray-600 dark:text-gray-300">PostgreSQL, MS SQL Server, SQLite, MongoDB</span>
@@ -369,7 +378,7 @@ svg {
           <span class="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Desktop:</span> <span class="text-sm text-gray-600 dark:text-gray-300">Tauri, JavaFX, Swing</span>
         </div>
         <div class="skill-item mb-2 text-sm">
-          <span class="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Development/VCS Tools:</span> <span class="text-sm text-gray-600 dark:text-gray-300">Git, GitHub, Claude Code, Copilot, Antigravity, Visual Studio Code, Visual Studio IDE, IntelliJ IDEA IDE</span>
+          <span class="text-sm font-bold text-gray-600 dark:text-gray-300 mb-1">Tools:</span> <span class="text-sm text-gray-600 dark:text-gray-300">Git, GitHub, Claude Code, Copilot, Antigravity, Visual Studio Code, Visual Studio IDE, IntelliJ IDEA IDE</span>
         </div>
       </section>
 
@@ -393,29 +402,24 @@ svg {
           <a class="highlight-color break-all" href="https://gdicristofaro.github.io/constantqjs">gdicristofaro.github.io/constantqjs</a>
         </div>
         <div class="text-sm break-inside-avoid-page mb-3 pb-3 border-b border-dotted border-neutral-400">
-          <p class="font-bold text-gray-800 dark:text-gray-100 mb-1">sci-fi-crawl</p>
-          <p class="text-gray-600 dark:text-gray-300 text-sm">Sci-fi customizable opening credit text using <span class="font-bold">React, TypeScript, Material UI, and CSS animations</span> </p>
-          <a class="highlight-color break-all" href="https://gdicristofaro.github.io/sci-fi-crawl">gdicristofaro.github.io/sci-fi-crawl</a>
-        </div>
-        <div class="text-sm break-inside-avoid-page mb-3 pb-3 border-b border-dotted border-neutral-400">
           <p class="font-bold text-gray-800 dark:text-gray-100 mb-1">PSDtoSVG</p>
           <p class="text-gray-600 dark:text-gray-300 text-sm">Python web application for converting Photoshop files into SVGs for data visualization </p>
           <a class="highlight-color break-all" href="https://gdicristofaro.github.io/PSDtoSVG">gdicristofaro.github.io/PSDtoSVG</a>
+        </div>
+        <div class="text-sm break-inside-avoid-page mb-3 pb-3 border-b border-dotted border-neutral-400">
+          <p class="font-bold text-gray-800 dark:text-gray-100 mb-1">sci-fi-crawl</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Sci-fi customizable opening credit text using <span class="font-bold">React, TypeScript, Material UI, and CSS animations</span> </p>
+          <a class="highlight-color break-all" href="https://gdicristofaro.github.io/sci-fi-crawl">gdicristofaro.github.io/sci-fi-crawl</a>
         </div>
         <div class="text-sm break-inside-avoid-page mb-3 pb-3 border-b border-dotted border-neutral-400">
           <p class="font-bold text-gray-800 dark:text-gray-100 mb-1">SeamCarve</p>
           <p class="text-gray-600 dark:text-gray-300 text-sm">Scala implementation of the Seam-Carving Algorithm for content-aware image resizing </p>
           <a class="highlight-color break-all" href="https://github.com/gdicristofaro/SeamCarve">github.com/gdicristofaro/SeamCarve</a>
         </div>
-        <div class="text-sm break-inside-avoid-page mb-3 pb-3 border-b border-dotted border-neutral-400">
+        <div class="text-sm break-inside-avoid-page mb-4">
           <p class="font-bold text-gray-800 dark:text-gray-100 mb-1">CSPSolver</p>
           <p class="text-gray-600 dark:text-gray-300 text-sm">Class scheduling program written in Scala based on the AC-3 algorithm, importing data from Excel documents via Apache POI </p>
           <a class="highlight-color break-all" href="https://github.com/gdicristofaro/CSPSolver">github.com/gdicristofaro/CSPSolver</a>
-        </div>
-        <div class="text-sm break-inside-avoid-page mb-4">
-          <p class="font-bold text-gray-800 dark:text-gray-100 mb-1">CalendarMaker</p>
-          <p class="text-gray-600 dark:text-gray-300 text-sm">Calendar making application developed with TypeScript, React, Moment.js, Material-UI, and PptxGenJS </p>
-          <a class="highlight-color break-all" href="https://github.com/gdicristofaro/CalendarMaker">github.com/gdicristofaro/CalendarMaker</a>
         </div>
       </section>
     </div>
