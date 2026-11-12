@@ -27,16 +27,17 @@ workExperience:
     workItems:
       - >
         Develop the **Hospital Quality Reporting** web application as a government contractor,
-        working within CMS' AWS cloud environment and its CI/CD pipeline
+        working within CMS' AWS cloud environment, **GitHub** organization, and CI/CD pipeline
       - >
         Build and maintain **Go microservice applications** and an **Nx monorepo** of Angular
-        frontend components
+        frontend components in **TypeScript** and Node.js
       - >
-        Develop **AWS Glue jobs** analyzing DynamoDB data and converting it to managed
+        Develop **AWS Glue jobs** in Python analyzing DynamoDB data and converting it to managed
         Databricks tables in S3
       - >
         Maintain **Terraform** configurations for **ECS** image generation and AWS Glue job
         deployment
+      - Deploy and update **AWS Lambda** functions
       - >
         Write database update scripts for **DynamoDB** and shell scripts automating development
         environment setup
@@ -57,7 +58,7 @@ workExperience:
       - >
         **Standardized multi-platform deployment (Windows, Linux, macOS)** through Snap, Homebrew, and Advanced Installer packages
       - >
-        Architected and built **RESTful API and Reactive web applications** using Spring Boot, Swagger, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming
+        Architected and built **RESTful API and Reactive web applications** using Spring Boot, Swagger, TypeScript, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming
       - Integrated **AWS S3** and **Azure Blob Storage** as data sources for file upload and retrieval
       - >
         Architected **parallel data ingestion system** using Docker, JMS, ActiveMQ, and AWS SQS for coordination, improving scalability of data processing
@@ -78,7 +79,7 @@ workExperience:
         Built tooling to **generate parameterized queries** tailored to the deployment environment, improving query performance from minutes to milliseconds and eliminating SQL injection vulnerabilities
       - Created **data visualizations** with JavaScript, TypeScript, **D3.js**, and SVG to present complex data to customers
       - >
-        Led creation and deployment of a **React and ASP.NET Core** web application with CMS and Authentication/Authorization capabilities, collaborating with stakeholders and a UX designer
+        Led creation and deployment of a **React and ASP.NET Core** web application with CMS and Authentication/Authorization capabilities, collaborating with stakeholders and a UX designer on **Section 508/WCAG accessibility** compliance
       - Modernized large J2EE web applications built with JSP and JSF, earning an **award of excellence** for customer satisfaction
   - title: Music Teacher
     company: St. Mary's County Public Schools
