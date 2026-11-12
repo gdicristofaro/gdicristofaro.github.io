@@ -35,10 +35,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           <p class="font-bold text-base mb-1 highlight-color">Bellese Technologies, LLC</p>
           <div class="text-gray-600 dark:text-gray-300 text-xs mb-2"><svg class="icon inline-block align-baseline mr-1/2" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"></path></svg><span class="italic mr-2">August 2026 - Present</span><svg class="icon inline-block align-baseline mr-1/2" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path></svg><span class="italic">Owings Mills, MD</span></div>
           <ul class="text-sm list-disc ml-5 text-gray-600 dark:text-gray-300">
-            <li class="mb-1">Develop the <span class="font-bold">Hospital Quality Reporting</span> web application as a government contractor, working within CMS&#39; AWS cloud environment and its CI/CD pipeline</li>
-            <li class="mb-1">Build and maintain <span class="font-bold">Go microservice applications</span> and an <span class="font-bold">Nx monorepo</span> of Angular frontend components</li>
-            <li class="mb-1">Develop <span class="font-bold">AWS Glue jobs</span> analyzing DynamoDB data and converting it to managed Databricks tables in S3</li>
+            <li class="mb-1">Develop the <span class="font-bold">Hospital Quality Reporting</span> web application as a government contractor, working within CMS&#39; AWS cloud environment, <span class="font-bold">GitHub</span> organization, and CI/CD pipeline</li>
+            <li class="mb-1">Build and maintain <span class="font-bold">Go microservice applications</span> and an <span class="font-bold">Nx monorepo</span> of Angular frontend components in <span class="font-bold">TypeScript</span> and Node.js</li>
+            <li class="mb-1">Develop <span class="font-bold">AWS Glue jobs</span> in Python analyzing DynamoDB data and converting it to managed Databricks tables in S3</li>
             <li class="mb-1">Maintain <span class="font-bold">Terraform</span> configurations for <span class="font-bold">ECS</span> image generation and AWS Glue job deployment</li>
+            <li class="mb-1">Deploy and update <span class="font-bold">AWS Lambda</span> functions</li>
             <li class="mb-1">Write database update scripts for <span class="font-bold">DynamoDB</span> and shell scripts automating development environment setup</li>
           </ul>
         </div>
@@ -53,7 +54,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             <li class="mb-1">Designed and implemented cloud updatable heuristics served to on-premises deployments via <span class="font-bold">GCP Datastore, BigQuery and Cloud Functions</span>, then compiled into optimized predicate matching data structures with runtimes in milliseconds for millions of files</li>
             <li class="mb-1"><span class="font-bold">Modernized testing and CI/CD infrastructure</span> using Jenkins, Docker, Linux, Bash, GitHub Actions, Python, JUnit/Mockito, SonarQube, and Playwright</li>
             <li class="mb-1"><span class="font-bold">Standardized multi-platform deployment (Windows, Linux, macOS)</span> through Snap, Homebrew, and Advanced Installer packages</li>
-            <li class="mb-1">Architected and built <span class="font-bold">RESTful API and Reactive web applications</span> using Spring Boot, Swagger, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming</li>
+            <li class="mb-1">Architected and built <span class="font-bold">RESTful API and Reactive web applications</span> using Spring Boot, Swagger, TypeScript, Angular, and React (Material UI), leveraging Server Sent Events (SSE) for real-time data streaming</li>
             <li class="mb-1">Integrated <span class="font-bold">AWS S3</span> and <span class="font-bold">Azure Blob Storage</span> as data sources for file upload and retrieval</li>
             <li class="mb-1">Architected <span class="font-bold">parallel data ingestion system</span> using Docker, JMS, ActiveMQ, and AWS SQS for coordination, improving scalability of data processing</li>
             <li class="mb-1">Leveraged <span class="font-bold">Node.js</span> across web application development, desktop tooling (Tauri), and build utilities</li>
@@ -68,7 +69,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             <li class="mb-1">Queried large datasets using <span class="font-bold">Microsoft SQL Server, Entity Framework</span>, T-SQL, and Linq to SQL</li>
             <li class="mb-1">Built tooling to <span class="font-bold">generate parameterized queries</span> tailored to the deployment environment, improving query performance from minutes to milliseconds and eliminating SQL injection vulnerabilities</li>
             <li class="mb-1">Created <span class="font-bold">data visualizations</span> with JavaScript, TypeScript, <span class="font-bold">D3.js</span>, and SVG to present complex data to customers</li>
-            <li class="mb-1">Led creation and deployment of a <span class="font-bold">React and ASP.NET Core</span> web application with CMS and Authentication/Authorization capabilities, collaborating with stakeholders and a UX designer</li>
+            <li class="mb-1">Led creation and deployment of a <span class="font-bold">React and ASP.NET Core</span> web application with CMS and Authentication/Authorization capabilities, collaborating with stakeholders and a UX designer on <span class="font-bold">Section 508/WCAG accessibility</span> compliance</li>
             <li class="mb-1">Modernized large J2EE web applications built with JSP and JSF, earning an <span class="font-bold">award of excellence</span> for customer satisfaction</li>
           </ul>
         </div>
